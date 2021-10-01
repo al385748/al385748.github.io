@@ -33,16 +33,22 @@
 
 	<!-- FORCE LANDSCAPE -->
 	<style>
+	@media only screen and (orientation: landscape) {
+		#contents { display: block; }
+		#turn { display: none; }
+	}
+
 	@media only screen and (orientation: portrait) {
-		body {
-			transform: rotate(-90deg);
-			height: 100vw;
-		}
+		#contents { display: none; }
+		#turn { display: block; }
 	}
 	</style>
 </head>
 
 <body id="top">
+
+	<div id="turn">Please rotate your device!</div>
+	<div id="contents">
 
 	<!-- header 
    ================================================== -->
@@ -1034,6 +1040,7 @@
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
 
+</div>
 </body>
 
 </html>
