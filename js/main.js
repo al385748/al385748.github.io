@@ -20,6 +20,8 @@
         // will fade out the whole DIV that covers the website.
         $("#preloader").delay(300).fadeOut("slow");
 
+		screen.orientation.lock('landscape');
+
       });       
 
   	})
