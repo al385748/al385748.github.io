@@ -1326,10 +1326,10 @@ header .logo a {
 }
 .intro-content h1 {
 	color: #FFFFFF;
-	font-family: "poppins-medium", sans-serif;
+	font-family: akira;
 	font-size: 8.4rem;
-	line-height: 1.071;
-	max-width: 900px;
+	line-height: 0.800;
+	max-width: 1000px;
 	margin-top: 0;
 	margin-bottom: .6rem;
 	margin-left: auto;
@@ -1347,7 +1347,7 @@ header .logo a {
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .intro-content .intro-position {
-	font-family: "lora-regular", serif;
+	font-family: "chapaza";
 	font-size: 1.7rem;
 	line-height: 2.4rem;
 	text-transform: uppercase;
@@ -1384,7 +1384,7 @@ header .logo a {
 	letter-spacing: .25rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
-	border-color: #cc005f;
+	border-color: #ccad00;
 }
 .intro-content .button::after {
 	display: inline-block;
