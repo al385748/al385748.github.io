@@ -523,7 +523,6 @@ select {
 	padding: 1.5rem 0;
 	border: 0;
 	outline: none;
-	vertical-align: middle;
 	color: #313131;
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.5rem;
@@ -2737,4 +2736,26 @@ footer .copyright span:last-child::after {
   }
   .fn_cs_personal_slider .swiper-slide{
 	  overflow: hidden;
+  }
+
+  a:hover{
+    cursor: none !important;
+  }
+
+  .noselect{
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;           /* Non-prefixed version */
+  }
+
+  canvas {
+	display: block;
+    position: fixed !important;
+	width: 100%;
+	height: 100%;
+	z-index: 99 !important;
+	pointer-events: all;
   }

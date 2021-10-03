@@ -10,6 +10,7 @@
 	<title>CHARLIE SÁNCHEZ - Game Designer | Filmmaker | Journalist</title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
    <!-- mobile specific metas
    ================================================== -->
@@ -48,7 +49,12 @@
 <body id="top">
 
 	<div id="turn">Please rotate your device!</div>
-	<div id="contents">
+	<div id="contents" class="noselect">
+
+	<canvas id="c"></canvas>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js'></script>
+	<script src="js/color-changing.js"></script>
+
 
 	<!-- header 
    <header>   	
@@ -98,6 +104,7 @@
 	   			</p>
 
 	   			<a class="button stroke smoothscroll" id="goFullscreenButton" onclick="goFullscreen()">Go Fullscreen</a>
+	   			<a class="button stroke smoothscroll" id="goAboutButton" onclick="fadeOut()" href="#about">About me</a>
 
 	   		</div>  
    			
