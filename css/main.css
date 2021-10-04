@@ -592,7 +592,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	color: #cc005f;
+	color: #cc8b00;
 	border-bottom: 1px solid #ffee00;
 }
 label, legend {
@@ -1017,6 +1017,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  */
 .grey-section {
 	background: #ebebeb;
+	display: block;
+    position: fixed !important;
+	width: 100%;
+	height: 100%;
+	z-index: 96 !important;
 }
 .grey-section p.lead {
 	color: #7d7d7d;
@@ -1333,7 +1338,7 @@ header .logo a {
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
-	color: #cc005f;
+	color: #ffee00;
 	font-family: "poppins-bold", sans-serif;
 	font-size: 2.3rem;
 	line-height: 1.565;
@@ -1485,8 +1490,8 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #about {
-	background: #FFFFFF;
-	padding-top: 12rem;
+	background: #FFD012;
+	padding-top: 6rem;
 	padding-bottom: 15rem;
 }
 #about .section-intro {
@@ -2758,4 +2763,44 @@ footer .copyright span:last-child::after {
 	height: 100%;
 	z-index: 99 !important;
 	pointer-events: all;
+  }
+
+  .about {
+	display: block;
+    position: fixed !important;
+	width: 100%;
+	height: 100%;
+	z-index: 98 !important;
+  }
+
+  .portfolio {
+	display: block;
+    position: fixed !important;
+	width: 100%;
+	height: 100%;
+	z-index: 97 !important;
+  }
+
+  .services {
+	display: block;
+    position: fixed !important;
+	width: 100%;
+	height: 100%;
+	z-index: 95 !important;
+  }
+
+  .count-up {
+	display: block;
+    position: fixed !important;
+	width: 100%;
+	height: 100%;
+	z-index: 94 !important;
+  }
+
+  .contact {
+	display: block;
+    position: fixed !important;
+	width: 100%;
+	height: 100%;
+	z-index: 93 !important;
   }

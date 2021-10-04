@@ -36,8 +36,11 @@ function removeAnimation(animation) {
     if (index > -1) animations.splice(index, 1);
     isDrawing = false;
   
-    if(!isDrawing) fadeOut();
-    console.log("REMOVING")
+    if(!isDrawing){
+      fadeOut();
+      disableOldScene(currentScene, newScene);
+    }
+    //console.log("REMOVING")
   }
 }
 
@@ -214,7 +217,7 @@ function startFauxClicking() {
 }
 
 function fauxClick(x, y) {
-  var fauxClick = new Event("mousedown");
+  //var fauxClick = new Event("mousedown");
   fauxClick.pageX = x;
   fauxClick.pageY = y;
   document.dispatchEvent(fauxClick);
@@ -223,7 +226,7 @@ function fauxClick(x, y) {
 function fadeOut()
 {
     animations = [];
-    console.log("ESTAMOS CLEAR " + ctx.globalAlpha)
+    //console.log("ESTAMOS CLEAR " + ctx.globalAlpha)
 
     ctx.clearRect(0, 0, c.width, c.height);
     ctx.globalAlpha -= 0.01;

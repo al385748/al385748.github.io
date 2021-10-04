@@ -5,6 +5,9 @@
  * ------------------------------------------------------------------- 
  */ 
 
+var currentScene = "intro";
+var newScene = "";
+
 (function($) {
 
 	"use strict";
@@ -319,4 +322,14 @@
 
 function goFullscreen(){
 	document.getElementById("top").requestFullscreen()
+}
+
+function disableOldScene(currentScene, newScene){
+	console.log(document.getElementById(currentScene));
+	document.getElementById(currentScene).style.display = "none";
+	currentScene = newScene;
+}
+
+function goToNewScreen(myNewScene){
+	newScene = myNewScene;
 }
