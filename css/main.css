@@ -101,7 +101,7 @@ a:hover, a:focus, a:active {
  * ------------------------------------------------------------------- 
  */
 h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
-	font-family: "poppins-semibold", sans-serif;
+	font-family: akira, sans-serif;
 	color: #313131;
 	font-style: normal;
 	text-rendering: optimizeLegibility;
@@ -111,7 +111,7 @@ h3, .h03, h4, .h04 {
 	margin-bottom: 1.8rem;
 }
 h5, .h05, h6, .h06 {
-	font-family: "poppins-bold";
+	font-family: akira;
 	margin-bottom: 1.2rem;
 }
 h1, .h01 {
@@ -1015,17 +1015,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- 
  */
-.grey-section {
-	background: #ebebeb;
-	display: block;
-    position: fixed !important;
-	width: 100%;
-	height: 100%;
-	z-index: 96 !important;
-}
+
+ 
 .grey-section p.lead {
 	color: #7d7d7d;
 }
+
 .section-intro {
 	max-width: 700px;
 	margin-left: auto;
@@ -1033,6 +1028,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	text-align: center;
 	margin-bottom: 3.6rem;
 	position: relative;
+	z-index: 1 !important;
 }
 .section-intro h1 {
 	font-family: "poppins-semibold", serif;
@@ -1306,6 +1302,7 @@ header .logo a {
 	display: table;
 	position: relative;
 	text-align: center;
+	z-index: 1;
 }
 .intro-overlay {
 	position: absolute;
@@ -1324,6 +1321,7 @@ header .logo a {
 	-webkit-transform: translateY(-2.1rem);
 	-ms-transform: translateY(-2.1rem);
 	transform: translateY(-2.1rem);
+	z-index: 1;
 }
 .intro-content h1 {
 	color: #FFFFFF;
@@ -1416,7 +1414,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: #cc005f;
+	color: #ccad00;
 }
 
 /**
@@ -1490,12 +1488,14 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #about {
-	background: #FFD012;
-	padding-top: 6rem;
+	background: #ff7112;
+	padding-top: 4rem;
 	padding-bottom: 15rem;
+	z-index: 85 !important;
 }
 #about .section-intro {
 	margin-bottom: 3rem;
+	z-index: 85 !important;
 }
 
 .intro-info {
@@ -1520,6 +1520,7 @@ header .logo a {
 	text-align: left;
 	max-width: 850px;
 	margin-bottom: 3.6rem;
+	z-index: 85 !important;
 }
 .about-content h3 {
 	font-family: "poppins-bold", sans-serif;
@@ -2618,7 +2619,7 @@ footer .copyright span:last-child::after {
 	width: 6px;
 	height: 6px;
 	z-index: 10000001;
-	background-color: #000;
+	background-color: #FFF;
 	-webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
 	transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
   }
@@ -2627,7 +2628,7 @@ footer .copyright span:last-child::after {
 	margin-top: -40px;
 	width: 80px;
 	height: 80px;
-	background-color: #000;
+	background-color: #FFF;
 	opacity: .3;
   }
   .cursor-outer {
@@ -2635,7 +2636,7 @@ footer .copyright span:last-child::after {
 	margin-top: -15px;
 	width: 30px;
 	height: 30px;
-	border: 2px solid #000;
+	border: 2px solid #FFF;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	z-index: 10000000;
@@ -2766,7 +2767,7 @@ footer .copyright span:last-child::after {
   }
 
   .about {
-	display: block;
+	display: none;
     position: fixed !important;
 	width: 100%;
 	height: 100%;
@@ -2774,15 +2775,24 @@ footer .copyright span:last-child::after {
   }
 
   .portfolio {
-	display: block;
+	display: none;
     position: fixed !important;
 	width: 100%;
 	height: 100%;
 	z-index: 97 !important;
   }
 
+  .grey-section {
+	background: #ebebeb;
+	display: none;
+    position: fixed !important;
+	width: 100%;
+	height: 100%;
+	z-index: 96 !important;
+}
+
   .services {
-	display: block;
+	display: none;
     position: fixed !important;
 	width: 100%;
 	height: 100%;
@@ -2790,7 +2800,7 @@ footer .copyright span:last-child::after {
   }
 
   .count-up {
-	display: block;
+	display: none;
     position: fixed !important;
 	width: 100%;
 	height: 100%;
@@ -2798,7 +2808,7 @@ footer .copyright span:last-child::after {
   }
 
   .contact {
-	display: block;
+	display: none;
     position: fixed !important;
 	width: 100%;
 	height: 100%;

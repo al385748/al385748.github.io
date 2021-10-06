@@ -7,6 +7,7 @@
 
 var currentScene = "intro";
 var newScene = "";
+document.getElementById("c").style.pointerEvents = 'none';
 
 (function($) {
 
@@ -41,7 +42,7 @@ var newScene = "";
 					e.classList.add("cursor-hover"), t.classList.add("cursor-hover")
 				}), $("body").on("mouseleave", "a, .cursor-pointer", function () {
 					$(this).is("a") && $(this).closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-				}), e.style.visibility = "visible", t.style.visibility = "invisible"
+				}), e.style.visibility = "visible", t.style.visibility = "visible"
 			}
 			}
 		};
@@ -218,7 +219,6 @@ var newScene = "";
 
 	/*---------------------------------------------------- */
   	/* Smooth Scrolling
-  	------------------------------------------------------ */
   	$('.smoothscroll').on('click', function (e) {
 	 	
 	 	e.preventDefault();
@@ -234,6 +234,7 @@ var newScene = "";
 
   	});  
   
+  	------------------------------------------------------ */
 
    /*---------------------------------------------------- */
 	/*  Placeholder Plugin Settings
@@ -324,12 +325,46 @@ function goFullscreen(){
 	document.getElementById("top").requestFullscreen()
 }
 
-function disableOldScene(currentScene, newScene){
-	console.log(document.getElementById(currentScene));
-	document.getElementById(currentScene).style.display = "none";
-	currentScene = newScene;
+/*
+function disableOldScene(myCurrentScene, myNewScene){
+	console.log(document.getElementById(myCurrentScene));
+	document.getElementById(myCurrentScene).style.display = "none";
+	console.log("AHORA LA CURRENT NO ES " + myCurrentScene + " SINO " + newScene)
+	currentScene = myNewScene;
+}
+*/
+
+function enableNewScene(myNewScene){
+	if(myNewScene != "intro") document.getElementById(myNewScene).style.display = "block";
+	console.log("PINTANDO " + myNewScene)
+	currentScene = myNewScene;
 }
 
 function goToNewScreen(myNewScene){
+	if ($("body")) {
+		const e = document.querySelector(".cursor-inner"),
+			t = document.querySelector(".cursor-outer");
+		$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+	}
+
+	document.getElementById("outer-mouse").style.border = "2px solid #000";
+	document.getElementById("inner-mouse").style.backgroundColor = "#000";
 	newScene = myNewScene;
+	console.log("LA NEW SCENE ES " + newScene);
+}
+
+function returnHome(){
+	if ($("body")) {
+		const e = document.querySelector(".cursor-inner"),
+			t = document.querySelector(".cursor-outer");
+		$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+	}
+
+	newScene = "intro";
+
+	console.log("RETURNEANDO A CASITA " + newScene + " DESDE " + currentScene);
+	document.getElementById(currentScene).style.display = "none";
+
+	document.getElementById("outer-mouse").style.border = "2px solid #FFF";
+	document.getElementById("inner-mouse").style.backgroundColor = "#FFF";
 }

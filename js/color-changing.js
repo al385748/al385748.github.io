@@ -34,12 +34,9 @@ function removeAnimation(animation) {
   if(isDrawing){
     var index = animations.indexOf(animation);
     if (index > -1) animations.splice(index, 1);
-    isDrawing = false;
-  
-    if(!isDrawing){
-      fadeOut();
-      disableOldScene(currentScene, newScene);
-    }
+
+    fadeOut();
+    enableNewScene(newScene);
     //console.log("REMOVING")
   }
 }
@@ -65,23 +62,49 @@ function handleEvent(e) {
     var minCoverDuration = 750;
     isDrawing = true;
 
-    var pageFill = new Circle({
-      x: e.pageX,
-      y: e.pageY,
-      r: 0,
-      fill: nextColor
-    });
+    if(currentScene == "intro"){
+      var pageFill = new Circle({
+        x: e.pageX,
+        y: e.pageY,
+        r: 0,
+        fill: nextColor
+      });
 
-    var fillAnimation = anime({
-      targets: pageFill,
-      r: targetR,
-      duration:  Math.max(targetR / 2 , minCoverDuration ),
-      easing: "easeOutQuart",
-      complete: function(){
-        bgColor = pageFill.fill;
-        removeAnimation(fillAnimation);
-      }
-    });
+      var fillAnimation = anime({
+        targets: pageFill,
+        r: targetR,
+        duration:  Math.max(targetR / 2 , minCoverDuration ),
+        easing: "easeOutQuart",
+        complete: function(){
+          bgColor = pageFill.fill;
+          removeAnimation(fillAnimation);
+          isDrawing = false;
+        }
+      });
+    }
+
+    else{
+      var pageFill = new Circle({
+        x: e.pageX,
+        y: e.pageY,
+        r: 0,
+        fill: nextColor
+      });
+
+      var fillAnimation = anime({
+        targets: pageFill,
+        r: targetR,
+        duration:  Math.max(targetR / 2 , minCoverDuration ),
+        direction: "reverse",
+        easing: "easeOutQuart",
+        complete: function(){
+          bgColor = pageFill.fill;
+          removeAnimation(fillAnimation);
+          isDrawing = false;
+
+        }
+      });
+    }
     
     var ripple = new Circle({
       x: e.pageX,
@@ -127,6 +150,7 @@ function handleEvent(e) {
       complete: removeAnimation
     });
     animations.push(fillAnimation, rippleAnimation, particlesAnimation);
+  
 }
 
 function extend(a, b){
@@ -189,7 +213,7 @@ var resizeCanvas = function() {
   window.addEventListener("resize", resizeCanvas);
   addClickListeners();
   if (!!window.location.pathname.match(/fullcpgrid/)) {
-    startFauxClicking();
+    //startFauxClicking();
   }
   handleInactiveUser();
 })();
