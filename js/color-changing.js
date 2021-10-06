@@ -2,14 +2,14 @@ var c = document.getElementById("c");
 var ctx = c.getContext("2d");
 var cH;
 var cW;
-var bgColor = "#FF6138";
+var bgColor = "#000000";
 var animations = [];
 var circles = [];
 
 var isDrawing = false;
 
 var ga = 1;
-var timerId = 5;
+var timerId = 3;
 
 var colorPicker = (function() {
   var colors = ["#363636", "#FFD012"];
@@ -35,9 +35,8 @@ function removeAnimation(animation) {
     var index = animations.indexOf(animation);
     if (index > -1) animations.splice(index, 1);
 
-    fadeOut();
     enableNewScene(newScene);
-    //console.log("REMOVING")
+    fadeOut();
   }
 }
 
@@ -53,22 +52,28 @@ function addClickListeners() {
 };
 
 function handleEvent(e) {
+
+  setTimeout(function () {
+
+  if(buttonTouch){
     if (e.touches) { 
       e.preventDefault();
       e = e.touches[0];
     }
+    
     var targetR = calcPageFillRadius(e.pageX, e.pageY);
     var rippleSize = Math.min(200, (cW * .4));
     var minCoverDuration = 750;
     isDrawing = true;
 
-    if(currentScene == "intro"){
       var pageFill = new Circle({
         x: e.pageX,
         y: e.pageY,
         r: 0,
         fill: nextColor
       });
+
+    if(currentScene == "intro"){
 
       var fillAnimation = anime({
         targets: pageFill,
@@ -84,12 +89,6 @@ function handleEvent(e) {
     }
 
     else{
-      var pageFill = new Circle({
-        x: e.pageX,
-        y: e.pageY,
-        r: 0,
-        fill: nextColor
-      });
 
       var fillAnimation = anime({
         targets: pageFill,
@@ -151,6 +150,8 @@ function handleEvent(e) {
     });
     animations.push(fillAnimation, rippleAnimation, particlesAnimation);
   
+  }  
+  }, 250);
 }
 
 function extend(a, b){
@@ -180,20 +181,62 @@ Circle.prototype.draw = function() {
     ctx.fill();
   }
   ctx.closePath();
-  if(isDrawing) ctx.globalAlpha = 1;
 }
 
-var animate = anime({
-  duration: Infinity,
-  update: function() {
-    ctx.fillStyle = bgColor;
-    animations.forEach(function(anim) {
-      anim.animatables.forEach(function(animatable) {
-        animatable.target.draw();
+function animateCircle(){
+  
+  var animate = anime({
+    duration: Infinity,
+    update: function() {
+      ctx.fillStyle = bgColor;
+      if(currentScene != "intro") ctx.fillRect(0, 0, cW, cH);
+      animations.forEach(function(anim) {
+        anim.animatables.forEach(function(animatable) {
+          animatable.target.draw();
+        });
       });
-    });
-  }
-});
+    }
+  });
+
+}
+
+function animateNonButtonParticles(){
+
+  /*
+
+  document.getElementById("cursor-outer-fake").style.display = 'fixed';
+  console.log("mostrando " + document.getElementById("cursor-outer-fake").style.display)
+
+  document.getElementById("cursor-outer-fake").style.position.x = -100;
+  document.getElementById("outer-mouse-fake").style.position.y = -100;
+
+  anime({
+    targets: '.cursor-outer-fake',
+    translateX: currentMousePosX,
+    translateY: currentMousePosY/*,
+    easing: 'easeInOutExpo',
+    scale: 3,
+    direction: 'alternate'
+  });
+
+  var animate = anime({
+    duration: Infinity,
+    update: function() {
+      var first = true;
+
+      ctx.fillStyle = bgColor;
+      if(currentScene != "intro") ctx.fillRect(0, 0, cW, cH);
+      animations.forEach(function(anim) {
+        anim.animatables.forEach(function(animatable) {
+          if(!first) animatable.target.draw();
+          else first = false; 
+        });
+      });
+    }
+  });
+
+*/
+}
 
 var resizeCanvas = function() {
   cW = window.innerWidth;
@@ -220,7 +263,7 @@ var resizeCanvas = function() {
 
 function handleInactiveUser() {
   var inactive = setTimeout(function(){
-    fauxClick(cW/2, cH/2);
+    //fauxClick(cW/2, cH/2);
   }, 2000);
   
   function clearInactiveTimeout() {
@@ -250,10 +293,13 @@ function fauxClick(x, y) {
 function fadeOut()
 {
     animations = [];
-    //console.log("ESTAMOS CLEAR " + ctx.globalAlpha)
 
     ctx.clearRect(0, 0, c.width, c.height);
     ctx.globalAlpha -= 0.01;
+
+    if(currentScene == "intro") ctx.fillStyle = "#000000";
+    else ctx.fillStyle = "#ffd012";
+
     ctx.fillRect(0, 0, cW, cH);
 
     if (ctx.globalAlpha > 0.01)
@@ -263,5 +309,6 @@ function fadeOut()
     else{
       ctx.globalAlpha = 0;
       document.getElementById("c").style.pointerEvents = 'none';
+      if(currentScene == "intro") buttonTouch = false;
     } 
 }

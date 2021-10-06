@@ -1335,6 +1335,21 @@ header .logo a {
 	margin-right: auto;
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+
+.turnPhone{
+	color: #ffee00;
+	font-family: akira;
+	font-size: 2.4rem;
+	line-height: 0.800;
+	max-width: 1000px;
+	margin-top: 50%;
+	margin-bottom: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
 .intro-content h5 {
 	color: #ffee00;
 	font-family: "poppins-bold", sans-serif;
@@ -1488,7 +1503,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #about {
-	background: #ff7112;
+	background: #ffd012;
 	padding-top: 4rem;
 	padding-bottom: 15rem;
 	z-index: 85 !important;
@@ -2644,6 +2659,7 @@ footer .copyright span:last-child::after {
 	-webkit-transition: all .08s ease-out;
 	transition: all .08s ease-out;
   }
+
   .cursor-outer.cursor-hover{
 	opacity: 0;
   }
@@ -2749,6 +2765,8 @@ footer .copyright span:last-child::after {
   }
 
   .noselect{
+	  width: 100%;
+	  height: 100%;
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none;   /* Chrome/Safari/Opera */
 	-khtml-user-select: none;    /* Konqueror */
@@ -2762,7 +2780,7 @@ footer .copyright span:last-child::after {
     position: fixed !important;
 	width: 100%;
 	height: 100%;
-	z-index: 99 !important;
+	z-index: 102 !important;
 	pointer-events: all;
   }
 
@@ -2813,4 +2831,13 @@ footer .copyright span:last-child::after {
 	width: 100%;
 	height: 100%;
 	z-index: 93 !important;
+  }
+
+  .transition-color-screen {
+	display: none;
+    position: fixed !important;
+	background: #ffd012;
+	width: 100%;
+	height: 100%;
+	z-index: 11 !important;
   }

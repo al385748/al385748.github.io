@@ -48,7 +48,7 @@
 
 <body id="top">
 
-	<div id="turn">Please rotate your device!</div>
+	<div id="turn" class="turnPhone">Please rotate your device!</div>
 	<div id="contents" class="noselect">
 
 	<canvas id="c"></canvas>
@@ -153,11 +153,11 @@
 				   </li>
 				   <li>
 				   	<div class="progress percent70"><span>70%</span></div>
-				   	<strong>JQuery</strong>
+				   	<strong>JavaScript</strong>
 				   </li>
 				   <li>
 				   	<div class="progress percent95"><span>95%</span></div>
-				   	<strong>PHP</strong>
+				   	<strong>SQL</strong>
 				   </li>
 				   <li>
 
@@ -942,11 +942,13 @@
 
 		<!-- intro section
    ================================================== -->
+   <section id="transition-color-screen" class="transition-color-screen"></section>
+
    <section id="intro">   
 
 	<div class="intro-overlay"></div>	
 
-	<div id="intro-content" class="intro-content">
+	<div id="intro-content" class="intro-content" onclick="animateNonButtonParticles()">
 		<div class="row">
 
 			<div class="col-twelve">
@@ -1024,7 +1026,7 @@
 
    	<!-- CURSOR -->
 	<div id="outer-mouse" class="mouse-cursor cursor-outer"></div>
-    <div id="inner-mouse" class="mouse-cursor cursor-inner"></div>
+	<div id="inner-mouse" class="mouse-cursor cursor-inner"></div>
 	<!-- /CURSOR -->
 
 	</div>

@@ -7,6 +7,9 @@
 
 var currentScene = "intro";
 var newScene = "";
+
+var buttonTouch = false;
+
 document.getElementById("c").style.pointerEvents = 'none';
 
 (function($) {
@@ -335,12 +338,17 @@ function disableOldScene(myCurrentScene, myNewScene){
 */
 
 function enableNewScene(myNewScene){
+	if(myNewScene == null || myNewScene == "") myNewScene = "intro";
 	if(myNewScene != "intro") document.getElementById(myNewScene).style.display = "block";
 	console.log("PINTANDO " + myNewScene)
 	currentScene = myNewScene;
 }
 
 function goToNewScreen(myNewScene){
+	buttonTouch = true;
+	bgColor = "#00000000";
+	animateCircle();
+	
 	if ($("body")) {
 		const e = document.querySelector(".cursor-inner"),
 			t = document.querySelector(".cursor-outer");
@@ -350,10 +358,32 @@ function goToNewScreen(myNewScene){
 	document.getElementById("outer-mouse").style.border = "2px solid #000";
 	document.getElementById("inner-mouse").style.backgroundColor = "#000";
 	newScene = myNewScene;
+	document.getElementById(newScene).style.opacity = "100%";
 	console.log("LA NEW SCENE ES " + newScene);
 }
 
+function endSceneTransition(value){
+	document.getElementById("transition-color-screen").style.display = "block"
+	if(value > 10){
+		document.getElementById(currentScene).style.opacity = value + "%";
+		setTimeout(function () {
+			endSceneTransition(value - 10)
+		}, 20);
+	}
+	else document.getElementById("transition-color-screen").style.display = "none"
+
+	console.log(value);
+}
+
 function returnHome(){
+
+	endSceneTransition(100);
+
+	setTimeout(function () {
+
+	bgColor = "#000000";
+	animateCircle();
+
 	if ($("body")) {
 		const e = document.querySelector(".cursor-inner"),
 			t = document.querySelector(".cursor-outer");
@@ -367,4 +397,8 @@ function returnHome(){
 
 	document.getElementById("outer-mouse").style.border = "2px solid #FFF";
 	document.getElementById("inner-mouse").style.backgroundColor = "#FFF";
+
+	buttonTouch = false;
+
+	}, 200);
 }
