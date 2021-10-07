@@ -8,6 +8,7 @@
 var currentScene = "intro";
 var newScene = "";
 
+var anyTransitionWorking = false;
 var buttonTouch = false;
 
 document.getElementById("c").style.pointerEvents = 'none';
@@ -325,7 +326,13 @@ document.getElementById("c").style.pointerEvents = 'none';
 })(jQuery);
 
 function goFullscreen(){
-	document.getElementById("top").requestFullscreen()
+	if (!document.fullscreenElement) {
+		document.documentElement.requestFullscreen();
+	} else {
+	  if (document.exitFullscreen) {
+		document.exitFullscreen();
+	  }
+	}
 }
 
 /*
@@ -345,21 +352,40 @@ function enableNewScene(myNewScene){
 }
 
 function goToNewScreen(myNewScene){
-	buttonTouch = true;
-	bgColor = "#00000000";
-	animateCircle();
-	
-	if ($("body")) {
-		const e = document.querySelector(".cursor-inner"),
-			t = document.querySelector(".cursor-outer");
-		$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-	}
 
-	document.getElementById("outer-mouse").style.border = "2px solid #000";
-	document.getElementById("inner-mouse").style.backgroundColor = "#000";
-	newScene = myNewScene;
-	document.getElementById(newScene).style.opacity = "100%";
-	console.log("LA NEW SCENE ES " + newScene);
+	if(myNewScene == "about") currentCircleColor = yellowColor;
+	if(myNewScene == "services") currentCircleColor = purpleColor;
+
+	document.getElementById("transition-color-screen").style.backgroundColor = currentCircleColor;
+
+	if(!circleTransitionWorking && !anyTransitionWorking){
+		anyTransitionWorking = true;
+		buttonTouch = true;
+		bgColor = "#00000000";
+		animateCircle();
+		
+		if ($("body")) {
+			const e = document.querySelector(".cursor-inner"),
+				t = document.querySelector(".cursor-outer");
+			$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+		}
+
+		newScene = myNewScene;
+		document.getElementById(newScene).style.opacity = "100%";
+
+		document.getElementById("outer-mouse").style.border = "2px solid #000";
+		document.getElementById("inner-mouse").style.backgroundColor = "#000";
+	}
+}
+
+function disableAllButtons(){
+	document.getElementById("goFullscreenButton").style.cursor = not-allowed;
+	document.getElementById("goAboutButton").style.cursor = not-allowed;
+}
+
+function enableAllButtons(){
+	document.getElementById("goFullscreenButton").disabled = false;
+	document.getElementById("goAboutButton").disabled = false;
 }
 
 function endSceneTransition(value){
@@ -370,35 +396,43 @@ function endSceneTransition(value){
 			endSceneTransition(value - 10)
 		}, 20);
 	}
-	else document.getElementById("transition-color-screen").style.display = "none"
+	else{
+		document.getElementById("transition-color-screen").style.display = "none"
+
+		setTimeout(function () {
+			document.getElementById("outer-mouse").style.border = "2px solid #FFF";
+			document.getElementById("inner-mouse").style.backgroundColor = "#FFF";
+			//enableAllButtons();
+		}, 500);
+	} 
 
 	console.log(value);
 }
 
 function returnHome(){
 
-	endSceneTransition(100);
+	if(!circleTransitionWorking){
 
-	setTimeout(function () {
+		endSceneTransition(100);
 
-	bgColor = "#000000";
-	animateCircle();
+		setTimeout(function () {
 
-	if ($("body")) {
-		const e = document.querySelector(".cursor-inner"),
-			t = document.querySelector(".cursor-outer");
-		$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+		bgColor = "#000000";
+		animateCircle();
+
+		if ($("body")) {
+			const e = document.querySelector(".cursor-inner"),
+				t = document.querySelector(".cursor-outer");
+			$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+		}
+
+		newScene = "intro";
+
+		console.log("RETURNEANDO A CASITA " + newScene + " DESDE " + currentScene);
+		document.getElementById(currentScene).style.display = "none";
+
+		buttonTouch = false;
+
+		}, 200);
 	}
-
-	newScene = "intro";
-
-	console.log("RETURNEANDO A CASITA " + newScene + " DESDE " + currentScene);
-	document.getElementById(currentScene).style.display = "none";
-
-	document.getElementById("outer-mouse").style.border = "2px solid #FFF";
-	document.getElementById("inner-mouse").style.backgroundColor = "#FFF";
-
-	buttonTouch = false;
-
-	}, 200);
 }

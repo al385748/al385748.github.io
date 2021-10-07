@@ -600,9 +600,9 @@
    ================================================== -->
 	<section id="services" class="services">
 
-		<div class="overlay"></div>
+		<div class="overlay" onclick="returnHome()"></div>
 
-		<div class="row section-intro">
+		<div class="row section-intro" onclick="returnHome()">
    		<div class="col-twelve">
 
    			<h5>Services</h5>
@@ -946,9 +946,13 @@
 
    <section id="intro">   
 
-	<div class="intro-overlay"></div>	
+	<!-- 
+	<div class="intro-overlay"></div>	 -->
+
 
 	<div id="intro-content" class="intro-content" onclick="animateNonButtonParticles()">
+		<a id="goFullscreenButton" class="button strokeFS smoothscroll" onclick="goFullscreen()">Go Fullscreen</a>
+
 		<div class="row">
 
 			<div class="col-twelve">
@@ -962,8 +966,8 @@
 				 <span>Journalist</span> 
 				</p>
 
-				<a class="button stroke smoothscroll" id="goFullscreenButton" onclick="goFullscreen()">Go Fullscreen</a>
-				<a class="button stroke smoothscroll" id="goAboutButton" onclick="goToNewScreen('about')">About me</a>
+				<a id="goAboutButton" class="button stroke smoothscroll" onclick="goToNewScreen('about')">About me</a>
+				<a id="goAboutButton" class="button stroke2 smoothscroll" onclick="goToNewScreen('services')">Services</a>
 
 			</div>  
 			

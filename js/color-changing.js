@@ -7,6 +7,11 @@ var animations = [];
 var circles = [];
 
 var isDrawing = false;
+var circleTransitionWorking = false;
+
+var purpleColor = "#a200ff";
+var yellowColor = "#ffd012";
+var currentCircleColor = yellowColor;
 
 var ga = 1;
 var timerId = 3;
@@ -53,9 +58,11 @@ function addClickListeners() {
 
 function handleEvent(e) {
 
+  if(!circleTransitionWorking){
   setTimeout(function () {
 
   if(buttonTouch){
+    circleTransitionWorking = true;
     if (e.touches) { 
       e.preventDefault();
       e = e.touches[0];
@@ -70,7 +77,7 @@ function handleEvent(e) {
         x: e.pageX,
         y: e.pageY,
         r: 0,
-        fill: nextColor
+        fill: currentCircleColor
       });
 
     if(currentScene == "intro"){
@@ -130,7 +137,7 @@ function handleEvent(e) {
       var particle = new Circle({
         x: e.pageX,
         y: e.pageY,
-        fill: nextColor,
+        fill: nonCurrentCircleColor(),
         r: anime.random(24, 48)
       })
       particles.push(particle);
@@ -152,6 +159,12 @@ function handleEvent(e) {
   
   }  
   }, 250);
+}
+}
+
+function nonCurrentCircleColor(){
+  if (currentCircleColor == yellowColor) return purpleColor;
+  return yellowColor;
 }
 
 function extend(a, b){
@@ -184,12 +197,16 @@ Circle.prototype.draw = function() {
 }
 
 function animateCircle(){
+
+  if(anyTransitionWorking && !circleTransitionWorking){
+
+    circleTransitionWorking = true;
   
   var animate = anime({
     duration: Infinity,
     update: function() {
       ctx.fillStyle = bgColor;
-      if(currentScene != "intro") ctx.fillRect(0, 0, cW, cH);
+      if(currentScene != "intro")ctx.fillRect(0, 0, cW, cH);
       animations.forEach(function(anim) {
         anim.animatables.forEach(function(animatable) {
           animatable.target.draw();
@@ -198,44 +215,55 @@ function animateCircle(){
     }
   });
 
+  }
+
 }
+
+var auxBorderValue = 2;
+var zoomIn = true;
+var borderZoomWorking = false;
 
 function animateNonButtonParticles(){
 
-  /*
+  if(!borderZoomWorking && !anyTransitionWorking){
+      recursiveNonButtonParticles();
+  }
+}
 
-  document.getElementById("cursor-outer-fake").style.display = 'fixed';
-  console.log("mostrando " + document.getElementById("cursor-outer-fake").style.display)
+function recursiveNonButtonParticles(){
 
-  document.getElementById("cursor-outer-fake").style.position.x = -100;
-  document.getElementById("outer-mouse-fake").style.position.y = -100;
+  if(!buttonTouch){
+    if (auxBorderValue < 5 && zoomIn){
+      borderZoomWorking = true;
+        setTimeout(function(){
+          auxBorderValue++;
+          document.getElementById("outer-mouse").style.border = auxBorderValue + "px solid #FFF";
 
-  anime({
-    targets: '.cursor-outer-fake',
-    translateX: currentMousePosX,
-    translateY: currentMousePosY/*,
-    easing: 'easeInOutExpo',
-    scale: 3,
-    direction: 'alternate'
-  });
+          recursiveNonButtonParticles();
+        }, 50);
 
-  var animate = anime({
-    duration: Infinity,
-    update: function() {
-      var first = true;
-
-      ctx.fillStyle = bgColor;
-      if(currentScene != "intro") ctx.fillRect(0, 0, cW, cH);
-      animations.forEach(function(anim) {
-        anim.animatables.forEach(function(animatable) {
-          if(!first) animatable.target.draw();
-          else first = false; 
-        });
-      });
     }
-  });
+    else {
+        if (auxBorderValue == 5) zoomIn = false;
+        if (auxBorderValue > 2){
 
-*/
+          setTimeout(function(){
+            document.getElementById("outer-mouse").style.border = --auxBorderValue + "px solid #FFF";
+
+            recursiveNonButtonParticles();
+          }, 50);
+      }
+
+      if(auxBorderValue <= 2 && !zoomIn){
+        //RESET
+        auxBorderValue = 2;
+        zoomIn = true;
+        borderZoomWorking = false;
+
+      }
+    }
+  }
+  if(buttonTouch)	document.getElementById("outer-mouse").style.border = "2px solid #000";
 }
 
 var resizeCanvas = function() {
@@ -298,17 +326,21 @@ function fadeOut()
     ctx.globalAlpha -= 0.01;
 
     if(currentScene == "intro") ctx.fillStyle = "#000000";
-    else ctx.fillStyle = "#ffd012";
+    else ctx.fillStyle = currentCircleColor;
 
     ctx.fillRect(0, 0, cW, cH);
 
     if (ctx.globalAlpha > 0.01)
     {       
       setTimeout(fadeOut, timerId)
+      return;
     }
     else{
       ctx.globalAlpha = 0;
       document.getElementById("c").style.pointerEvents = 'none';
       if(currentScene == "intro") buttonTouch = false;
+
+      anyTransitionWorking = false;
+      circleTransitionWorking = false;
     } 
 }
