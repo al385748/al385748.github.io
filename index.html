@@ -48,7 +48,12 @@
 
 <body id="top">
 
-	<div id="turn" class="turnPhone">Please rotate your device</div>
+	<div id="turn" class="turnPhone">
+		Pleaserotateyourphone
+		<img src="images/rotate.gif" class="blurredTurnPhoneGIF">
+		<img src="images/rotate.gif" class="turnPhoneGIF">
+	</div>
+
 	<div id="contents" class="noselect">
 	<div id="myWrapper" class="demoWrapper">
 
@@ -954,9 +959,12 @@
 	<div id="intro-content" class="intro-content" onmousedown="animateNonButtonParticles()">
 		<a id="goFullscreenButton" class="button strokeFS smoothscroll" onmousedown="goFullscreen()">Go Fullscreen</a>
 
-		<img id="goAboutPosterOutline" src="images/poster-outline.png" class="clickable-object" onmousedown="goToNewScreen('about')">
-		<img id="goAboutPoster" src="images/poster.png" class="clickable-object" onmousedown="goToNewScreen('about')">
-
+		<div class="poster-container">
+			<img id="goAboutPosterOutline" src="images/poster-outline.png" class="clickable-object-hover" onmousedown="goToNewScreen('about')">
+			<img id="goAboutPoster" src="images/poster.png" class="clickable-object" onmousedown="goToNewScreen('about')">
+			<p class="imgDescription">Poster</p>
+		</div>
+		
 		<h5>Welcome to my world.</h5>
 		<h1 class="custom-h1">CHARLIE SANCHEZ</h1>
 

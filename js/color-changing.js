@@ -9,7 +9,7 @@ var circles = [];
 var isDrawing = false;
 var circleTransitionWorking = false;
 
-var purpleColor = "#a200ff";
+var purpleColor = "#7d45bc";
 var yellowColor = "#ffd012";
 var currentCircleColor = yellowColor;
 
