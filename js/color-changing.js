@@ -8,9 +8,13 @@ var circles = [];
 
 var isDrawing = false;
 var circleTransitionWorking = false;
+var isSelectable = false;
 
 var purpleColor = "#7d45bc";
 var yellowColor = "#ffd012";
+var lightGrayColor = "#ebebeb";
+var darkGrayColor = "#2b2b2b";
+
 var currentCircleColor = yellowColor;
 
 var ga = 1;
@@ -58,112 +62,119 @@ function addClickListeners() {
 
 function handleEvent(e) {
 
-  if(!circleTransitionWorking){
-  setTimeout(function () {
+    if(!circleTransitionWorking && !isSelectable){
+    setTimeout(function () {
 
-  if(buttonTouch){
-    circleTransitionWorking = true;
-    if (e.touches) { 
-      e.preventDefault();
-      e = e.touches[0];
-    }
-    
-    var targetR = calcPageFillRadius(e.pageX, e.pageY);
-    var rippleSize = Math.min(200, (cW * .4));
-    var minCoverDuration = 750;
-    isDrawing = true;
-
-      var pageFill = new Circle({
-        x: e.pageX,
-        y: e.pageY,
-        r: 0,
-        fill: currentCircleColor
-      });
-
-    if(currentScene == "intro"){
-
-      var fillAnimation = anime({
-        targets: pageFill,
-        r: targetR,
-        duration:  Math.max(targetR / 2 , minCoverDuration ),
-        easing: "easeOutQuart",
-        complete: function(){
-          bgColor = pageFill.fill;
-          removeAnimation(fillAnimation);
-          isDrawing = false;
+      if(buttonTouch){
+        console.log("BUTTON TOUCHED")
+        circleTransitionWorking = true;
+        if (e.touches) { 
+          e.preventDefault();
+          e = e.touches[0];
         }
-      });
-    }
+        
+        var targetR = calcPageFillRadius(e.pageX, e.pageY);
+        var rippleSize = Math.min(200, (cW * .4));
+        var minCoverDuration = 750;
+        isDrawing = true;
 
-    else{
+          var pageFill = new Circle({
+            x: e.pageX,
+            y: e.pageY,
+            r: 0,
+            fill: currentCircleColor
+          });
 
-      var fillAnimation = anime({
-        targets: pageFill,
-        r: targetR,
-        duration:  Math.max(targetR / 2 , minCoverDuration ),
-        direction: "reverse",
-        easing: "easeOutQuart",
-        complete: function(){
-          bgColor = pageFill.fill;
-          removeAnimation(fillAnimation);
-          isDrawing = false;
+        if(currentScene == "intro"){
 
+          var fillAnimation = anime({
+            targets: pageFill,
+            r: targetR,
+            duration:  Math.max(targetR / 2 , minCoverDuration ),
+            easing: "easeOutQuart",
+            complete: function(){
+              bgColor = pageFill.fill;
+              removeAnimation(fillAnimation);
+              isDrawing = false;
+            }
+          });
         }
-      });
-    }
-    
-    var ripple = new Circle({
-      x: e.pageX,
-      y: e.pageY,
-      r: 0,
-      fill: currentColor,
-      stroke: {
-        width: 3,
-        color: currentColor
-      },
-      opacity: 1
-    });
-    var rippleAnimation = anime({
-      targets: ripple,
-      r: rippleSize,
-      opacity: 0,
-      easing: "easeOutExpo",
-      duration: 900,
-      complete: removeAnimation
-    });
-    
-    var particles = [];
-    for (var i=0; i<32; i++) {
-      var particle = new Circle({
-        x: e.pageX,
-        y: e.pageY,
-        fill: nonCurrentCircleColor(),
-        r: anime.random(24, 48)
-      })
-      particles.push(particle);
-    }
-    var particlesAnimation = anime({
-      targets: particles,
-      x: function(particle){
-        return particle.x + anime.random(rippleSize, -rippleSize);
-      },
-      y: function(particle){
-        return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
-      },
-      r: 0,
-      easing: "easeOutExpo",
-      duration: anime.random(1000,1300),
-      complete: removeAnimation
-    });
-    animations.push(fillAnimation, rippleAnimation, particlesAnimation);
-  
-  }  
-  }, 250);
+
+        else{
+
+          var fillAnimation = anime({
+            targets: pageFill,
+            r: targetR,
+            duration:  Math.max(targetR / 2 , minCoverDuration ),
+            direction: "reverse",
+            easing: "easeOutQuart",
+            complete: function(){
+              bgColor = pageFill.fill;
+              removeAnimation(fillAnimation);
+              isDrawing = false;
+
+            }
+          });
+        }
+        
+        var ripple = new Circle({
+          x: e.pageX,
+          y: e.pageY,
+          r: 0,
+          fill: currentColor,
+          stroke: {
+            width: 3,
+            color: currentColor
+          },
+          opacity: 1
+        });
+        var rippleAnimation = anime({
+          targets: ripple,
+          r: rippleSize,
+          opacity: 0,
+          easing: "easeOutExpo",
+          duration: 900,
+          complete: removeAnimation
+        });
+        
+        var particles = [];
+        for (var i=0; i<32; i++) {
+          var particle = new Circle({
+            x: e.pageX,
+            y: e.pageY,
+            fill: nonCurrentCircleColor(),//[purpleColor,yellowColor][randomIntFromInterval(1,2)],
+            r: anime.random(24, 48)
+          })
+          particles.push(particle);
+        }
+        var particlesAnimation = anime({
+          targets: particles,
+          x: function(particle){
+            return particle.x + anime.random(rippleSize, -rippleSize);
+          },
+          y: function(particle){
+            return particle.y + anime.random(rippleSize * 1.15, -rippleSize * 1.15);
+          },
+          r: 0,
+          easing: "easeOutExpo",
+          duration: anime.random(1000,1300),
+          complete: removeAnimation
+        });
+        animations.push(fillAnimation, rippleAnimation, particlesAnimation);
+      
+      }  
+    }, 250);
+  }
 }
+
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 function nonCurrentCircleColor(){
-  if (currentCircleColor == yellowColor) return purpleColor;
+  if (currentCircleColor == yellowColor) return darkGrayColor;
+  if (currentCircleColor == lightGrayColor) return darkGrayColor;
+  if (currentCircleColor == purpleColor) return lightGrayColor;
   return yellowColor;
 }
 
@@ -344,3 +355,14 @@ function fadeOut()
       circleTransitionWorking = false;
     } 
 }
+
+function clickOnSelectableObject(){
+  isSelectable = true;
+  console.log("es selectable");
+
+  setTimeout(function(){
+    isSelectable = false;
+    console.log("uy ya no")
+  }, 500);
+}
+

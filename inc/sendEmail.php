@@ -1,8 +1,6 @@
 ﻿<?php
 
-// Replace this with your own email address
-$siteOwnersEmail = 'user@website.com';
-
+$siteOwnersEmail = 'carlos.sanchez@hyperhype.es';
 
 if($_POST) {
 
@@ -24,12 +22,12 @@ if($_POST) {
 		$error['message'] = "Please enter your message. It should have at least 15 characters.";
 	}
    // Subject
-	if ($subject == '') { $subject = "Contact Form Submission"; }
+	if ($subject == '') { $subject = "Contact Form"; }
 
 
    // Set Message
    $message .= "Email from: " . $name . "<br />";
-	$message .= "Email address: " . $email . "<br />";
+   $message .= "Email address: " . $email . "<br />";
    $message .= "Message: <br />";
    $message .= $contact_message;
    $message .= "<br /> ----- <br /> This email was sent from your site's contact form. <br />";
@@ -49,7 +47,7 @@ if($_POST) {
       ini_set("sendmail_from", $siteOwnersEmail); // for windows server
       $mail = mail($siteOwnersEmail, $subject, $message, $headers);
 
-		if ($mail) { echo "OK"; }
+	  if ($mail) { echo "Your email has been sent correctly :)"; }
       else { echo "Something went wrong. Please try again."; }
 		
 	} # end if - no validation error

@@ -273,7 +273,7 @@ document.getElementById("c").style.pointerEvents = 'none';
 		      success: function(msg) {
 
 	            // Message was sent
-	            if (msg == 'OK') {
+	            if (msg == 'Your email has been sent correctly :)') {
 	            	sLoader.fadeOut(); 
 	               $('#message-warning').hide();
 	               $('#contactForm').fadeOut();
@@ -359,6 +359,7 @@ function goToNewScreen(myNewScene){
 
 	if(myNewScene == "about") currentCircleColor = yellowColor;
 	if(myNewScene == "services") currentCircleColor = purpleColor;
+	if(myNewScene == "contact") currentCircleColor = lightGrayColor;
 
 	document.getElementById("transition-color-screen").style.backgroundColor = currentCircleColor;
 
@@ -417,7 +418,7 @@ function endSceneTransition(value){
 
 function returnHome(){
 
-	if(!circleTransitionWorking){
+	if(!circleTransitionWorking && !isSelectable){
 
 	setTimeout(function () {
 

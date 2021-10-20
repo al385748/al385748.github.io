@@ -7,7 +7,7 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-	<title>CHARLIE SÁNCHEZ - Game Designer | Filmmaker | Journalist</title>
+	<title>CHARLIE SÁNCHEZ - Game Designer | Communicator</title>
 	<meta name="description" content="">  
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
@@ -37,12 +37,15 @@
 	@media only screen and (orientation: landscape) {
 		#contents { display: block; cursor: none !important}
 		#turn { display: none; }
+		#zoomedin { display: none; }
 	}
 
 	@media only screen and (orientation: portrait) {
 		#contents { display: none; cursor: none !important}
 		#turn { display: block; }
+		#zoomedin { display: none; }
 	}
+
 	</style>
 </head>
 
@@ -52,6 +55,10 @@
 		Pleaserotateyourphone
 		<img src="images/rotate.gif" class="blurredTurnPhoneGIF">
 		<img src="images/rotate.gif" class="turnPhoneGIF">
+	</div>
+
+	<div id="zoomedin" class="turnPhone">
+		Pleasezoomout
 	</div>
 
 	<div id="contents" class="noselect">
@@ -189,26 +196,27 @@
 
    <!-- resume Section
    ================================================== -->
-	<section id="resume" class="grey-section">
+	<section id="resume" class="grey-section" onmousedown="returnHome()">
 
-		<div class="row section-intro">
+	<div class="row section-intro">
    		<div class="col-twelve">
 
    			<h5>Resume</h5>
-   			<h1>More of my credentials.</h1>
+   			<h1>More of my education.</h1>
 
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum.</p>
 
    		</div>   		
    	</div> <!-- /section-intro--> 
 
    	<div class="row resume-timeline">
 
+		<!--
    		<div class="col-twelve resume-header">
 
    			<h2>Work Experience</h2>
 
-   		</div> <!-- /resume-header -->
+   		</div>  /resume-header -->
 
    		<div class="col-twelve">
 
@@ -221,14 +229,15 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>UI Designer</h3>
-	   					<p>July 2015 - Present</p>
+						<h3>Video Game Design and Development Degree</h3>
+						<p>September 2018 - July 2022</p>
+						<p>Castellón de la Plana, Spain</p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>Awesome Studio</h4>
+	   					<h4>Universitat Jaume I</h4>
 	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
-	   				</div>
+					</div>
 
 	   			</div> <!-- /timeline-block -->
 
@@ -239,16 +248,17 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Front-end Developer</h3>
-	   					<p>July 2014 - June 2015</p>
-	   				</div>
+	   					<h3>Bachelor Degree</h3>
+	   					<p>September 2015 - July 2017</p>
+						<p>Granada, Spain</p>
+					</div>
 
 	   				<div class="timeline-content">
-	   					<h4>Super Cool Agency</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+	   					<h4>I.E.S. Padre Manjon</h4>
+	   					<p>First-class honors in the subjects of drawing, psychology, language arts, and philosophy. Member of the robotics and theater clubs.</p>
 	   				</div>
 
-	   			</div> <!-- /timeline-block -->
+	   			</div> <!-- /timeline-block 
 
 	   			<div class="timeline-block">
 
@@ -266,7 +276,7 @@
 	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
 	   				</div>
 
-	   			</div> <!-- /timeline-block -->
+	   			</div> /timeline-block -->
 
    			</div> <!-- /timeline-wrap -->   			
 
@@ -274,13 +284,15 @@
    		
    	</div> <!-- /resume-timeline -->
    	
+	<!-- 
+
    	<div class="row resume-timeline">
 
    		<div class="col-twelve resume-header">
 
    			<h2>Education</h2>
 
-   		</div> <!-- /resume-header -->
+   		</div> 
 
    		<div class="col-twelve">
 
@@ -293,8 +305,8 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Master Degree</h3>
-	   					<p>July 2015 - Present</p>
+	   					<h3>Video Game Design and Development Degree</h3>
+	   					<p>September 2018 - July 2022</p>
 	   				</div>
 
 	   				<div class="timeline-content">
@@ -302,7 +314,7 @@
 	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
 	   				</div>
 
-	   			</div> <!-- /timeline-block -->
+	   			</div> <!- /timeline-block ->
 
 	   			<div class="timeline-block">
 
@@ -320,7 +332,7 @@
 	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
 	   				</div>
 
-	   			</div> <!-- /timeline-block -->
+	   			</div> <!- /timeline-block ->
 
 	   			<div class="timeline-block">
 
@@ -338,14 +350,16 @@
 	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
 	   				</div>
 
-	   			</div> <!-- /timeline-block -->
+	   			</div> <!- /timeline-block ->
 
-   			</div> <!-- /timeline-wrap -->   			
+   			</div> <!- /timeline-wrap ->   			
 
-   		</div> <!-- /col-twelve -->
+   		</div> <!- /col-twelve ->
    		
-   	</div> <!-- /resume-timeline -->
-		
+   	</div> <!- /resume-timeline ->
+
+	-->
+
 	</section> <!-- /features -->
 
 
@@ -353,7 +367,7 @@
    ================================================== -->
 	<section id="portfolio" class="portfolio">
 
-		<div class="row section-intro">
+	<div class="row section-intro">
    		<div class="col-twelve">
 
    			<h5>Portfolio</h5>
@@ -435,7 +449,7 @@
 	               </div>
 	        		</div> <!-- /folio-item -->     
 
-	        		<div class="bgrid folio-item">
+	        	<div class="bgrid folio-item">
 	               <div class="item-wrap">
 	               	<img src="images/portfolio/lighthouse.jpg" alt="Lighthouse">
 	                  <a href="#modal-05" class="overlay">             		                  
@@ -449,7 +463,7 @@
 	                     </div>                    
 	                  </a>
 	               </div>
-	        		</div> <!-- /folio-item -->
+	        	</div> <!-- /folio-item -->
 
 	            <div class="bgrid folio-item">
 	               <div class="item-wrap">
@@ -465,7 +479,7 @@
 	                     </div>                    
 	                  </a>
 	               </div>
-	        		</div> <!-- /folio-item -->   
+	        	</div> <!-- /folio-item -->   
 
 	            <!-- modal popups - begin
 	            ============================================================= -->
@@ -623,15 +637,15 @@
 
    		<div id="owl-slider" class="owl-carousel services-list">
 
-	      	<div class="service">	
+	      		<div class="service">	
 
-	      		<span class="icon"><i class="icon-earth"></i></span>            
+	      		<span class="icon"><i class="icon-calendar"></i></span>            
 
 	            <div class="service-content">	
 
-	            	 <h3>Webdesign</h3>
+	            	 <h3>Production & team management</h3>
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 	         		</p>
 	         		
 	         	</div> 	         	 
@@ -640,13 +654,13 @@
 
 				<div class="service">	
 
-					<span class="icon"><i class="icon-window"></i></span>                          
+					<span class="icon"><i class="icon-terminal"></i></span>                          
 
 	            <div class="service-content">	
 
-	            	<h3>Web Development</h3>  
+	            	<h3>Front-end / Object Oriented Coding</h3>  
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 	         		</p>
 
 	            </div>	                          
@@ -655,13 +669,13 @@
 
 			   <div class="service">
 
-			   	<span class="icon"><i class="icon-paint-brush"></i></span>		            
+			   	<span class="icon"><i class="icon-edit"></i></span>		            
 
 	            <div class="service-content">
 
-	            	<h3>Branding</h3>
+	            	<h3>Narrative design & writing</h3>
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 	        			</p> 
 
 	            </div> 	            	               
@@ -674,9 +688,9 @@
 
 	            <div class="service-content">
 
-	            	<h3>UI/UX Design</h3>
+	            	<h3>Branding & Graphic / UX UI Design</h3>
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 	         		</p> 
 	         		
 	            </div>                
@@ -685,13 +699,13 @@
 
 			   <div class="service">
 
-			   	<span class="icon"><i class="icon-image"></i></span>	            
+			   	<span class="icon"><i class="icon-camera"></i></span>	            
 
 	            <div class="service-content">
 
-	            	<h3>Graphics Design</h3>
+	            	<h3>Creative direction & Cinematic design</h3>
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 	        			</p> 
 
 	            </div>	               
@@ -704,9 +718,9 @@
 
 	            <div class="service-content">
 
-	            	 <h3>Consultancy</h3>
+	            	 <h3>Communication & video editing</h3>
 
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 	        			</p> 
 	        			
 	            </div>	               
@@ -835,7 +849,7 @@
 	
    <!-- contact
    ================================================== -->
-	<section id="contact" class="contact">
+	<section id="contact" class="contact" onmousedown="returnHome()">
 
 		<div class="row section-intro">
    		<div class="col-twelve">
@@ -843,14 +857,14 @@
    			<h5>Contact</h5>
    			<h1>I'd Love To Hear From You.</h1>
 
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum.</p>
 
    		</div> 
    	</div> <!-- /section-intro -->
 
    	<div class="row contact-form">
 
-   		<div class="col-twelve">
+   		<div class="col-twelve" onmousedown="clickOnSelectableObject()">
 
             <!-- form -->
             <form name="contactForm" id="contactForm" method="post" action="">
@@ -866,7 +880,7 @@
 	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
 	               </div>                       
                   <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+	                 	<textarea name="contactMessage" id="contactMessage" placeholder="Message" rows="10" cols="50" required=""></textarea>
 	               </div>                      
                  <div class="form-field">
                      <button class="submitform">Submit</button>
@@ -894,55 +908,6 @@
          </div> <!-- /col-twelve -->
    		
    	</div> <!-- /contact-form -->
-
-   	<div class="row contact-info">
-
-   		<div class="col-four tab-full">
-
-   			<div class="icon">
-   				<i class="icon-pin"></i>
-   			</div>
-
-   			<h5>Where to find me</h5>
-
-   			<p>
-            1600 Amphitheatre Parkway<br>
-            Mountain View, CA<br>
-            94043 US
-            </p>
-
-   		</div>
-
-   		<div class="col-four tab-full collapse">
-
-   			<div class="icon">
-   				<i class="icon-mail"></i>
-   			</div>
-
-   			<h5>Email Me At</h5>
-
-   			<p>someone@kardswebsite.com<br>
-			   	info@kardswebsite.com			     
-			   </p>
-
-   		</div>
-
-   		<div class="col-four tab-full">
-
-   			<div class="icon">
-   				<i class="icon-phone"></i>
-   			</div>
-
-   			<h5>Call Me At</h5>
-
-   			<p>Phone: (+63) 555 1212<br>
-			   	Mobile: (+63) 555 0100<br>
-			     	Fax: (+63) 555 0101
-			   </p>
-
-   		</div>
-   		
-   	</div> <!-- /contact-info -->
 		
 	</section> <!-- /contact -->
 
@@ -965,7 +930,7 @@
 			<p class="imgDescription">Poster</p>
 		</div>
 		
-		<h5>Welcome to my world.</h5>
+		<!-- <h5>Welcome to my world.</h5> -->
 		<h1 class="custom-h1">CHARLIE SANCHEZ</h1>
 
 		<p class="intro-position">
@@ -975,6 +940,10 @@
 
 		<a id="goAboutButton" class="button stroke smoothscroll" onmousedown="goToNewScreen('about')">About me</a>
 		<a id="goAboutButton" class="button stroke2 smoothscroll" onmousedown="goToNewScreen('services')">Services</a>		
+		<a id="goAboutButton" class="button stroke smoothscroll" onmousedown="goToNewScreen('contact')">Contact</a>		
+		<a id="goAboutButton" class="button stroke2 smoothscroll" onmousedown="goToNewScreen('stats')">Stats</a>		
+		<a id="goAboutButton" class="button stroke2 smoothscroll" onmousedown="goToNewScreen('portfolio')">Portfolio</a>		
+		<a id="goAboutButton" class="button stroke2 smoothscroll" onmousedown="goToNewScreen('resume')">Resume</a>		
 
 	</div> <!-- /intro-content --> 
 
