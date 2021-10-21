@@ -938,15 +938,17 @@
 						<input type="submit" value="Submit">
 					  </form>
 
-					  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-					
 					  <script type="text/javascript">var submitted=false;</script>
+
 					  <script>
 					  	$('#gform').on('submit', function(e) {
 							$('#gform *').fadeOut(2000);
 							$('#gform').prepend('Your submission has been processed...');
 						});
 					  </script>
+
+					<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
 					  <!--
                   <div class="form-field">
  						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">

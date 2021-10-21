@@ -7,7 +7,6 @@
 
 var currentScene = "intro";
 var newScene = "";
-var submitted = false;
 
 var anyTransitionWorking = false;
 var buttonTouch = false;
