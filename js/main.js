@@ -255,7 +255,7 @@ document.getElementById("c").style.pointerEvents = 'none';
 	/* local validation */
 	$('#contactForm').validate({
 
-		/* submit via ajax */
+		/* submit via ajax 
 		submitHandler: function(form) {
 
 			var sLoader = $('#submit-loader');
@@ -294,10 +294,10 @@ document.getElementById("c").style.pointerEvents = 'none';
 		         $('#message-warning').fadeIn();
 
 		      }
-
+			  
 	      });     		
   		}
-
+		*/
 	});
 
 
