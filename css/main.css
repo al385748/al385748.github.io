@@ -1705,11 +1705,22 @@ header .logo a {
 
 #resume .resume-timeline {
 	max-width: 980px;
+	margin-left: 10%;
 }
+
+.force-2-grid{
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+}
+
 #resume .timeline-wrap {
 	position: relative;
-	margin-top: 1.5rem;
-	margin-bottom: 6rem;
+	margin-top: 0vh;
+	margin-bottom: 0vh;
 }
 #resume .timeline-wrap::before {
 	content: "";
@@ -1773,7 +1784,7 @@ header .logo a {
 #resume .timeline-content p {
 	margin-top: -4vh !important;
 	font-family: "poppins-regular", sans-serif;
-	font-size: 2.1vh;
+	font-size: 1.9vh;
 }
 
 #resume .timeline-content h4::after {
@@ -2450,9 +2461,14 @@ header .logo a {
 	border-image-slice: 1;
 	border-image-source: linear-gradient(-45deg, rgba(255,208,18,1) 20%, rgba(125,69,188,1) 70%);
 	color: #2b2b2b;
-
-
 }
+
+#contact input[type="text"]::placeholder,
+#contact input[type="password"]::placeholder,
+#contact input[type="email"]::placeholder{
+	color: #777777;
+}
+
 #contact textarea {
 	min-height: 16vh;
 	padding: 2% 2%;
@@ -2462,6 +2478,11 @@ header .logo a {
 	-o-transition: border-image-source .3s ease-out;
 	transition: border-image-source .3s ease-out;
 }
+
+#contact textarea::placeholder{
+	color: #777777;
+}
+
 #contact textarea:focus {
 	border-image-slice: 1;
 	border-image-source: linear-gradient(-45deg, rgba(255,208,18,1) 20%, rgba(125,69,188,1) 70%);
@@ -2928,6 +2949,15 @@ footer .copyright span:last-child::after {
 	z-index: 95 !important;
   }
 
+  .services h1 {
+	font-family: "chapaza";
+	margin-top: 2vh;
+  }
+
+  .services p {
+	font-family: "poppins-regular", serif;
+  }
+
   .count-up {
 	display: none;
     position: fixed !important;
@@ -3057,11 +3087,15 @@ footer .copyright span:last-child::after {
 	font-size: 2vmin !important;
 	line-height: 100%;
 	font-family: akira, sans-serif;
-	text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.4vh 0.4vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
+	text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.6vh 0.6vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 	color: #fff;
 	opacity: 0;
 
 	/* transition effect. not necessary */
+	-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
+	-o-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
+	-webkit-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
+	-ms-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
 	transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
 }
 
@@ -3090,6 +3124,91 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 }
 
+#resume .section-intro h5 {
+	font-size: 2vh;
+	background: linear-gradient(-45deg, rgb(223, 181, 15) 40%, rgba(125,69,188,1) 60%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	color: linear-gradient(-45deg, rgba(255,208,18,1) 0%, rgba(125,69,188,1) 100%);
+}
+
+#resume h1 {
+	font-family: "chapaza";
+	margin-top: 2vh;
+}
+
+#resume p {
+	font-family: "poppins-regular";
+	margin-top: 2vh;
+	font-size: 2.5vh;
+}
+
 .poster-container{
 	margin: 0 auto;
+}
+
+.resume-stats {
+	width: 16.66667%;
+	display: block;
+	position: fixed;
+	left: auto;
+	right: 10%;
+	bottom: 6%;
+
+	text-align: center !important;
+	align-items: center !important;
+}
+
+.resume-stats .stat-big {
+	line-height: 4vh;
+	font-size: 4vh;
+	background: linear-gradient(-45deg, rgb(223, 181, 15) 20%, rgba(125,69,188,1) 80%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	color: linear-gradient(-45deg, rgba(255,208,18,1) 0%, rgba(125,69,188,1) 100%);
+}
+
+.resume-stats .stat-title {
+	max-width: 40vh !important;
+	min-width: 28vh !important;
+	width: 50%;
+	margin: 0 auto;
+	padding-bottom: 5vh;
+	margin-top: -2vh !important;
+	line-height: 2.8vh;
+	color: #2b2b2b;
+}
+
+
+.resume-stats h3 {
+	font-family: "poppins-bold";
+	font-size: 4vh;
+}
+
+
+#about .section-intro h5 {
+	font-size: 2vh;
+	color: #2b2b2b;
+}
+
+#about h1 {
+	font-family: "chapaza";
+	margin-top: 2vh;
+	color: #2b2b2b;
+}
+
+#about h3 {
+	font-family: akira;
+	font-size: 1.8vh;
+	color: #2b2b2b;
+	margin-bottom: -0.5	vh;
+}
+
+#about p {
+	font-family: "poppins-regular";
+	margin-top: 2vh;
+	font-size: 2vh;
+	color: #2b2b2b;
 }

@@ -1,6 +1,7 @@
 ﻿<?php
 
 $siteOwnersEmail = 'carlos.sanchez@hyperhype.es';
+$myGoogleForm = "https://docs.google.com/forms/d/e/1FAIpQLScqCJrFMwfRa0VgCH7PZtiu0GKtzVl8dFjDkbnaTAqAf7uoiQ/viewform?usp=pp_url&entry.1884265043=myName&entry.1448977556=myEmail&entry.513669972=myMessage"
 
 if($_POST) {
 

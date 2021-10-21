@@ -360,6 +360,9 @@ function goToNewScreen(myNewScene){
 	if(myNewScene == "about") currentCircleColor = yellowColor;
 	if(myNewScene == "services") currentCircleColor = purpleColor;
 	if(myNewScene == "contact") currentCircleColor = lightGrayColor;
+	if(myNewScene == "stats") currentCircleColor = lightGrayColor;
+	if(myNewScene == "portfolio") currentCircleColor = yellowColor;
+	if(myNewScene == "resume") currentCircleColor = lightGrayColor;
 
 	document.getElementById("transition-color-screen").style.backgroundColor = currentCircleColor;
 

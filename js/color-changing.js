@@ -15,7 +15,7 @@ var yellowColor = "#ffd012";
 var lightGrayColor = "#ebebeb";
 var darkGrayColor = "#2b2b2b";
 
-var currentCircleColor = yellowColor;
+var currentCircleColor = [darkGrayColor, darkGrayColor];
 
 var ga = 1;
 var timerId = 3;
@@ -136,13 +136,14 @@ function handleEvent(e) {
           duration: 900,
           complete: removeAnimation
         });
+
         
         var particles = [];
         for (var i=0; i<32; i++) {
           var particle = new Circle({
             x: e.pageX,
             y: e.pageY,
-            fill: nonCurrentCircleColor(),//[purpleColor,yellowColor][randomIntFromInterval(1,2)],
+            fill: nonCurrentCircleColor()[randomIntFromInterval(0,1)],
             r: anime.random(24, 48)
           })
           particles.push(particle);
@@ -172,10 +173,10 @@ function randomIntFromInterval(min, max) { // min and max included
 }
 
 function nonCurrentCircleColor(){
-  if (currentCircleColor == yellowColor) return darkGrayColor;
-  if (currentCircleColor == lightGrayColor) return darkGrayColor;
-  if (currentCircleColor == purpleColor) return lightGrayColor;
-  return yellowColor;
+  if (currentCircleColor == yellowColor) return [darkGrayColor, darkGrayColor];
+  if (currentCircleColor == lightGrayColor) return [purpleColor, yellowColor];
+  if (currentCircleColor == purpleColor) return [lightGrayColor, lightGrayColor];
+  else return [yellowColor, yellowColor];
 }
 
 function extend(a, b){
