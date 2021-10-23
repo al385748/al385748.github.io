@@ -367,3 +367,11 @@ function clickOnSelectableObject(){
   }, 500);
 }
 
+function secondClickOnGrid(){
+      isSelectable = false;
+      console.log("ESTAMOS FUERA DE GRID")
+}
+
+function makeSelectable(){
+  isSelectable = true;
+}

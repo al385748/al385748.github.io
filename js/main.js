@@ -160,14 +160,16 @@ document.getElementById("c").style.pointerEvents = 'none';
       fixedContentPos: false,
       removalDelay: 300,
       showCloseBtn: false,
-      mainClass: 'mfp-fade'
-
+      mainClass: 'mfp-fade',
+	  closeOnBgClick: false,
+	  enableEscapeKey: false
    });
 
    $(document).on('click', '.popup-modal-dismiss', function (e) {
-   	e.preventDefault();
-   	$.magnificPopup.close();
-   });
+   		e.preventDefault();
+		secondClickOnGrid();
+   		$.magnificPopup.close();
+	});
 
 	
 	/*-----------------------------------------------------*/
@@ -182,7 +184,6 @@ document.getElementById("c").style.pointerEvents = 'none';
 		e.preventDefault();
 		toggleButton.toggleClass('is-clicked');
 		nav.slideToggle();
-
 	});
 
    // nav items
@@ -361,7 +362,11 @@ function goToNewScreen(myNewScene){
 	if(myNewScene == "services") currentCircleColor = purpleColor;
 	if(myNewScene == "contact") currentCircleColor = lightGrayColor;
 	if(myNewScene == "stats") currentCircleColor = lightGrayColor;
-	if(myNewScene == "portfolio") currentCircleColor = yellowColor;
+	if(myNewScene == "portfolio-unity") currentCircleColor = purpleColor;
+	if(myNewScene == "portfolio-unreal") currentCircleColor = purpleColor;
+	if(myNewScene == "portfolio-extra") currentCircleColor = purpleColor;
+	if(myNewScene == "portfolio-filmmaking") currentCircleColor = yellowColor;
+	if(myNewScene == "portfolio-journalism") currentCircleColor = yellowColor;
 	if(myNewScene == "resume") currentCircleColor = lightGrayColor;
 
 	document.getElementById("transition-color-screen").style.backgroundColor = currentCircleColor;
