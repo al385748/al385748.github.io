@@ -358,8 +358,8 @@ function goToNewScreen(myNewScene){
 
 	setTimeout(function () {
 
-	if(myNewScene == "about") currentCircleColor = yellowColor;
-	if(myNewScene == "services") currentCircleColor = purpleColor;
+	if(myNewScene == "about") currentCircleColor = lightGrayColor;
+	if(myNewScene == "services") currentCircleColor = lightGrayColor;
 	if(myNewScene == "contact") currentCircleColor = lightGrayColor;
 	if(myNewScene == "stats") currentCircleColor = lightGrayColor;
 	if(myNewScene == "portfolio-unity") currentCircleColor = purpleColor;
@@ -386,8 +386,7 @@ function goToNewScreen(myNewScene){
 		newScene = myNewScene;
 		document.getElementById(newScene).style.opacity = "100%";
 
-		document.getElementById("outer-mouse").style.border = "2px solid #000";
-		document.getElementById("inner-mouse").style.backgroundColor = "#000";
+		blackMouse();
 	}
 
 	}, 100);
@@ -415,8 +414,7 @@ function endSceneTransition(value){
 		document.getElementById("transition-color-screen").style.display = "none"
 
 		setTimeout(function () {
-			document.getElementById("outer-mouse").style.border = "2px solid #FFF";
-			document.getElementById("inner-mouse").style.backgroundColor = "#FFF";
+			whiteMouse();
 			//enableAllButtons();
 		}, 500);
 	} 
@@ -453,4 +451,14 @@ function returnHome(){
 		}, 200);
 	}, 100);
 }
+}
+
+function whiteMouse(){
+	document.getElementById("outer-mouse").style.border = "2px solid #FFF";
+	document.getElementById("inner-mouse").style.backgroundColor = "#FFF";
+}
+
+function blackMouse(){
+	document.getElementById("outer-mouse").style.border = "2px solid #000";
+	document.getElementById("inner-mouse").style.backgroundColor = "#000";
 }
