@@ -359,6 +359,7 @@ function goToNewScreen(myNewScene){
 	setTimeout(function () {
 
 	if(myNewScene == "about") currentCircleColor = lightGrayColor;
+	if(myNewScene == "skills") currentCircleColor = lightGrayColor;
 	if(myNewScene == "services") currentCircleColor = lightGrayColor;
 	if(myNewScene == "contact") currentCircleColor = lightGrayColor;
 	if(myNewScene == "stats") currentCircleColor = lightGrayColor;
