@@ -154,7 +154,7 @@ p img {
 }
 p.lead {
 	font-family: "lora-regular", serif;
-	font-size: 115%;
+	font-size: 2vh;
 	line-height: 150%;
 	color: #888888;
 }
@@ -1111,10 +1111,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 .section-intro h1 {
 	font-family: "poppins-semibold", serif;
-	font-size: 3.6rem;
+	font-size: 4.5vh;
 	color: #313131;
 	line-height: 1.25;
-	margin-bottom: 1.2rem;
+	margin-bottom: 1.2vh;
 }
 .section-intro h5 {
 	color: #ffee00;
@@ -3028,7 +3028,7 @@ header .logo a {
 }
 
 #services .section-intro {
-	margin-bottom: 1.8rem;
+	margin-bottom: 1.8vh;
 }
 
 #services .section-intro h1 {
@@ -3146,9 +3146,9 @@ header .logo a {
 .owl-theme .owl-controls .owl-page.active span {
 	background: linear-gradient(-45deg, rgba(255,208,18,1) 20%, rgba(125,69,188,1) 80%);
 
-	width: 2.5vh;
-	height: 2.5vh;
-	margin: 0vh 1.6vh -0.5vh .8vh !important;
+	width: 2vh;
+	height: 2vh;
+	margin: 0vh 1.6vh -0.2vh .8vh !important;
 
 }
 
@@ -3848,9 +3848,10 @@ footer .copyright span:last-child::after {
 
   .portfolio-unity h1 {
 	font-family: "chapaza";
+	font-size: 4.5vh;
 	margin-top: 2vh;
 	color: #ebebeb;
-  }
+}
 
   .portfolio-unity h5 {
 	color: #ebebeb;
@@ -3873,6 +3874,7 @@ footer .copyright span:last-child::after {
 
   .portfolio-unreal h1 {
 	font-family: "chapaza";
+	font-size: 4.5vh;
 	margin-top: 2vh;
 	color: #ebebeb;
   }
@@ -3898,6 +3900,7 @@ footer .copyright span:last-child::after {
 
   .portfolio-extra h1 {
 	font-family: "chapaza";
+	font-size: 4.5vh;
 	margin-top: 2vh;
 	color: #ebebeb;
   }
@@ -3923,6 +3926,7 @@ footer .copyright span:last-child::after {
 
   .portfolio-filmmaking h1 {
 	font-family: "chapaza";
+	font-size: 4.5vh;
 	margin-top: 2vh;
   }
 
@@ -3947,6 +3951,7 @@ footer .copyright span:last-child::after {
 
   .portfolio-journalism h1 {
 	font-family: "chapaza";
+	font-size: 4.5vh;
 	margin-top: 2vh;
   }
 
@@ -3980,11 +3985,14 @@ footer .copyright span:last-child::after {
 
   .services h1 {
 	font-family: "chapaza";
+	font-size: 4.5vh;
 	margin-top: 2vh;
   }
 
   .services p {
 	font-family: "poppins-regular", serif;
+	font-size: 2vh;
+
   }
 
   .count-up {
@@ -4005,6 +4013,7 @@ footer .copyright span:last-child::after {
 
   .contact h1 {
 	font-family: "chapaza";
+	font-size: 4.5vh;
 	margin-top: 2vh;
   }
 
