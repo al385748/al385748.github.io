@@ -58,6 +58,24 @@ function calcPageFillRadius(x, y) {
 function addClickListeners() {
   document.addEventListener("touchstart", handleEvent);
   document.addEventListener("mousedown", handleEvent);
+  document.addEventListener("mouseout", function(e) {
+    e = e ? e : window.event;
+    var from = e.relatedTarget || e.toElement;
+    if (!from || from.nodeName == "HTML") {
+      document.getElementById("outer-mouse").style.border = "2px solid #ffffff00";
+      document.getElementById("inner-mouse").style.backgroundColor = "#ffffff00";
+    }
+});
+  document.addEventListener("mouseenter", function(e) {
+    if(bgColor == yellowColor || bgColor == lightGrayColor){
+      document.getElementById("outer-mouse").style.border = "2px solid #000";
+      document.getElementById("inner-mouse").style.backgroundColor = "#000";
+    }
+    else{
+      document.getElementById("outer-mouse").style.border = "2px solid #ffffff";
+      document.getElementById("inner-mouse").style.backgroundColor = "#ffffff";
+    }
+  })
 };
 
 function handleEvent(e) {
@@ -281,9 +299,11 @@ function recursiveNonButtonParticles(){
 var resizeCanvas = function() {
   cW = window.innerWidth;
   cH = window.innerHeight;
-  c.width = cW * devicePixelRatio;
+  c.width = cW * devicePixelRatio; // Clear
   c.height = cH * devicePixelRatio;
   ctx.scale(devicePixelRatio, devicePixelRatio);
+  console.log("resized");
+  ctx.globalAlpha = 0.0;
 };
 
 (function init() {
