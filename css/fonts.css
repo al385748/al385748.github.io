@@ -120,10 +120,11 @@
 @font-face {
     font-family: 'chapaza';
     
-    src: url('../fonts/chapaza/chapaza.woff') format("woff");
-    src: url('../fonts/chapaza/chapaza.woff2') format("woff2");
     src: url('../fonts/chapaza/chapaza.eot');
-    src: url('../fonts/chapaza/chapaza.ttf') format("ttf");
+    src: url('../fonts/chapaza/chapaza.ttf') format("ttf"),
+    /*url('../fonts/chapaza/chapaza.woff') format("woff"),
+    url('../fonts/chapaza/chapaza.woff2') format("woff2"),*/
+    url("../fonts/chapaza/chapaza.svg") format("svg");
     font-weight: normal;
     font-style: normal;
 }

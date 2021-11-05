@@ -162,7 +162,7 @@ function handleEvent(e) {
             x: e.pageX,
             y: e.pageY,
             fill: nonCurrentCircleColor()[randomIntFromInterval(0,1)],
-            r: anime.random(24, 48)
+            r: anime.random(24/devicePixelRatio, 48/devicePixelRatio)
           })
           particles.push(particle);
         }
@@ -314,6 +314,7 @@ var resizeCanvas = function() {
     window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000; 
   }
   window.addEventListener("resize", resizeCanvas);
+  window.addEventListener( 'touchmove', function() {});
   addClickListeners();
   if (!!window.location.pathname.match(/fullcpgrid/)) {
     //startFauxClicking();
