@@ -387,7 +387,8 @@ function goToNewScreen(myNewScene){
 		newScene = myNewScene;
 		document.getElementById(newScene).style.opacity = "100%";
 
-		blackMouse();
+		if(currentCircleColor != purpleColor) blackMouse();
+		else setTimeout(function() {whiteMouse()}, 10);
 	}
 
 	}, 100);
