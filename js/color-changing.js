@@ -315,7 +315,6 @@ var resizeCanvas = function() {
   }
   window.addEventListener("resize", resizeCanvas);
   window.addEventListener("touchmove", function() { e.preventDefault(); }, { passive:false });
-  window.addEventListener("touchstart", function() { e.preventDefault(); }, { passive:false });
   addClickListeners();
   if (!!window.location.pathname.match(/fullcpgrid/)) {
     //startFauxClicking();

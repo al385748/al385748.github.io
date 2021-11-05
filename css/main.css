@@ -2858,6 +2858,7 @@ header .logo a {
 	font-size: 2vh;
 	line-height: 2.4vh;
 	margin-bottom: 2vh;
+	letter-spacing: 0.1vh !important;
 }
 
 .popup-modal-unity .description-box p {
@@ -2966,6 +2967,7 @@ header .logo a {
 	font-size: 2vh;
 	line-height: 2.4vh;
 	margin-bottom: 2vh;
+	letter-spacing: 0.1vh !important;
 }
 
 .popup-modal-filmmaking .description-box p {
