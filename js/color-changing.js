@@ -314,7 +314,8 @@ var resizeCanvas = function() {
     window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000; 
   }
   window.addEventListener("resize", resizeCanvas);
-  window.addEventListener( 'touchmove', function() {});
+  window.addEventListener("touchmove", function() {});
+  window.addEventListener("touchstart", function() {});
   addClickListeners();
   if (!!window.location.pathname.match(/fullcpgrid/)) {
     //startFauxClicking();
