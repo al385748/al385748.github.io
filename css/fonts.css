@@ -119,10 +119,11 @@
 ================================================================================ */
 @font-face {
     font-family: 'chapaza';
-    src: url('../fonts/chapaza/chapaza.eot');
-    src: url('../fonts/chapaza/chapaza.ttf') format("ttf");
+    
     src: url('../fonts/chapaza/chapaza.woff') format("woff");
     src: url('../fonts/chapaza/chapaza.woff2') format("woff2");
+    src: url('../fonts/chapaza/chapaza.eot');
+    src: url('../fonts/chapaza/chapaza.ttf') format("ttf");
     font-weight: normal;
     font-style: normal;
 }

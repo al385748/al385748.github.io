@@ -1871,6 +1871,18 @@ header .logo a {
 	margin-left: 10%;
 }
 
+.timeline-block h3{
+	letter-spacing: .0vh;
+}
+
+.timeline-block h4{
+	letter-spacing: .0vh;
+}
+
+.timeline-header p{
+	letter-spacing: .0vh !important;
+}
+
 .force-2-grid{
 	-webkit-column-count: 2; /* Chrome, Safari, Opera */
     -moz-column-count: 2; /* Firefox */
@@ -1892,7 +1904,7 @@ header .logo a {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.1);
 	position: absolute;
-	left: 35%;
+	left: 43.5vh;
 	top: 0;
 }
 #resume .timeline-block {
@@ -1908,7 +1920,7 @@ header .logo a {
 	text-align: center;
 	color: #FFFFFF;
 	position: absolute;
-	left: 35%;
+	left: 43.5vh;
 	top: .9vh;
 	margin-left: -2.4vh;
 }
@@ -1921,7 +1933,7 @@ header .logo a {
 
 #resume .timeline-header {
 	float: left;
-	width: 39%;
+	width: 48vh;
 	padding-right: 9%;
 	text-align: right;
 }
@@ -1939,8 +1951,8 @@ header .logo a {
 	margin-bottom: -1vh !important;
 }
 #resume .timeline-content {
-	margin-left: 35%;
-	padding-left: 60px;
+	margin-left: 43.5vh;
+	padding-left: 8vh;
 }
 #resume .timeline-content h4 {
 	position: relative;
@@ -1949,9 +1961,10 @@ header .logo a {
 }
 
 #resume .timeline-content p {
-	margin-top: -4vh !important;
+	margin-top: -5% !important;
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.9vh;
+	line-height: 4vh;
 }
 
 #resume .timeline-content h4::after {
@@ -1970,77 +1983,76 @@ header .logo a {
  * resume
  * ------------------------------------------------------------------- 
  */
-@media only screen and (max-width:1024px) {
-	#resume .timeline-header {
-		padding-right: 50px;
+ @media only screen and (max-width:1380px) {
+
+	#resume .timeline-content p {
+		width: 70%;
+		margin-top: -5% !important;
+		font-family: "poppins-regular", sans-serif;
+		font-size: 1.8vh;
+		line-height: 3vh;
 	}
-	#resume .timeline-header h3 {
-		font-size: 1.8rem;
+}
+ @media only screen and (max-width:1190px) {
+
+	#resume .timeline-content p {
+		width: 55%;
+		margin-top: -5% !important;
+		font-family: "poppins-regular", sans-serif;
+		font-size: 1.7vh;
+		line-height: 3vh;
 	}
-	#resume .timeline-header p {
-		font-size: 1.4rem;
+}
+@media only screen and (max-width:1085px) {
+
+	#resume .timeline-content p {
+		width: 50%;
+		margin-top: -5% !important;
+		font-family: "poppins-regular", sans-serif;
+		font-size: 1.6vh;
+		line-height: 3vh;
 	}
+
 	#resume .timeline-content {
-		padding-left: 50px;
+		margin-left: 32vh !important;
+	}
+
+	#resume .timeline-wrap::before {
+		left: 33.5vh;
+	}
+
+	#resume .timeline-ico {
+		left: 33.5vh;
+	}
+
+	#resume .timeline-header h3 {
+		margin-bottom: 0;
+		font-size: 2vh;
+		margin-right: 10vh !important;
+	}
+
+	#resume .timeline-header p {
+		margin-bottom: 0;
+		font-size: 2vh;
+		margin-right: 10vh !important;
 	}
 }
 @media only screen and (max-width:768px) {
-	#resume .timeline-wrap::before {
-		left: 2.4rem;
-	}
-	#resume .timeline-ico {
-		left: 2.4rem;
-	}
-	#resume .timeline-header {
-		float: none;
-		width: auto;
-		padding-right: 15px;
-		text-align: left;
-	}
-	#resume .timeline-header h3 {
-		font-size: 2rem;
-	}
-	#resume .timeline-header p {
-		font-size: 1.5rem;
-		margin-bottom: 1.5rem;
-	}
-	#resume .timeline-content {
-		margin: 0;
-	}
-	#resume .timeline-content h4 {
-		padding-bottom: 0;
-		padding-top: 2.1rem;
-		margin-bottom: .6rem;
-		font-size: 1.7rem;
-	}
-	#resume .timeline-content h4::after {
-		bottom: auto;
-		top: 0;
-	}
-	#resume .timeline-header, #resume .timeline-content {
-		padding-left: 7rem;
+	#resume .timeline-content p {
+		margin-top: -5% !important;
+		font-family: "poppins-regular", sans-serif;
+		font-size: 1.9vh;
+		line-height: 4vh;
 	}
 }
-@media only screen and (max-width:480px) {
-	#resume .resume-header h2 {
-		font-size: 2.2rem;
-	}
-	#resume .timeline-wrap::before {
-		left: 1.8rem;
-	}
-	#resume .timeline-ico {
-		height: 3.6rem;
-		width: 3.6rem;
-		line-height: 3.6rem;
-		left: 1.8rem;
-		margin-left: -1.8rem;
-		font-size: 1.5rem;
-	}
-	#resume .timeline-header, #resume .timeline-content {
-		padding-left: 5.5rem;
+@media only screen and (max-width:400px) {
+	#resume .timeline-content p {
+		margin-top: -5% !important;
+		font-family: "poppins-regular", sans-serif;
+		font-size: 1.9vh;
+		line-height: 4vh;
 	}
 }
-
 
 /** 
  * ===================================================================
@@ -2117,6 +2129,7 @@ header .logo a {
 	color: #7d45bc;
 	font-size: 2.3vh;
 	padding: 0 2vh;
+	letter-spacing: 0.1vh;
 	margin-bottom: 0;
 }
 #portfolio-unity .folio-types {
@@ -2265,6 +2278,7 @@ header .logo a {
 	color: #7d45bc;
 	font-size: 2.3vh;
 	padding: 0 2vh;
+	letter-spacing: 0.1vh;
 	margin-bottom: 0;
 }
 #portfolio-unreal .folio-types {
@@ -2412,6 +2426,7 @@ header .logo a {
 	color: #7d45bc;
 	font-size: 2.3vh;
 	padding: 0 2vh;
+	letter-spacing: 0.1vh;
 	margin-bottom: 0;
 }
 #portfolio-extra .folio-types {
@@ -2560,6 +2575,7 @@ header .logo a {
 	color: #ffd012;
 	font-size: 2.3vh;
 	padding: 0 2vh;
+	letter-spacing: 0.1vh;
 	margin-bottom: 0;
 }
 #portfolio-filmmaking .folio-types {
@@ -2706,6 +2722,7 @@ header .logo a {
 #portfolio-journalism .folio-title {
 	color: #ffd012;
 	font-size: 2.3vh;
+	letter-spacing: 0.1vh;
 	padding: 0 2vh;
 	margin-bottom: 0;
 }
@@ -4367,9 +4384,11 @@ footer .copyright span:last-child::after {
 	width: 50%;
 	margin: 0 auto;
 	padding-bottom: 6.5vh;
+	font-size: 1.9vh;
 	margin-top: -2vh !important;
 	line-height: 2.8vh;
 	color: #2b2b2b;
+	letter-spacing: 0.2vh !important;
 }
 
 
