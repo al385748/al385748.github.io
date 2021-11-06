@@ -87,7 +87,6 @@ function handleEvent(e) {
         console.log("BUTTON TOUCHED")
         circleTransitionWorking = true;
         if (e.touches) { 
-          e.preventDefault();
           e = e.touches[0];
         }
         
