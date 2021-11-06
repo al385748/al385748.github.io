@@ -1511,7 +1511,7 @@ header .logo a {
 
 .turnPhone{
 	display: block;
-	color: #ffffff8f;
+	color: rgba(0, 0, 0, 0);
 	font-family: akira;
 	font-size: 20vw;
 	line-height: 15vw;
@@ -1519,7 +1519,8 @@ header .logo a {
 	margin-left: 20vw;
 	margin-right: 20vw;
 	text-align: center;
-	padding-top: 20vw;}
+	padding-top: 20vw;
+}
 
 .turnPhoneGIF{
 	position: fixed;
@@ -1527,6 +1528,7 @@ header .logo a {
 	left: 15.5%;
 	max-width: 70%;
 	max-height: 70%;
+
 }
 
 .intro-content h5 {
