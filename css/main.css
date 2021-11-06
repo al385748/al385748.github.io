@@ -479,10 +479,10 @@ img.pull-left {
 	animation: load 1.5s infinite linear;
 	animation-direction: alternate-reverse;
 	position: fixed;
-	left: 49% !important;
+	left: 49.5% !important;
 	top: 48% !important;
-	width: 8vh;
-	height: 8vh;
+	max-width: 8%;
+	max-height: 8%;
 	right: auto;
 	bottom: auto;
 }
@@ -491,12 +491,108 @@ img.pull-left {
 	animation: load 1.5s infinite linear;
 	animation-direction: alternate;
 	position: fixed;
-	left: 45% !important;
+	left: 45.5% !important;
 	top: 43% !important;
-	width: 10vh;
-	height: 10vh;
+	max-width: 10%;
+	max-height: 10%;
 	right: auto;
 	bottom: auto;
+}
+
+#play-button {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100% !important;
+	width: 100% !important;
+	background-color: #2b2b2b;
+	z-index: 780;
+	  
+	-webkit-transition: .2s all ease;
+	-o-transition: .2s all ease;
+	transition: .2s all ease;
+	-webkit-transition-delay: .5s;
+	-o-transition-delay: .5s;
+	transition-delay: .5s; 
+}
+#play-button.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#play-button:before,
+#play-button:after{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+	
+    -webkit-transition: .7s all ease;
+    -o-transition: .7s all ease;
+    transition: .7s all ease;
+}
+#play-button:before{
+    top: 0;
+    left: 0; 
+}
+#play-button:after{
+    bottom: 0;
+	left: 0; 
+}
+#play-button.loaded:before, 
+#play-button.loaded:after{
+	height: 0%;
+}
+
+.play-button-button{
+	position: fixed;
+	top: 45%;
+	left: 47.5%;
+	max-width: 10%;
+	max-height: 10%;
+	z-index: 790 !important;
+
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.play-button-button:hover ~ .play-button-empty{
+	transform: rotate(180deg);
+}
+
+.play-button-button:hover{
+	transform: rotate(-240deg);
+}
+
+.play-button-button.loaded {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.play-button-empty{
+	position: fixed;
+	top: 45%;
+	left: 47.5%;
+	max-width: 10%;
+	max-height: 10%;
+	z-index: 789 !important;
+	
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.play-button-empty.loaded {
+    opacity: 0;
+    visibility: hidden;
 }
 
 #loader:before {
@@ -1426,22 +1522,12 @@ header .logo a {
 	padding-top: 20vw;}
 
 .turnPhoneGIF{
-	display: block;
-	position: absolute;
-	top: 35vw !important;
-	left: 0vw !important;
-	width: 100vh;
-	filter: brightness(0.0) !important;
-}
-
-.blurredTurnPhoneGIF{
-	display: block;
-	position: absolute;
-	top: 35vw !important;
-	left: 0vw !important;
-	width: 100vh;
-	filter: brightness(100) !important;
-	filter: blur(0.5vh) !important;
+	position: fixed;
+	top: 40%;
+	left: 20%;
+	max-width: 30vh;
+	max-height: 30vh;
+	min-width: 30vh;
 }
 
 .intro-content h5 {
@@ -2120,14 +2206,24 @@ header .logo a {
  * resume
  * ------------------------------------------------------------------- 
  */
+
+ @media only screen and (max-width:1480px) {
+
+	#resume .timeline-content p {
+		width: 80%;
+	}
+}
+
  @media only screen and (max-width:1380px) {
+
+	#resume .lead {
+		width: 70% !important;
+		margin-left: 15% !important;
+		margin-bottom: 4vh;
+	}
 
 	#resume .timeline-content p {
 		width: 70%;
-		margin-top: -5% !important;
-		font-family: "poppins-regular", sans-serif;
-		font-size: 1.8vh;
-		line-height: 3vh;
 	}
 }
  @media only screen and (max-width:1190px) {
@@ -2174,12 +2270,113 @@ header .logo a {
 		margin-right: 10vh !important;
 	}
 }
+
+@media only screen and (max-width:1200px) and (min-width:769px) {
+	
+	#resume .lead {
+		width: 50% !important;
+		margin-left: 25% !important;
+		margin-bottom: 4vh;
+	}
+
+	#resume .timeline-content p {
+		width: 50%;
+		margin-top: -7% !important;
+		font-size: 1.9vh;
+		line-height: 4vh;
+		margin-left: 10vh !important;
+	}
+
+	#resume .timeline-content {
+		margin-left: 32vh !important;
+	}
+
+	#resume .timeline-content h4 {
+		left: 10vh !important;
+	}
+
+	#resume .timeline-block:nth-child(2) {
+		top: -4vh;
+	}
+
+
+	#resume .timeline-wrap::before {
+		left: 42vh;
+	}
+
+	#resume .timeline-ico {
+		left: 42vh;
+	}
+
+	#resume .timeline-ico i {
+		font-size: 50%;
+		top: -0.5vh;
+	}
+
+	#resume .timeline-header {
+		width: 20%;
+	}
+
+	#resume .timeline-header h3 {
+		margin-bottom: 0;
+		font-size: 2vh;
+		margin-left: -10vh !important;
+		margin-right: -15vh !important;
+	}
+
+	#resume .timeline-header p {
+		margin-bottom: 0;
+		font-size: 2vh;
+		margin-left: -20vh !important;
+		margin-right: -15vh !important;
+		line-height: 4vh;
+	}
+
+	#resume .timeline-wrap::before {
+		content: "";
+		display: block;
+		width: 0.2vh;
+		height: 95%;
+		background: rgba(0, 0, 0, 0.1);
+		position: absolute;
+		top: 0;
+	}
+
+}
+
+@media only screen and (min-width:1868px) {
+	
+	#resume .timeline-content p {
+		width: 150% !important;
+	}
+}
+
+@media only screen and (min-width:1668px) {
+	
+	#resume h1 {
+		width: 150% !important;
+		margin-left: -25% !important;
+		margin-bottom: 4vh;
+	}
+
+	#resume .lead {
+		width: 110% !important;
+		margin-left: -5% !important;
+		margin-bottom: 4vh;
+		margin-top: -2vh;
+	}
+
+	#resume .timeline-content p {
+		width: 120%;
+	}
+}
+
 @media only screen and (max-width:768px) {
 	
 	#resume .lead {
-		width: 50%;
+		width: 50% !important;
 		margin-left: 25% !important;
-		margin-bottom: 2vh;
+		margin-bottom: 4vh;
 	}
 
 	#resume .timeline-content p {

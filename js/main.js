@@ -301,7 +301,6 @@ document.getElementById("c").style.pointerEvents = 'none';
 		*/
 	});
 
-
  	/*----------------------------------------------------- */
   	/* Back to top
    ------------------------------------------------------- */ 
@@ -336,6 +335,14 @@ function goFullscreen(){
 		document.exitFullscreen();
 	  }
 	}
+}
+
+function play_button_myload(){
+	jQuery('.play-button-button').addClass('loaded');
+	jQuery('.play-button-empty').addClass('loaded');
+	
+	setTimeout(function() {jQuery('#play-button').addClass('loaded')}, 200);
+	goFullscreen();
 }
 
 /*
