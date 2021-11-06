@@ -344,7 +344,7 @@ function play_button_myload(){
 	setTimeout(function() {jQuery('#play-button').addClass('loaded')}, 200);
 	goFullscreen();
 
-	screen.orientation.lock('landscape').then(res=>console.log(res)).catch(err=>console.log(err));
+	setTimeout(function() {screen.orientation.lock('landscape').then(res=>console.log(res)).catch(err=>console.log(err))}, 200);
 }
 
 /*
