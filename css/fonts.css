@@ -121,14 +121,13 @@
     font-family: 'chapaza';
     
     src: url('../fonts/chapaza/chapaza.eot');
-    src: url('../fonts/chapaza/chapaza-webfont.woff') format("woff"),
-    url('../fonts/chapaza/chapaza-webfont.woff2') format("woff2"),
-    url("../fonts/chapaza/chapaza.svg") format("svg"),
-    url('../fonts/chapaza/chapaza.ttf') format("truetype");
-    font-weight: normal !important;
+    src: url('../fonts/chapaza/chapaza.ttf') format("ttf"),
+    url('../fonts/chapaza/chapaza-webfont.woff') format("woff"),
+    url('../fonts/chapaza/chapaza-webfont.woff2') format("woff2");
+
+    font-weight: 100 !important;
     font-style: normal;
     -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale !important;
 
-    src: url('chapaza.eot');
 }
