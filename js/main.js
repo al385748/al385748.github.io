@@ -344,7 +344,19 @@ function play_button_myload(){
 	setTimeout(function() {jQuery('#play-button').addClass('loaded')}, 200);
 	goFullscreen();
 
-	setTimeout(function() {screen.orientation.lock('landscape').then(res=>console.log(res)).catch(err=>console.log(err))}, 200);
+	setTimeout(function() {
+		screen.orientation.lock('landscape');
+		var lockFunction =  window.screen.orientation.lock;
+		if (lockFunction.call(window.screen.orientation, 'landscape')) {
+				   console.log('Orientation locked')
+				} else {
+					console.error('There was a problem in locking the orientation')
+				}
+		}, 1200);
+
+	setTimeout(function() {
+		goFullscreen();
+	}, 3700);
 }
 
 /*
