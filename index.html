@@ -58,15 +58,17 @@
 	</style>
 </head>
 
-<body id="top">
+<body id="top" ontouchmove="">
 
 	<div id="turn" class="turnPhone">
 		<img src="images/rotate.gif" class="turnPhoneGIF">
 	</div>
 
+	<!---
 	<div id="zoomedin" class="turnPhone">
 		Pleasezoomout
 	</div>
+	-->
 
 	<div id="contents" class="noselect">
 	<div id="myWrapper" class="demoWrapper">
@@ -567,7 +569,7 @@
 
 				<data>
 
-	         	<div class="bgrid folio-item" onmousedown="makeSelectable()" ontouchstart="makeSelectable()">
+	         	<div class="bgrid folio-item" onmousedown="makeSelectable()" ontouchstart="makeSelectable()" ontou>
 	               <div class="item-wrap">
 	               	<img src="images/portfolio/infravalorado.jpg" alt="Infravalorado">
 	                  <a href="#modal-01" class="overlay">	                  	           
@@ -2269,6 +2271,11 @@
    </footer>  
 
       ================================================== -->
+
+	<!-- CURSOR -->
+	<div id="outer-mouse" class="mouse-cursor cursor-outer"></div>
+	<div id="inner-mouse" class="mouse-cursor cursor-inner"></div>
+	<!-- /CURSOR -->
 	</div>
 </div>
 
@@ -2292,11 +2299,6 @@
    ================================================== --> 
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
-
-   	<!-- CURSOR -->
-	<div id="outer-mouse" class="mouse-cursor cursor-outer"></div>
-	<div id="inner-mouse" class="mouse-cursor cursor-inner"></div>
-	<!-- /CURSOR -->
 
 </body>
 
