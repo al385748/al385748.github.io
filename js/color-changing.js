@@ -331,7 +331,7 @@ function handleInactiveUser() {
   function clearInactiveTimeout() {
     clearTimeout(inactive);
     document.removeEventListener("mousedown", clearInactiveTimeout);
-    document.removeEventListener("touchend", clearInactiveTimeout);
+    //document.removeEventListener("touchend", clearInactiveTimeout);
   }
   
   document.addEventListener("mousedown", clearInactiveTimeout);
