@@ -56,7 +56,7 @@ function calcPageFillRadius(x, y) {
 }
 
 function addClickListeners() {
-  document.addEventListener("touchstart", handleEvent);
+  document.addEventListener("touchend", handleEvent);
   document.addEventListener("mousedown", handleEvent);
   document.addEventListener("mouseout", function(e) {
     e = e ? e : window.event;
@@ -331,11 +331,11 @@ function handleInactiveUser() {
   function clearInactiveTimeout() {
     clearTimeout(inactive);
     document.removeEventListener("mousedown", clearInactiveTimeout);
-    document.removeEventListener("touchstart", clearInactiveTimeout);
+    document.removeEventListener("touchend", clearInactiveTimeout);
   }
   
   document.addEventListener("mousedown", clearInactiveTimeout);
-  document.addEventListener("touchstart", clearInactiveTimeout);
+  document.addEventListener("touchend", clearInactiveTimeout);
 }
 
 function startFauxClicking() {
