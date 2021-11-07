@@ -368,8 +368,6 @@ function enableNewScene(myNewScene){
 	if(myNewScene != "intro") document.getElementById(myNewScene).style.display = "block";
 	console.log("PINTANDO " + myNewScene)
 	currentScene = myNewScene;
-	setTimeout(function () {circleTransitionWorking = false;}, 2000);
-
 }
 
 function goToNewScreen(myNewScene){
@@ -467,7 +465,6 @@ function returnHome(){
 		document.getElementById(currentScene).style.display = "none";
 
 		buttonTouch = false;
-		setTimeout(function () {circleTransitionWorking = false;}, 2000);
 		}, 200);
 	}, 100);
 }

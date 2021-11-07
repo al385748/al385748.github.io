@@ -118,6 +118,8 @@ function handleEvent(e) {
               bgColor = pageFill.fill;
               removeAnimation(fillAnimation);
               isDrawing = false;
+              circleTransitionWorking = false;
+              isSelectable = false;
             }
           });
         }
@@ -134,7 +136,8 @@ function handleEvent(e) {
               bgColor = pageFill.fill;
               removeAnimation(fillAnimation);
               isDrawing = false;
-
+              circleTransitionWorking = false;
+              isSelectable = false;
             }
           });
         }
@@ -246,7 +249,8 @@ function animateCircle(){
           animatable.target.draw();
         });
       });
-    }
+    },
+    complete: function() {circleTransitionWorking = false; console.log("YEEE")}
   });
 
   }
@@ -385,17 +389,14 @@ function fadeOut()
 
 function clickOnSelectableObject(){
   isSelectable = true;
-  console.log("es selectable");
 
   setTimeout(function(){
     isSelectable = false;
-    console.log("uy ya no")
   }, 500);
 }
 
 function secondClickOnGrid(){
-      isSelectable = false;
-      console.log("ESTAMOS FUERA DE GRID")
+  isSelectable = false;
 }
 
 function makeSelectable(){
