@@ -80,15 +80,20 @@ function addClickListeners() {
 
 function handleEvent(e) {
 
+  console.log("Ha entrado un eventaso, y la TRANSI " + circleTransitionWorking + " pero es que además SELECTA " + isSelectable)
+
     if(!circleTransitionWorking && !isSelectable){
     setTimeout(function () {
 
       if(buttonTouch){
         console.log("BUTTON TOUCHED")
-        circleTransitionWorking = true;
         if (e.touches) { 
+          e.preventDefault();
           e = e.touches[0];
         }
+        circleTransitionWorking = true;
+
+        //setTimeout(function () { circleTransitionWorking = false; console.log("ya no está workeando por si aca") }, 1000);
         
         var targetR = calcPageFillRadius(e.pageX, e.pageY);
         var rippleSize = Math.min(200, (cW * .4));
@@ -330,7 +335,7 @@ function handleInactiveUser() {
   function clearInactiveTimeout() {
     clearTimeout(inactive);
     document.removeEventListener("mousedown", clearInactiveTimeout);
-    //document.removeEventListener("touchend", clearInactiveTimeout);
+    document.removeEventListener("touchend", clearInactiveTimeout);
   }
   
   document.addEventListener("mousedown", clearInactiveTimeout);

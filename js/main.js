@@ -368,6 +368,8 @@ function enableNewScene(myNewScene){
 	if(myNewScene != "intro") document.getElementById(myNewScene).style.display = "block";
 	console.log("PINTANDO " + myNewScene)
 	currentScene = myNewScene;
+	setTimeout(function () {circleTransitionWorking = false;}, 1200);
+
 }
 
 function goToNewScreen(myNewScene){
@@ -465,7 +467,7 @@ function returnHome(){
 		document.getElementById(currentScene).style.display = "none";
 
 		buttonTouch = false;
-
+		setTimeout(function () {circleTransitionWorking = false;}, 1300);
 		}, 200);
 	}, 100);
 }
@@ -479,4 +481,8 @@ function whiteMouse(){
 function blackMouse(){
 	document.getElementById("outer-mouse").style.border = "2px solid #000";
 	document.getElementById("inner-mouse").style.backgroundColor = "#000";
+}
+
+function downloadCV(){
+	window.open("docs/CURRICULUM-VITAE.pdf");
 }
