@@ -477,26 +477,25 @@ function forceReturnHome(){
 		endSceneTransition(100);
 
 		setTimeout(function () {
+			bgColor = "#000000";
+			animateCircle();
 
-		bgColor = "#000000";
-		animateCircle();
+			if ($("body")) {
+				const e = document.querySelector(".cursor-inner"),
+					t = document.querySelector(".cursor-outer");
+				$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+			}
 
-		if ($("body")) {
-			const e = document.querySelector(".cursor-inner"),
-				t = document.querySelector(".cursor-outer");
-			$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-		}
+			newScene = "intro";
 
-		newScene = "intro";
+			console.log("RETURNEANDO A CASITA " + newScene + " DESDE " + currentScene);
+			document.getElementById(currentScene).style.display = "none";
 
-		console.log("RETURNEANDO A CASITA " + newScene + " DESDE " + currentScene);
-		document.getElementById(currentScene).style.display = "none";
-
-		buttonTouch = false;
-		circleTransitionWorking = false;
-		isSelectable = false;
-		}, 300);
-	}, 300);
+			buttonTouch = false;
+			circleTransitionWorking = false;
+			isSelectable = false;
+		}, 800);
+	}, 100);
 }
 
 
