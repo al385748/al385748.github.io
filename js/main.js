@@ -470,6 +470,34 @@ function returnHome(){
 }
 }
 
+function forceReturnHome(){
+
+	setTimeout(function () {
+
+		endSceneTransition(100);
+
+		setTimeout(function () {
+
+		bgColor = "#000000";
+		animateCircle();
+
+		if ($("body")) {
+			const e = document.querySelector(".cursor-inner"),
+				t = document.querySelector(".cursor-outer");
+			$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+		}
+
+		newScene = "intro";
+
+		console.log("RETURNEANDO A CASITA " + newScene + " DESDE " + currentScene);
+		document.getElementById(currentScene).style.display = "none";
+
+		buttonTouch = false;
+		}, 200);
+	}, 100);
+}
+
+
 function whiteMouse(){
 	document.getElementById("outer-mouse").style.border = "2px solid #FFF";
 	document.getElementById("inner-mouse").style.backgroundColor = "#FFF";
