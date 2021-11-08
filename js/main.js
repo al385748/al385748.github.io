@@ -495,8 +495,8 @@ function forceReturnHome(){
 		buttonTouch = false;
 		circleTransitionWorking = false;
 		isSelectable = false;
-		}, 200);
-	}, 100);
+		}, 300);
+	}, 300);
 }
 
 
