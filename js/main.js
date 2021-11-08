@@ -477,7 +477,6 @@ function forceReturnHome(){
 		endSceneTransition(100);
 
 		setTimeout(function () {
-			bgColor = "#000000";
 			animateCircle();
 
 			if ($("body")) {
@@ -494,8 +493,8 @@ function forceReturnHome(){
 			buttonTouch = false;
 			circleTransitionWorking = false;
 			isSelectable = false;
-		}, 800);
-	}, 100);
+		}, 400);
+	}, 200);
 }
 
 

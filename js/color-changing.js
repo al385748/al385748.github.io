@@ -239,18 +239,19 @@ function animateCircle(){
 
     circleTransitionWorking = true;
   
-  var animate = anime({
-    duration: Infinity,
-    update: function() {
-      ctx.fillStyle = bgColor;
-      if(currentScene != "intro")ctx.fillRect(0, 0, cW, cH);
-      animations.forEach(function(anim) {
-        anim.animatables.forEach(function(animatable) {
-          animatable.target.draw();
+    var animate = anime({
+      duration: Infinity,
+      update: function() {
+        ctx.fillStyle = bgColor;
+        if(currentScene != "intro")ctx.fillRect(0, 0, cW, cH);
+        animations.forEach(function(anim) {
+          anim.animatables.forEach(function(animatable) {
+            animatable.target.draw();
+          });
         });
-      });
-    },
-    complete: function() {circleTransitionWorking = false; console.log("YEEE")}
+      },
+      complete: function() {circleTransitionWorking = false; console.log("YEEE")
+    }
   });
 
   }
