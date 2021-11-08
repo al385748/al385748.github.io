@@ -493,6 +493,8 @@ function forceReturnHome(){
 		document.getElementById(currentScene).style.display = "none";
 
 		buttonTouch = false;
+		circleTransitionWorking = false;
+		isSelectable = false;
 		}, 200);
 	}, 100);
 }

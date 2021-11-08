@@ -4470,6 +4470,19 @@ header .logo a {
 
 }
 
+@media only screen and (max-height:495px) and (min-height:490px) {
+	#services .section-intro p {
+		margin-left: 10% !important;
+		width: 80%;
+		margin-bottom: 4vh;
+	}
+
+	.owl-pagination {
+		text-align: center;
+		margin-top: 0vh;
+	}
+}
+
 @media only screen and (max-width:768px) {
 	#services .section-intro p {
 		margin-left: 25% !important;
@@ -4490,7 +4503,7 @@ header .logo a {
 		margin-bottom: 4vh;
 	}
 
-	.services-list .service {
+	.services-content {
 		width: 50% !important; 
 		margin-left: 25%;
 		margin-top: -1vh;
