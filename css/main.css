@@ -2497,14 +2497,14 @@ header .logo a {
 	.center-text{
 		position: fixed;
 		bottom: 45.7% !important;
-		right: 32% !important;
+		right: 28% !important;
 	}
 
 	.two-col{
 		position: fixed;
 
 		width: 30%;
-		right: 36vh;
+		right: 30vh;
 		bottom: 10.5vh;
 	}
 
