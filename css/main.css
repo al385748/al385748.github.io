@@ -4483,6 +4483,25 @@ header .logo a {
 	}
 }
 
+@media only screen and (max-width:668px) {
+	#services .section-intro p {
+		margin-left: 25% !important;
+		width: 50%;
+		margin-bottom: 4vh;
+	}
+
+	.services-list .service {
+		width: 50% !important; 
+		margin-left: 25%;
+		margin-top: -1vh;
+	}
+
+	.owl-pagination {
+		text-align: center;
+		margin-top: -8vh;
+	}
+}
+
 
 /** 
  * ===================================================================
