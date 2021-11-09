@@ -1528,7 +1528,22 @@ header .logo a {
 	-ms-transform: translateY(-2.1rem);
 	transform: translateY(-2.1rem);
 	z-index: 1;
+
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
+
+.intro-data{
+	-webkit-pointer-events: none;
+	pointer-events: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
 .intro-content h1 {
 	color: #FFFFFF;
 	font-family: akira;
@@ -2494,6 +2509,50 @@ header .logo a {
 		margin-left: -1vh !important;
 	}
 
+	.center-text{
+		position: fixed;
+		bottom: 45.7% !important;
+		right: 32% !important;
+	}
+
+	.two-col{
+		position: fixed;
+
+		width: 30%;
+		right: 36vh;
+		bottom: 10.5vh;
+	}
+
+	.about-img h3{
+		position: relative;
+		width: 120%;
+		left: 5.5vh !important;
+	}
+}
+
+@media only screen and (max-height:435px) and (min-height:431px) {	
+	.center-text{
+		position: fixed;
+		bottom: 45.7% !important;
+		right: 30% !important;
+	}
+
+	.two-col{
+		position: fixed;
+
+		width: 30%;
+		right: 30vh;
+		bottom: 10.5vh;
+	}
+
+	.about-img h3{
+		position: relative;
+		width: 120%;
+		left: 5.5vh !important;
+	}
+}
+
+@media only screen and (max-height:346px) and (min-height:340px) {	
 	.center-text{
 		position: fixed;
 		bottom: 45.7% !important;
@@ -6406,6 +6465,16 @@ footer .copyright span:last-child::after {
 
 .poster-container{
 	margin: 0 auto;
+	width: 100vw !important;
+	height: 100vh !important;
+}
+
+.selectable-data{
+	-webkit-pointer-events: visible;
+	pointer-events: visible;
+	-webkit-user-select: visible;
+	-moz-user-select: visible;
+	user-select: visible;
 }
 
 .resume-stats {

@@ -28,6 +28,7 @@
 	<script src="js/modernizr.js"></script>
 	<script src="js/pace.min.js"></script>
 	<script src="js/jquery-2.1.3.min.js"></script>
+	<script src="js/parallax.js"></script>
 
    <!-- favicons
 	================================================== -->
@@ -2020,7 +2021,7 @@
 
    		<div class="col-twelve" onmousedown="clickOnSelectableObject()" ontouchend="clickOnSelectableObject()">
 
-			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+			<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if((typeof submitted !== 'undefined') && submitted) {}"></iframe>
 
 			<script type="text/javascript">var submitted=false;</script>
 			
@@ -2137,76 +2138,97 @@
 	<div id="intro-content" class="intro-content" onmousedown="animateNonButtonParticles()">
 		<a id="goFullscreenButton" class="button strokeFS smoothscroll" onmousedown="goFullscreen()">Go Fullscreen</a>
 
-		<data>
+		<div id="intro-data">
 
-		<div class="poster-container">
-			<img id="goAboutPosterOutline" src="images/poster-outline.png" class="about-object-hover" onmousedown="goToNewScreen('about')">
-			<img id="goAboutPoster" src="images/poster.png" class="about-object" onmousedown="goToNewScreen('about')">
-			<p class="imgAboutDescription">About me</p>
+		<div class="poster-container" data-depth="0.1">
+			<data class="selectable-data">
+				<img id="goAboutPosterOutline" src="images/poster-outline.png" class="about-object-hover" onmousedown="goToNewScreen('about')">
+				<img id="goAboutPoster" src="images/poster.png" class="about-object" onmousedown="goToNewScreen('about')">
+				<p class="imgAboutDescription">About me</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="goSkillsObjectOutline" src="images/poster-outline.png" class="skills-object-hover" onmousedown="goToNewScreen('skills')">
-			<img id="goSkillsObject" src="images/poster.png" class="skills-object" onmousedown="goToNewScreen('skills')">
-			<p class="imgSkillsDescription">Skills</p>
+		<div class="poster-container" data-depth="0.1">
+			<data class="selectable-data">
+				<img id="goSkillsObjectOutline" src="images/poster-outline.png" class="skills-object-hover" onmousedown="goToNewScreen('skills')">
+				<img id="goSkillsObject" src="images/poster.png" class="skills-object" onmousedown="goToNewScreen('skills')">
+				<p class="imgSkillsDescription">Skills</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="goServicesObjectOutline" src="images/poster-outline.png" class="services-object-hover" onmousedown="goToNewScreen('services')">
-			<img id="goServicesObject" src="images/poster.png" class="services-object" onmousedown="goToNewScreen('services')">
-			<p class="imgServicesDescription">Services</p>
+		<div class="poster-container" data-depth="0.1">
+			<data class="selectable-data">
+				<img id="goServicesObjectOutline" src="images/poster-outline.png" class="services-object-hover" onmousedown="goToNewScreen('services')">
+				<img id="goServicesObject" src="images/poster.png" class="services-object" onmousedown="goToNewScreen('services')">
+				<p class="imgServicesDescription">Services</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="goContactObjectOutline" src="images/poster-outline.png" class="contact-object-hover" onmousedown="goToNewScreen('contact')">
-			<img id="goContactObject" src="images/poster.png" class="contact-object" onmousedown="goToNewScreen('contact')">
-			<p class="imgContactDescription">Contact</p>
+		<div class="poster-container" data-depth="0.1">
+			<data class="selectable-data">
+				<img id="goContactObjectOutline" src="images/poster-outline.png" class="contact-object-hover" onmousedown="goToNewScreen('contact')">
+				<img id="goContactObject" src="images/poster.png" class="contact-object" onmousedown="goToNewScreen('contact')">
+				<p class="imgContactDescription">Contact</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="goUnityObjectOutline" src="images/poster-outline.png" class="unity-object-hover" onmousedown="goToNewScreen('portfolio-unity')">
-			<img id="goUnityObject" src="images/poster.png" class="unity-object" onmousedown="goToNewScreen('portfolio-unity')">
-			<p class="imgUnityDescription">Unity Experience</p>
+		<div class="poster-container" data-depth="0.1">
+			<data class="selectable-data">
+				<img id="goUnityObjectOutline" src="images/poster-outline.png" class="unity-object-hover" onmousedown="goToNewScreen('portfolio-unity')">
+				<img id="goUnityObject" src="images/poster.png" class="unity-object" onmousedown="goToNewScreen('portfolio-unity')">
+				<p class="imgUnityDescription">Unity Experience</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="goUnrealObjectOutline" src="images/poster-outline.png" class="unreal-object-hover" onmousedown="goToNewScreen('portfolio-unreal')">
-			<img id="goUnrealObject" src="images/poster.png" class="unreal-object" onmousedown="goToNewScreen('portfolio-unreal')">
-			<p class="imgUnrealDescription">Unreal Experience</p>
+		<div class="poster-container" data-depth="0.1">
+			<data class="selectable-data">
+				<img id="goUnrealObjectOutline" src="images/poster-outline.png" class="unreal-object-hover" onmousedown="goToNewScreen('portfolio-unreal')">
+				<img id="goUnrealObject" src="images/poster.png" class="unreal-object" onmousedown="goToNewScreen('portfolio-unreal')">
+				<p class="imgUnrealDescription">Unreal Experience</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="goExtraObjectOutline" src="images/poster-outline.png" class="extra-object-hover" onmousedown="goToNewScreen('portfolio-extra')">
-			<img id="goExtraObject" src="images/poster.png" class="extra-object" onmousedown="goToNewScreen('portfolio-extra')">
-			<p class="imgExtraDescription">Extra Experience</p>
+		<div class="poster-container" data-depth="0.2">
+			<data class="selectable-data">
+				<img id="goExtraObjectOutline" src="images/poster-outline.png" class="extra-object-hover" onmousedown="goToNewScreen('portfolio-extra')">
+				<img id="goExtraObject" src="images/poster.png" class="extra-object" onmousedown="goToNewScreen('portfolio-extra')">
+				<p class="imgExtraDescription">Extra Experience</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="goFilmmakingObjectOutline" src="images/poster-outline.png" class="filmmaking-object-hover" onmousedown="goToNewScreen('portfolio-filmmaking')">
-			<img id="goFilmmakingObject" src="images/poster.png" class="filmmaking-object" onmousedown="goToNewScreen('portfolio-filmmaking')">
-			<p class="imgFilmmakingDescription">Filmmaking Experience</p>
+		<div class="poster-container" data-depth="0.2">
+			<data class="selectable-data">
+				<img id="goFilmmakingObjectOutline" src="images/poster-outline.png" class="filmmaking-object-hover" onmousedown="goToNewScreen('portfolio-filmmaking')">
+				<img id="goFilmmakingObject" src="images/poster.png" class="filmmaking-object" onmousedown="goToNewScreen('portfolio-filmmaking')">
+				<p class="imgFilmmakingDescription">Filmmaking Experience</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="goJournalismObjectOutline" src="images/poster-outline.png" class="journalism-object-hover" onmousedown="goToNewScreen('portfolio-journalism')">
-			<img id="goJournalismObject" src="images/poster.png" class="journalism-object" onmousedown="goToNewScreen('portfolio-journalism')">
-			<p class="imgJournalismDescription">Journalism Experience</p>
+		<div class="poster-container" data-depth="0.2">
+			<data class="selectable-data">
+				<img id="goJournalismObjectOutline" src="images/poster-outline.png" class="journalism-object-hover" onmousedown="goToNewScreen('portfolio-journalism')">
+				<img id="goJournalismObject" src="images/poster.png" class="journalism-object" onmousedown="goToNewScreen('portfolio-journalism')">
+				<p class="imgJournalismDescription">Journalism Experience</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="goEducationObjectOutline" src="images/poster-outline.png" class="education-object-hover" onmousedown="goToNewScreen('resume')">
-			<img id="goEducationObject" src="images/poster.png" class="education-object" onmousedown="goToNewScreen('resume')">
-			<p class="imgEducationDescription">Education</p>
+		<div class="poster-container" data-depth="0.2">
+			<data class="selectable-data">
+				<img id="goEducationObjectOutline" src="images/poster-outline.png" class="education-object-hover" onmousedown="goToNewScreen('resume')">
+				<img id="goEducationObject" src="images/poster.png" class="education-object" onmousedown="goToNewScreen('resume')">
+				<p class="imgEducationDescription">Education</p>
+			</data>
 		</div>
 
-		<div class="poster-container">
-			<img id="downloadCVObjectOutline" src="images/poster-outline.png" class="cv-object-hover" onmousedown="downloadCV()">
-			<img id="downloadCVObjectOutline" src="images/poster.png" class="cv-object" onmousedown="downloadCV()">
-			<p class="imgCVDescription">Download CV</p>
+		<div class="poster-container" data-depth="0.1">
+			<data class="selectable-data">
+				<img id="downloadCVObjectOutline" src="images/poster-outline.png" class="cv-object-hover" onmousedown="downloadCV()">
+				<img id="downloadCVObjectOutline" src="images/poster.png" class="cv-object" onmousedown="downloadCV()">
+				<p class="imgCVDescription">Download CV</p>
+			</data>
 		</div>
-
-		</data>
 		
+		</div>
 		<!-- <h5>Welcome to my world.</h5> -->
 		<h1 class="custom-h1">CHARLIE SANCHEZ</h1>
 
@@ -2214,26 +2236,21 @@
 		 <span>Game Designer</span>
 		 <span>Communicator</span> 
 		</p>
-
-		<a id="goAboutButton" class="button stroke smoothscroll" onmousedown="goToNewScreen('about')">About me</a>
-		<a id="goSkillsButton" class="button stroke smoothscroll" onmousedown="goToNewScreen('skills')">Skills</a>
-		<a id="goServicesButton" class="button stroke2 smoothscroll" onmousedown="goToNewScreen('services')">Services</a>		
-		<a id="goContactButton" class="button stroke smoothscroll" onmousedown="goToNewScreen('contact')">Contact</a>		
-		<a id="goUnityPortfolioButton" class="button stroke2 smoothscroll" onmousedown="goToNewScreen('portfolio-unity')">Unity experience</a>		
-		<a id="goUnrealPortfolioButton" class="button stroke2 smoothscroll" onmousedown="goToNewScreen('portfolio-unreal')">Unreal experience</a>		
-		<a id="goExtraPortfolioButton" class="button stroke2 smoothscroll" onmousedown="goToNewScreen('portfolio-extra')">Extra experience</a>		
-		<a id="goFilmmakingPortfolioButton" class="button stroke smoothscroll" onmousedown="goToNewScreen('portfolio-filmmaking')">Filmmaking experience</a>		
-		<a id="goJournalismPortfolioButton" class="button stroke smoothscroll" onmousedown="goToNewScreen('portfolio-journalism')">Journalism experience</a>		
-		<a id="goResumeButton" class="button stroke2 smoothscroll" onmousedown="goToNewScreen('resume')">Education</a>		
-
 	</div> <!-- /intro-content --> 
+	
+	<script>
+		var scene = document.getElementById('intro-data');
+		var parallaxInstance = new Parallax(scene);
+	</script>
 
-	<ul class="intro-social">        
-	  <li><a href="https://www.facebook.com/carlos.sf.99/"><i class="fa fa-facebook"></i></a></li>
-	  <li><a href="#"><i class="fa fa-behance"></i></a></li>
-	  <li><a href="https://twitter.com/CharlieSnchez"><i class="fa fa-twitter"></i></a></li>
-	  <li><a href="https://dribbble.com/charliesnchez/about"><i class="fa fa-dribbble"></i></a></li>
-	  <li><a href="https://www.instagram.com/charliesnchez/"><i class="fa fa-instagram"></i></a></li>
+	<ul class="intro-social">   
+		
+	  <data><li><a href="https://www.facebook.com/carlos.sf.99/"><i class="fa fa-facebook"></i></a></li></data> 
+	  <data><li><a href="#"><i class="fa fa-behance"></i></a></li></data> 
+	  <data><li><a href="https://twitter.com/CharlieSnchez"><i class="fa fa-twitter"></i></a></li></data> 
+	  <data><li><a href="https://dribbble.com/charliesnchez/about"><i class="fa fa-dribbble"></i></a></li></data> 
+	  <data><li><a href="https://www.instagram.com/charliesnchez/"><i class="fa fa-instagram"></i></a></li></data> 
+	  
    </ul> <!-- /intro-social -->      	
 
 	</section> <!-- /intro -->
