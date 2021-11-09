@@ -1523,10 +1523,7 @@ header .logo a {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
-	height: 100vh;
-	-webkit-transform: translateY(-2.1rem);
-	-ms-transform: translateY(-2.1rem);
-	transform: translateY(-2.1rem);
+	height: 100%;
 	z-index: 1;
 
 	-webkit-pointer-events: none;
@@ -1548,7 +1545,7 @@ header .logo a {
 	color: #FFFFFF;
 	font-family: akira;
 	line-height: 8vh;
-	top: 13vh !important;
+	top: 12vh !important;
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
@@ -1600,8 +1597,9 @@ header .logo a {
 	display: inline-block;
 }
 .intro-content .intro-position span::after {
-	content: "|";
+	content: "+";
 	text-align: center;
+	font-family: poppins;
 	display: inline-block;
 	padding: 0 2vh 0 3.5vh;
 	color: rgba(255, 255, 255, 0.3);
@@ -1612,6 +1610,10 @@ header .logo a {
 	display: none;
 	padding: 0 3.5px 0 2px;
 	color: rgba(255, 255, 255, 0.3);
+}
+.intro-content .intro-position span:nth-child(2)::after{
+	content: "";
+	display: none;
 }
 .intro-content .button {
 	color: #FFFFFF !important;
@@ -6435,6 +6437,7 @@ footer .copyright span:last-child::after {
 	
 	position: fixed;
 	left: 50%;
+	top: 20%;
 	transform: translateX(-50%);
 	
 	opacity: 1;
@@ -6466,7 +6469,7 @@ footer .copyright span:last-child::after {
 .poster-container{
 	margin: 0 auto;
 	width: 100vw !important;
-	height: 100vh !important;
+	height: 100em !important;
 }
 
 .selectable-data{
