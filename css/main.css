@@ -1172,8 +1172,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 .skill-bars li .progress span {
 	position: absolute;
-	right: -2vh;
+	right: -4.5vh;
 	top: -4.4vh;
+	min-width: 9vh;
+	text-align: center;
 	display: block;
 	font-family: "poppins-regular", sans-serif;
 	color: white;
@@ -1183,6 +1185,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	padding: .8vh .8vh;
 	border-radius: 0.3vh;
 }
+
 .skill-bars li .progress span::after {
 	position: absolute;
 	left: 50%;
@@ -1559,12 +1562,12 @@ header .logo a {
 	margin-left: 20vw;
 	margin-right: 20vw;
 	text-align: center;
-	padding-top: 20vw;
+	padding-top: 20vh;
 }
 
 .turnPhoneGIF{
 	position: fixed;
-	top: 35%;
+	top: 30%;
 	left: 15.5%;
 	max-width: 70%;
 	max-height: 70%;
@@ -1754,10 +1757,10 @@ header .logo a {
 }
 
 .intro-info img {
-	height: 12vh;
-	width: 12vh;
+	height: 20vh;
+	width: 20vh;
 	border-radius: 50%;
-	margin: 1vh 0 0 0;
+	margin: 0vh 0 0 0;
 	float: left;
 }
 
@@ -1814,6 +1817,7 @@ header .logo a {
 .about img{
 	max-width: 14vh;
 	max-height: 14vh;
+	margin-left: -1vh !important;
 	align-content: center;
 	text-align: center;
 	left: 50%;
@@ -2574,6 +2578,64 @@ header .logo a {
 		width: 120%;
 		left: 5.5vh !important;
 	}
+}
+
+@media only screen and (max-height:200px) {
+
+	.intro-info {
+		width: 135% !important;
+		margin-bottom: -5vh !important;
+	}
+
+	.about-content .col-six h3:nth-child(1){
+		margin-bottom: 8vh;
+	}
+
+	.about-content .col-six h3:nth-child(3){
+		margin-top: 0.5vh !important;
+	}
+
+	.about-content .two-col{
+		width: 28% !important;
+		top: 50vh !important;
+		left: 52vw !important;
+	}
+
+	.about-img h3 {
+		margin-top: -2vh !important;
+		margin-left: -8vh !important;
+	}
+
+	.less-margin-top{
+		margin-bottom: 2vh !important;
+	}
+	
+	.center-text{
+		position: fixed;
+		bottom: 45.7% !important;
+		right: 32% !important;
+	}
+
+	.about-img h3{
+		position: relative;
+		top: -2vh !important;
+		width: 120%;
+		left: 5.5vh !important;
+	}
+
+	.about-img p{
+		margin-top: -2vh !important;
+	}
+}
+
+
+@media only screen and (max-height:155px) {
+
+	.intro-info {
+		width: 135% !important;
+		margin-bottom: -11vh !important;
+	}
+
 }
 
 /**
@@ -4807,7 +4869,7 @@ header .logo a {
 	letter-spacing: .2vh;
 	height: 7vh;
 	padding: 0 5vh;
-	margin-top: 4.8vh;
+	margin-top: 6.5vh;
 	width: 100%;
 	background-color: rgb(125,69,188);
 	color: #ebebeb;
@@ -6661,4 +6723,19 @@ footer .copyright span:last-child::after {
 
 .center-text{
 	text-align: center;
+}
+
+.fullscreen-ico{
+	color: rgb(251, 255, 0); 
+	position: fixed;	
+	mix-blend-mode: difference;
+	width: 100%;
+	align-content: right;
+	text-align: right;
+	margin-top: 5vh;
+	margin-left: 95vw;
+	margin-right: auto;
+	width: 5vh !important;
+	height: 5vh !important;
+	z-index: 200 !important;
 }
