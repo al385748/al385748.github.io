@@ -1499,7 +1499,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: #151515 url(../images/intro-bg.jpg) no-repeat center bottom;
+	background: #151515 url(../images/main-art/background/background-min.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -5614,8 +5614,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 73.7% !important;
-	top: 40vh !important;
+	left: 46% !important;
+	top: 35vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5636,8 +5636,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 73.7% !important;
-	top: 40vh !important;
+	left: 46% !important;
+	top: 35vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5645,15 +5645,18 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.about-object:hover + .imgAboutDescription {
+.about-object-hover:hover + .imgAboutDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -1px 1px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
+}
+.about-object-hover:hover {
+	opacity: 1;
 }
 
 .skills-object{
@@ -5662,12 +5665,12 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 15vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 63.7% !important;
-	top: 40vh !important;
+	left: 10% !important;
+	top: 70vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5684,12 +5687,12 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 15vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 63.7% !important;
-	top: 40vh !important;
+	left: 10% !important;
+	top: 70vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5697,15 +5700,18 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.skills-object:hover + .imgSkillsDescription {
+.skills-object-hover:hover + .imgSkillsDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
+}
+.skills-object-hover:hover {
+	opacity: 1;
 }
 
 .services-object{
@@ -5714,11 +5720,11 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 30vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 53.7% !important;
+	left: 63.7% !important;
 	top: 40vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
@@ -5736,11 +5742,11 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 30vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 53.7% !important;
+	left: 63.7% !important;
 	top: 40vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
@@ -5749,15 +5755,18 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.services-object:hover + .imgServicesDescription {
+.services-object-hover:hover + .imgServicesDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
+}
+.services-object-hover:hover {
+	opacity: 1;
 }
 
 .contact-object{
@@ -5770,8 +5779,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 43.7% !important;
-	top: 40vh !important;
+	left: 25.7% !important;
+	top: 30vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5792,8 +5801,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 43.7% !important;
-	top: 40vh !important;
+	left: 25.7% !important;
+	top: 30vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5801,15 +5810,18 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.contact-object:hover + .imgContactDescription {
+.contact-object-hover:hover + .imgContactDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
+}
+.contact-object-hover:hover {
+	opacity: 1;
 }
 
 .unity-object{
@@ -5818,12 +5830,12 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 25vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 33.7% !important;
-	top: 40vh !important;
+	left: 45% !important;
+	top: 70vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5840,12 +5852,12 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 25vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 33.7% !important;
-	top: 40vh !important;
+	left: 45% !important;
+	top: 70vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5853,15 +5865,18 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.unity-object:hover + .imgUnityDescription {
+.unity-object-hover:hover + .imgUnityDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
+}
+.unity-object-hover:hover {
+	opacity: 1;
 }
 
 .unreal-object{
@@ -5874,8 +5889,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 23.7% !important;
-	top: 40vh !important;
+	left: 70.7% !important;
+	top: 70vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5896,8 +5911,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 23.7% !important;
-	top: 40vh !important;
+	left: 70.7% !important;
+	top: 70vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5905,15 +5920,18 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.unreal-object:hover + .imgUnrealDescription {
+.unreal-object-hover:hover + .imgUnrealDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
+}
+.unreal-object-hover:hover {
+	opacity: 1;
 }
 
 .extra-object{
@@ -5926,8 +5944,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 13.7% !important;
-	top: 40vh !important;
+	left: 63.7% !important;
+	top: 70vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5948,8 +5966,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 13.7% !important;
-	top: 40vh !important;
+	left: 63.7% !important;
+	top: 70vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5957,15 +5975,18 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.extra-object:hover + .imgExtraDescription {
+.extra-object-hover:hover + .imgExtraDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
+}
+.extra-object-hover:hover {
+	opacity: 1;
 }
 
 .filmmaking-object{
@@ -5978,8 +5999,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 03.7% !important;
-	top: 40vh !important;
+	left: 50% !important;
+	top: 55vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6000,8 +6021,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 03.7% !important;
-	top: 40vh !important;
+	left: 50% !important;
+	top: 55vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6009,15 +6030,19 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.filmmaking-object:hover + .imgFilmmakingDescription {
+.filmmaking-object-hover:hover + .imgFilmmakingDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
+}
+
+.filmmaking-object-hover:hover {
+	opacity: 1;
 }
 
 .journalism-object{
@@ -6030,7 +6055,7 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 83.7% !important;
+	left: 40% !important;
 	top: 40vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
@@ -6052,7 +6077,7 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 83.7% !important;
+	left: 40% !important;
 	top: 40vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
@@ -6061,15 +6086,19 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.journalism-object:hover + .imgJournalismDescription {
+.journalism-object-hover:hover + .imgJournalismDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
+}
+
+.journalism-object-hover:hover {
+	opacity: 1;
 }
 
 .education-object{
@@ -6078,12 +6107,12 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 15vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 93.7% !important;
-	top: 40vh !important;
+	left: 73% !important;
+	top: 30vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6100,12 +6129,12 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 15vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 93.7% !important;
-	top: 40vh !important;
+	left: 73% !important;
+	top: 30vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6113,28 +6142,32 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
 }
 
-.education-object:hover + .imgEducationDescription {
+.education-object-hover:hover + .imgEducationDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
+.education-object-hover:hover {
+	opacity: 1;
+}
+
 .cv-object{
 	display: block;
 	font-family: "poppins-bold", sans-serif;
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 5vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 73.7% !important;
-	top: 20vh !important;
+	left: 75% !important;
+	top: 25vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6143,6 +6176,8 @@ footer .copyright span:last-child::after {
 	transition: all 0.3s ease-in-out;
 
 	opacity: 1;
+
+	animation: cv-swing 1s infinite ease-in-out;
 }
 
 .cv-object-hover{
@@ -6151,12 +6186,12 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 5vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 73.7% !important;
-	top: 20vh !important;
+	left: 75% !important;
+	top: 25vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6164,16 +6199,199 @@ footer .copyright span:last-child::after {
 	-ms-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 
-	opacity: 1;
+	opacity: 0;
+
+	animation: cv-swing 1s infinite ease-in-out;
 }
 
-.cv-object:hover + .imgCVDescription {
+@keyframes cv-swing {
+	0% { top: 25vh !important; }
+	50% { top: 15vh !important; }
+	100% { top: 25vh !important; }
+}
+
+.cv-object-hover:hover + .imgCVDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
 	animation: text-shadow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
+.cv-object-hover:hover {
+	opacity: 1;
+}
+
+/* --- NON CLICKABLE */
+
+.wine-object{
+	display: block;
+	height: 20vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 83% !important;
+	top: 50vh !important;
+	opacity: 1;
+}
+
+.star-object{
+	display: block;
+	height: 20vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 35% !important;
+	top: 30vh !important;
+	opacity: 1;
+}
+
+.shine-object{
+	display: block;
+	height: 20vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 35% !important;
+	top: 30vh !important;
+	opacity: 1;
+
+	animation: load 3.5s infinite ease-in-out;
+	animation-direction: alternate-reverse;
+}
+
+.wall-object{
+	display: block;
+	height: 20vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 45% !important;
+	top: 50vh !important;
+	opacity: 1;
+}
+
+.ball1-object{
+	display: block;
+	height: 35vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 17% !important;
+	top: 40vh !important;
+	opacity: 1;
+}
+
+.ball2-object{
+	display: block;
+	height: 50vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 53% !important;
+	top: 40vh !important;
+	opacity: 1;
+}
+
+.branch-object{
+	display: block;
+	height: 30vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 18% !important;
+	top: 50vh !important;
+	opacity: 1;
+}
+
+.snake-object{
+	display: block;
+	height: 35vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 17.7% !important;
+	top: 50vh !important;
+	opacity: 1;
+}
+
+.sun-object{
+	display: block;
+	height: 40vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 28% !important;
+	top: 50vh !important;
+	opacity: 1;
+}
+
+.triangle-object{
+	display: block;
+	height: 20vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 54% !important;
+	top: 48vh !important;
+	opacity: 1;
+}
+
+.window-object{
+	display: block;
+	height: 40vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 55% !important;
+	top: 35vh !important;
+	opacity: 1;
+}
+
+.stars1-object{
+	display: block;
+	height: 40vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 55% !important;
+	top: 35vh !important;
+	opacity: 1;
+}
+
+.stars2-object{
+	display: block;
+	height: 40vh;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 55% !important;
+	top: 35vh !important;
+	opacity: 1;
+}
+
+.downGrid-object{
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 0% !important;
+	top: 70vh !important;
+	opacity: 1;
+}
+
+.upGrid-object{
+	display: block;
+	width: 100%;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 0% !important;
+	top: 0vh !important;
+	opacity: 1;
+}
+
+/* ----- */
 
 @keyframes text-shadow-anim {
 	0% {
@@ -6438,8 +6656,9 @@ footer .copyright span:last-child::after {
 		opacity: 0;
 	}
 	.extra-object:hover {
-		opacity: 0;
+		opacity: 0 !important;
 	}
+
 	.filmmaking-object:hover {
 		opacity: 0;
 	}
@@ -6492,9 +6711,10 @@ footer .copyright span:last-child::after {
 
 .custom-h1{
 	display: block;
-	font-size: 10vh !important;
+	font-size: 8vh !important;
 	text-transform: uppercase;
 	letter-spacing: 0.3vh;
+	line-height: 7.8vh !important;
 	max-width: 69vh;
 	
 	position: fixed;
@@ -6504,6 +6724,21 @@ footer .copyright span:last-child::after {
 	
 	opacity: 1;
 }
+
+.custom-accent{
+	display: block;
+	font-size: 8vh !important;
+	text-transform: uppercase;
+	letter-spacing: 0.3vh;
+	line-height: 7.2vh !important;
+	max-width: 69vh;
+	
+	position: fixed;
+	left: 41.2%;
+	
+	opacity: 1;
+}
+
 
 #resume .section-intro h5 {
 	font-size: 2vh !important;
