@@ -521,7 +521,7 @@ img.pull-left {
 	bottom: 0;
 	height: 100% !important;
 	width: 100% !important;
-	background-color: #2b2b2b;
+	background-color: rgb(26, 26, 26);
 	z-index: 780;
 	  
 	-webkit-transition: .2s all ease;
@@ -1648,11 +1648,12 @@ header .logo a {
 	position: fixed;
 	width: 100%;
 	left: 0;
-	bottom: 5%;
-	font-size: 4vh !important;
+	bottom: 4vh !important;
+	font-size: 3vh !important;
 	margin: 0;
 	padding: 0;
 }
+
 .intro-social li {
 	display: inline-block;
 	margin: 0 1.5%;
@@ -1662,7 +1663,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: #ccad00;
+	color: #747474;
 }
 
 /**
@@ -5615,7 +5616,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 46% !important;
-	top: 35vh !important;
+	top: 31vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5637,7 +5638,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 46% !important;
-	top: 35vh !important;
+	top: 31vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5652,7 +5653,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -1px 1px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-mix-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 .about-object-hover:hover {
@@ -5669,8 +5670,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 10% !important;
-	top: 70vh !important;
+	left: 5% !important;
+	top: 67vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5679,6 +5680,9 @@ footer .copyright span:last-child::after {
 	transition: all 0.3s ease-in-out;
 
 	opacity: 1;
+
+	animation: cv-swing 3s infinite ease-in-out;
+	animation-direction: alternate-reverse;
 }
 
 .skills-object-hover{
@@ -5691,8 +5695,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 10% !important;
-	top: 70vh !important;
+	left: 5% !important;
+	top: 67vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5701,13 +5705,16 @@ footer .copyright span:last-child::after {
 	transition: all 0.3s ease-in-out;
 
 	opacity: 0;
+
+	animation: cv-swing 3s infinite ease-in-out;
+	animation-direction: alternate-reverse;
 }
 
 .skills-object-hover:hover + .imgSkillsDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-mix-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 .skills-object-hover:hover {
@@ -5725,7 +5732,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 63.7% !important;
-	top: 40vh !important;
+	top: 36vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5747,7 +5754,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 63.7% !important;
-	top: 40vh !important;
+	top: 36vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5762,7 +5769,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-mix-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 .services-object-hover:hover {
@@ -5779,8 +5786,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 25.7% !important;
-	top: 30vh !important;
+	left: 30.2% !important;
+	top: 36vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5801,8 +5808,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 25.7% !important;
-	top: 30vh !important;
+	left: 30.2% !important;
+	top: 36vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5817,7 +5824,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-mix-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 .contact-object-hover:hover {
@@ -5835,7 +5842,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 45% !important;
-	top: 70vh !important;
+	top: 66vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5857,7 +5864,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 45% !important;
-	top: 70vh !important;
+	top: 66vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5872,7 +5879,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-purple-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 .unity-object-hover:hover {
@@ -5890,7 +5897,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 70.7% !important;
-	top: 70vh !important;
+	top: 66vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5912,7 +5919,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 70.7% !important;
-	top: 70vh !important;
+	top: 66vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5927,7 +5934,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-purple-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 .unreal-object-hover:hover {
@@ -5944,8 +5951,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 63.7% !important;
-	top: 70vh !important;
+	left: 63% !important;
+	top: 69vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5966,8 +5973,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 63.7% !important;
-	top: 70vh !important;
+	left: 63% !important;
+	top: 69vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -5982,7 +5989,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-purple-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 .extra-object-hover:hover {
@@ -5995,12 +6002,12 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 28vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 50% !important;
-	top: 55vh !important;
+	left: 46.8% !important;
+	top: 49.5vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6017,12 +6024,12 @@ footer .copyright span:last-child::after {
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	letter-spacing: .3rem;
-	height: 20vh;
+	height: 28vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 50% !important;
-	top: 55vh !important;
+	left: 46.8% !important;
+	top: 49.5vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6037,7 +6044,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-yellow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 
@@ -6055,8 +6062,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 40% !important;
-	top: 40vh !important;
+	left: 40.4% !important;
+	top: 40.5vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6077,8 +6084,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 40% !important;
-	top: 40vh !important;
+	left: 40.4% !important;
+	top: 40.5vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6093,7 +6100,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-yellow-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 
@@ -6111,8 +6118,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 73% !important;
-	top: 30vh !important;
+	left: 70% !important;
+	top: 29vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6133,8 +6140,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 73% !important;
-	top: 30vh !important;
+	left: 70% !important;
+	top: 29vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6149,7 +6156,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-mix-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 .education-object-hover:hover {
@@ -6166,8 +6173,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 75% !important;
-	top: 25vh !important;
+	left: 72% !important;
+	top: 26vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6178,6 +6185,7 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 
 	animation: cv-swing 1s infinite ease-in-out;
+	animation-direction: alternate-reverse;
 }
 
 .cv-object-hover{
@@ -6190,8 +6198,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 75% !important;
-	top: 25vh !important;
+	left: 72% !important;
+	top: 26vh !important;
 
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -6202,19 +6210,34 @@ footer .copyright span:last-child::after {
 	opacity: 0;
 
 	animation: cv-swing 1s infinite ease-in-out;
+	animation-direction: alternate-reverse;
 }
-
+@-webkit-keyframes cv-swing {
+	0% {
+		-webkit-transform: translateY(0vh);
+		transform: translateY(0vh);
+	}
+	100% {
+		-webkit-transform: translateY(-2vh);
+		transform: translateY(-2vh);
+	}
+}
 @keyframes cv-swing {
-	0% { top: 25vh !important; }
-	50% { top: 15vh !important; }
-	100% { top: 25vh !important; }
+	0% {
+		-webkit-transform: translateY(0vh);
+		transform: translateY(0vh);
+	}
+	100% {
+		-webkit-transform: translateY(-2vh);
+		transform: translateY(-2vh);
+	}
 }
 
 .cv-object-hover:hover + .imgCVDescription {
 	opacity: 1;
 	transform: translateY(-100%);
 	text-shadow: -1px -1px 0 #7d45bc, 1px -1px 0 #7d45bc, -5px 5px 0 #7d45bc, 1px 1px 0 #7d45bc;
-	animation: text-shadow-anim 1s infinite;
+	animation: text-shadow-mix-anim 1s infinite;
 	animation-timing-function: ease-in-out;
 }
 .cv-object-hover:hover {
@@ -6229,8 +6252,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 83% !important;
-	top: 50vh !important;
+	left: 79% !important;
+	top: 48vh !important;
 	opacity: 1;
 }
 
@@ -6241,7 +6264,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 35% !important;
-	top: 30vh !important;
+	top: 26vh !important;
 	opacity: 1;
 }
 
@@ -6252,7 +6275,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 35% !important;
-	top: 30vh !important;
+	top: 26vh !important;
 	opacity: 1;
 
 	animation: load 3.5s infinite ease-in-out;
@@ -6266,7 +6289,7 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 45% !important;
-	top: 50vh !important;
+	top: 46vh !important;
 	opacity: 1;
 }
 
@@ -6276,19 +6299,19 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 17% !important;
-	top: 40vh !important;
+	left: 14.7% !important;
+	top: 35vh !important;
 	opacity: 1;
 }
 
 .ball2-object{
 	display: block;
-	height: 50vh;
+	height: 60vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 53% !important;
-	top: 40vh !important;
+	left: 47% !important;
+	top: 36vh !important;
 	opacity: 1;
 }
 
@@ -6298,8 +6321,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 18% !important;
-	top: 50vh !important;
+	left: 15.7% !important;
+	top: 54vh !important;
 	opacity: 1;
 }
 
@@ -6309,8 +6332,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 17.7% !important;
-	top: 50vh !important;
+	left: 16.2% !important;
+	top: 46vh !important;
 	opacity: 1;
 }
 
@@ -6320,8 +6343,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 28% !important;
-	top: 50vh !important;
+	left: 26% !important;
+	top: 51vh !important;
 	opacity: 1;
 }
 
@@ -6331,8 +6354,8 @@ footer .copyright span:last-child::after {
 	white-space: nowrap;
 
 	position: fixed;
-	left: 54% !important;
-	top: 48vh !important;
+	left: 55% !important;
+	top: 45vh !important;
 	opacity: 1;
 }
 
@@ -6343,30 +6366,53 @@ footer .copyright span:last-child::after {
 
 	position: fixed;
 	left: 55% !important;
-	top: 35vh !important;
+	top: 28vh !important;
 	opacity: 1;
+}
+
+@-webkit-keyframes stars-opacity {
+	0% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 0.8;
+	}
+}
+@keyframes stars-opacity {
+	0% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 0.8;
+	}
 }
 
 .stars1-object{
 	display: block;
-	height: 40vh;
+	height: 60vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 55% !important;
-	top: 35vh !important;
+	left: 2% !important;
+	top: 38vh !important;
 	opacity: 1;
+
+	animation: stars-opacity 1.5s infinite ease-in-out;
+	animation-direction: alternate-reverse;
 }
 
 .stars2-object{
 	display: block;
-	height: 40vh;
+	height: 60vh;
 	white-space: nowrap;
 
 	position: fixed;
-	left: 55% !important;
+	left: 46% !important;
 	top: 35vh !important;
 	opacity: 1;
+
+	animation: stars-opacity 1s infinite ease-in-out;
+	animation-direction: alternate-reverse;
 }
 
 .downGrid-object{
@@ -6391,17 +6437,52 @@ footer .copyright span:last-child::after {
 	opacity: 1;
 }
 
+.title-object{
+	display: block;
+	width: 60%;
+	white-space: nowrap;
+
+	position: fixed;
+	left: 20% !important;
+	top: 5vh !important;
+	opacity: 1;
+}
+
 /* ----- */
 
-@keyframes text-shadow-anim {
+@keyframes text-shadow-purple-anim {
 	0% {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.2vh 0.2vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 	}
 	50% {
-		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.4vh 0.4vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
+		text-shadow: -0.2vh -0.2vh 0 #47276b, 0.2vh -0.2vh 0 #47276b, -0.4vh 0.4vh 0 #47276b, 0.2vh 0.2vh 0 #47276b;
 	}
 	100% {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.2vh 0.2vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
+	}
+  }
+  
+@keyframes text-shadow-yellow-anim {
+	0% {
+		text-shadow: -0.2vh -0.2vh 0 #997a00, 0.2vh -0.2vh 0 #997a00, -0.2vh 0.2vh 0 #997a00, 0.2vh 0.2vh 0 #997a00;
+	}
+	50% {
+		text-shadow: -0.2vh -0.2vh 0 #5f4c00, 0.2vh -0.2vh 0 #5f4c00, -0.4vh 0.4vh 0 #5f4c00, 0.2vh 0.2vh 0 #5f4c00;
+	}
+	100% {
+		text-shadow: -0.2vh -0.2vh 0 #997a00, 0.2vh -0.2vh 0 #997a00, -0.2vh 0.2vh 0 #997a00, 0.2vh 0.2vh 0 #997a00;
+	}
+  }
+  
+@keyframes text-shadow-mix-anim {
+	0% {
+		text-shadow: -0.2vh -0.2vh 0 #2c2c2c, 0.2vh -0.2vh 0 #2c2c2c, -0.2vh 0.2vh 0 #2c2c2c, 0.2vh 0.2vh 0 #2c2c2c;
+	}
+	50% {
+		text-shadow: -0.2vh -0.2vh 0 #5c5c5c, 0.2vh -0.2vh 0 #5c5c5c, -0.4vh 0.4vh 0 #5c5c5c, 0.2vh 0.2vh 0 #5c5c5c;
+	}
+	100% {
+		text-shadow: -0.2vh -0.2vh 0 #2c2c2c, 0.2vh -0.2vh 0 #2c2c2c, -0.2vh 0.2vh 0 #2c2c2c, 0.2vh 0.2vh 0 #2c2c2c;
 	}
   }
 
@@ -6409,15 +6490,17 @@ footer .copyright span:last-child::after {
 	.imgAboutDescription {
 		display: block;
 		position: fixed;
-		left: 75% !important;
-		top: 38vh !important;
+		left: 47.5% !important;
+		top: 32vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
 		font-family: akira, sans-serif;
-		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
+		text-shadow: -0.2vh -0.2vh 0 #000000, 0.2vh -0.2vh 0 #000000, -0.3vh 0.3vh 0 #000000, 0.2vh 0.2vh 0 #000000;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6430,8 +6513,8 @@ footer .copyright span:last-child::after {
 	.imgSkillsDescription {
 		display: block;
 		position: fixed;
-		left: 65% !important;
-		top: 38vh !important;
+		left: 10.5% !important;
+		top: 64vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
@@ -6439,6 +6522,8 @@ footer .copyright span:last-child::after {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6451,8 +6536,8 @@ footer .copyright span:last-child::after {
 	.imgServicesDescription {
 		display: block;
 		position: fixed;
-		left: 55% !important;
-		top: 38vh !important;
+		left: 64% !important;
+		top: 63vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
@@ -6460,6 +6545,8 @@ footer .copyright span:last-child::after {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6472,15 +6559,17 @@ footer .copyright span:last-child::after {
 	.imgContactDescription {
 		display: block;
 		position: fixed;
-		left: 45% !important;
-		top: 38vh !important;
+		left: 23% !important;
+		top: 48vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
 		font-family: akira, sans-serif;
-		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
+		text-shadow: -0.2vh -0.2vh 0 #000000, 0.2vh -0.2vh 0 #000000, -0.3vh 0.3vh 0 #000000, 0.2vh 0.2vh 0 #000000;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6493,8 +6582,8 @@ footer .copyright span:last-child::after {
 	.imgUnityDescription {
 		display: block;
 		position: fixed;
-		left: 35% !important;
-		top: 38vh !important;
+		left: 55% !important;
+		top: 89vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
@@ -6502,6 +6591,8 @@ footer .copyright span:last-child::after {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6514,8 +6605,8 @@ footer .copyright span:last-child::after {
 	.imgUnrealDescription {
 		display: block;
 		position: fixed;
-		left: 25% !important;
-		top: 38vh !important;
+		left: 82% !important;
+		top: 85vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
@@ -6523,6 +6614,8 @@ footer .copyright span:last-child::after {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6535,8 +6628,8 @@ footer .copyright span:last-child::after {
 	.imgExtraDescription {
 		display: block;
 		position: fixed;
-		left: 15% !important;
-		top: 38vh !important;
+		left: 61% !important;
+		top: 68vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
@@ -6544,6 +6637,8 @@ footer .copyright span:last-child::after {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 		color: #fff;
 		opacity: 0;
+		
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6556,8 +6651,8 @@ footer .copyright span:last-child::after {
 	.imgFilmmakingDescription {
 		display: block;
 		position: fixed;
-		left: 2% !important;
-		top: 38vh !important;
+		left: 49.5% !important;
+		top: 55vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
@@ -6565,6 +6660,8 @@ footer .copyright span:last-child::after {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6577,8 +6674,8 @@ footer .copyright span:last-child::after {
 	.imgJournalismDescription {
 		display: block;
 		position: fixed;
-		left: 80% !important;
-		top: 38vh !important;
+		left: 35% !important;
+		top: 60vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
@@ -6586,6 +6683,8 @@ footer .copyright span:last-child::after {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6598,8 +6697,8 @@ footer .copyright span:last-child::after {
 	.imgEducationDescription {
 		display: block;
 		position: fixed;
-		left: 90% !important;
-		top: 38vh !important;
+		left: 83.5% !important;
+		top: 35vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
@@ -6607,6 +6706,8 @@ footer .copyright span:last-child::after {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6619,8 +6720,8 @@ footer .copyright span:last-child::after {
 	.imgCVDescription {
 		display: block;
 		position: fixed;
-		left: 75% !important;
-		top: 18vh !important;
+		left: 82.5% !important;
+		top: 28vh !important;
 		text-align: center;
 		font-size: 2vh !important;
 		line-height: 100%;
@@ -6628,6 +6729,8 @@ footer .copyright span:last-child::after {
 		text-shadow: -0.2vh -0.2vh 0 #7d45bc, 0.2vh -0.2vh 0 #7d45bc, -0.3vh 0.3vh 0 #7d45bc, 0.2vh 0.2vh 0 #7d45bc;
 		color: #fff;
 		opacity: 0;
+
+		pointer-events: none;
 
 		/* transition effect. not necessary */
 		-moz-transition: opacity .2s, visibility .2s, transform .5s, text-shadow .5s;
@@ -6724,21 +6827,6 @@ footer .copyright span:last-child::after {
 	
 	opacity: 1;
 }
-
-.custom-accent{
-	display: block;
-	font-size: 8vh !important;
-	text-transform: uppercase;
-	letter-spacing: 0.3vh;
-	line-height: 7.2vh !important;
-	max-width: 69vh;
-	
-	position: fixed;
-	left: 41.2%;
-	
-	opacity: 1;
-}
-
 
 #resume .section-intro h5 {
 	font-size: 2vh !important;
@@ -6963,7 +7051,7 @@ footer .copyright span:last-child::after {
 .fullscreen-ico{
 	color: rgb(251, 255, 0); 
 	position: fixed;	
-	mix-blend-mode: difference;
+	mix-blend-mode:difference;
 	width: 100%;
 	align-content: right;
 	text-align: right;
