@@ -321,12 +321,10 @@ var resizeCanvas = function() {
   }
   window.addEventListener("resize", resizeCanvas);
 
-  window.addEventListener("hashchange", function(e) {
-    if(e.oldURL.length > e.newURL.length){
+  window.addEventListener("backbutton", function(e) {
         if(currentScene != "intro"){
           document.getElementById(currentScene).click();
         }
-    }
    });
 
   //window.addEventListener("touchmove", function() { e.preventDefault(); }, { passive:false });
