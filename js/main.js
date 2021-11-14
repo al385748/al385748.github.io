@@ -451,32 +451,35 @@ function endSceneTransition(value){
 
 function returnHome(){
 
+	if(currentScene!="intro"){
+
 	if(!circleTransitionWorking && !isSelectable){
-
-	setTimeout(function () {
-
-		endSceneTransition(100);
 
 		setTimeout(function () {
 
-		bgColor = "#000000";
-		animateCircle();
+			endSceneTransition(100);
 
-		if ($("body")) {
-			const e = document.querySelector(".cursor-inner"),
-				t = document.querySelector(".cursor-outer");
-			$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
-		}
+			setTimeout(function () {
 
-		newScene = "intro";
+			bgColor = "#000000";
+			animateCircle();
 
-		console.log("RETURNEANDO A CASITA " + newScene + " DESDE " + currentScene);
-		document.getElementById(currentScene).style.display = "none";
+			if ($("body")) {
+				const e = document.querySelector(".cursor-inner"),
+					t = document.querySelector(".cursor-outer");
+				$("body").is("a") && $("body").closest(".cursor-pointer").length || (e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover"))
+			}
 
-		buttonTouch = false;
-		}, 200);
-	}, 100);
-}
+			newScene = "intro";
+
+			console.log("RETURNEANDO A CASITA " + newScene + " DESDE " + currentScene);
+			document.getElementById(currentScene).style.display = "none";
+
+			buttonTouch = false;
+			}, 200);
+		}, 100);
+	}
+	}
 }
 
 function forceReturnHome(){
