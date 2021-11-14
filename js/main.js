@@ -227,18 +227,7 @@ document.getElementById("c").style.pointerEvents = 'none';
 		var direction = data.state.direction;
 		if (direction == 'back') {
 			if(currentScene != "intro"){
-				document.getElementById("outer-mouse").click();
-				eventFire(document.getElementById(currentScene), 'click');
-			}
-		}
-	});
-
-	$(document).on("navigate", function (event, data) {
-		var direction = data.state.direction;
-		if (direction == 'back') {
-			if(currentScene != "intro"){
-				document.getElementById("outer-mouse").click();
-				eventFire(document.getElementById(currentScene), 'click');
+				document.getElementById(currentScene).click();
 			}
 		}
 	});

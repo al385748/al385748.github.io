@@ -320,6 +320,15 @@ var resizeCanvas = function() {
     window.CP.PenTimer.MAX_TIME_IN_LOOP_WO_EXIT = 6000; 
   }
   window.addEventListener("resize", resizeCanvas);
+
+  window.addEventListener("hashchange", function(e) {
+    if(e.oldURL.length > e.newURL.length){
+        if(currentScene != "intro"){
+          document.getElementById(currentScene).click();
+        }
+    }
+   });
+
   //window.addEventListener("touchmove", function() { e.preventDefault(); }, { passive:false });
   //window.addEventListener("touchstart", function() { e.preventDefault(); }, { passive:false });
   addClickListeners();
