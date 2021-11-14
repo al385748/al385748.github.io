@@ -228,6 +228,17 @@ document.getElementById("c").style.pointerEvents = 'none';
 		if (direction == 'back') {
 			if(currentScene != "intro"){
 				document.getElementById("outer-mouse").click();
+				eventFire(document.getElementById('outer-mouse'), 'click');
+			}
+		}
+	});
+
+	$(document).on("navigate", function (event, data) {
+		var direction = data.state.direction;
+		if (direction == 'back') {
+			if(currentScene != "intro"){
+				document.getElementById("outer-mouse").click();
+				eventFire(document.getElementById('outer-mouse'), 'click');
 			}
 		}
 	});
