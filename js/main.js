@@ -228,7 +228,7 @@ document.getElementById("c").style.pointerEvents = 'none';
 		if (direction == 'back') {
 			if(currentScene != "intro"){
 				document.getElementById("outer-mouse").click();
-				eventFire(document.getElementById('outer-mouse'), 'click');
+				eventFire(document.getElementById(currentScene), 'click');
 			}
 		}
 	});
@@ -238,7 +238,7 @@ document.getElementById("c").style.pointerEvents = 'none';
 		if (direction == 'back') {
 			if(currentScene != "intro"){
 				document.getElementById("outer-mouse").click();
-				eventFire(document.getElementById('outer-mouse'), 'click');
+				eventFire(document.getElementById(currentScene), 'click');
 			}
 		}
 	});
