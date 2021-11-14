@@ -80,13 +80,10 @@ function addClickListeners() {
 
 function handleEvent(e) {
 
-  console.log("Ha entrado un eventaso, y la TRANSI " + circleTransitionWorking + " pero es que además SELECTA " + isSelectable)
-
     if(!circleTransitionWorking && !isSelectable){
     setTimeout(function () {
 
       if(buttonTouch){
-        console.log("BUTTON TOUCHED")
         if (e.touches) { 
           e.preventDefault();
           e = e.touches[0];

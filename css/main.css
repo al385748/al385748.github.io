@@ -7049,7 +7049,6 @@ footer .copyright span:last-child::after {
 }
 
 .fullscreen-ico{
-	color: rgb(251, 255, 0); 
 	position: fixed;	
 	mix-blend-mode:difference;
 	width: 100%;
@@ -7061,4 +7060,18 @@ footer .copyright span:last-child::after {
 	width: 5vh !important;
 	height: 5vh !important;
 	z-index: 200 !important;
+}
+
+.touch-anywhere{
+	position: fixed;	
+	width: 100%;
+	align-content: right;
+	text-align: right;
+	margin-top: 5vh;
+	margin-left: 5vh;
+	margin-right: auto;
+	width: 20vh !important;
+	height: 4vh !important;
+	z-index: 200 !important;
+	opacity: 75%;
 }
