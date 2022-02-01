@@ -6849,6 +6849,9 @@ footer .copyright span:last-child::after {
 	.imgSkillsDescription {
 		display: none;
 	}
+	.imgSunDescription {
+		display: none;
+	}
 	.imgServicesDescription {
 		display: none;
 	}
