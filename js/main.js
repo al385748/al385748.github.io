@@ -463,7 +463,7 @@ function returnHome(){
 				document.getElementById("postmortemCountdown").textContent = romanize(visitedScreensArray.length);
 			}
 
-			if(document.getElementById("postmortemCountdown").textContent == "XI"){
+			if(document.getElementById("postmortemCountdown").textContent == "X"){
 				document.getElementById("conditional-data").className = "selectable-data";
 				document.getElementById("sunObject").src = "images/main-art/clickable/sol_jarrones-white.png";
 			}
