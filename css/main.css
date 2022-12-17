@@ -3322,8 +3322,8 @@ header .logo a {
 	display: block;
 	position: relative !important;
 	overflow: hidden;
-	min-width: 16.66% !important;
-	max-width: 16.66% !important;
+	min-width: 20% !important;
+	max-width: 20% !important;
 	min-height: 55vh !important;
 	max-height: 55% !important;
 	margin-right: 0vh !important;
@@ -3479,8 +3479,8 @@ header .logo a {
 	display: block;
 	position: relative !important;
 	overflow: hidden;
-	min-width: 33.33%;
-	max-width: 33.33%;
+	min-width: 25%;
+	max-width: 25%;
 	min-height: 55%;
 	max-height: 55%;
 }
@@ -3638,8 +3638,8 @@ header .logo a {
 	overflow: hidden;
 	min-width: 16.66%;
 	max-width: 16.66%;
-	min-height: 55%;
-	max-height: 55%;
+	min-height: 55% !important;
+	max-height: 55% !important;
 }
 #portfolio-extra .folio-item img {
 	vertical-align: middle;
@@ -5035,6 +5035,7 @@ header .logo a {
  * --------------------------------------------------------------- 
  */
 .s-loader {
+	display: none !important;
 	margin: 1.2rem auto 3rem;
 	width: 70px;
 	text-align: center;
@@ -7077,7 +7078,7 @@ footer .copyright span:last-child::after {
 	display: block;
 	position: fixed;
 
-	margin-top: 6.5vh;
+	margin-top: 2vh;
 	background: linear-gradient(-45deg, rgb(223, 181, 15) 50%, rgba(125,69,188,1) 90%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
