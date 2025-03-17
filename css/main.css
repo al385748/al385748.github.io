@@ -3404,10 +3404,11 @@ header .logo a {
 	transform: scale(1.05);
 }
 
-/**
- * responsive
+ /**
+ * old responsive
  * ------------------------------------------------------------------- 
  */
+
  @media only screen and (max-width:1024px) {
 
 	#portfolio-unity .folio-title {
@@ -3473,14 +3474,16 @@ header .logo a {
 	padding-top: 3%;
 	overflow: hidden !important;
 
+	
+
 }
 #portfolio-unreal .folio-item {
 	padding: 0;
 	display: block;
 	position: relative !important;
 	overflow: hidden;
-	min-width: 25%;
-	max-width: 25%;
+	min-width: 16.66%;
+	max-width: 16.66%;
 	min-height: 55%;
 	max-height: 55%;
 }
@@ -3518,7 +3521,9 @@ header .logo a {
 	display: table;
 	width: 100%;
 	height: 100%;
+	
 }
+
 #portfolio-unreal .folio-item-cell {
 	display: table-cell;
 	vertical-align: middle;
@@ -3530,6 +3535,7 @@ header .logo a {
 	transition: all 0.5s ease-in-out;
 	position: relative !important;
 	left: -100%;
+	
 }
 
 #portfolio-unreal .folio-title {
@@ -4129,7 +4135,18 @@ header .logo a {
 	letter-spacing: .1vh;
 	display: block;
 	text-align: left;
-	color: #2b2b2b;
+	color: #1b1b1b;
+}
+.extra-details {
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.5vh;
+	line-height: 2.5vh;
+	text-transform: uppercase;
+	letter-spacing: .1vh;
+	display: block;
+	text-align: left;
+	color: #8a8a8a;
+	margin-bottom: 1vh;
 }
 .popup-modal-unity .link-box {
 	width: 100%;
@@ -5434,6 +5451,16 @@ footer .copyright span:last-child::after {
 	font-size: 4.2vh;
 	margin-top: 2vh;
 	color: #ebebeb;
+
+	
+	/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 13.5vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 35vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 10vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-unreal h5 {
@@ -5445,8 +5472,16 @@ footer .copyright span:last-child::after {
   .portfolio-unreal .lead {
 	font-family: "poppins-regular", serif;
 	color: #ebebeb;
-	width: 135%;
-	margin-left: -17.5% !important;
+
+	
+	/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 30vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 10vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-extra {
@@ -7172,3 +7207,90 @@ footer .copyright span:last-child::after {
 	font-family: "chapaza";
 	font-size: 4vmin !important;
 }
+
+
+
+
+
+/**
+ * responsive 2K - NEW
+ * ------------------------------------------------------------------- 
+ */
+
+ #folio-wrapper{
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 50vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -12.5%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 100vh;    /* Tamaño relativo al alto de la ventana */
+}
+
+ /*
+
+ @media only screen and (max-width:2224px) and (min-width:1025px)  {
+
+	#portfolio-unity .folio-item {
+		display: none !important;
+	}
+
+	#portfolio-unity .folio-item-table {
+		display: none;
+	}
+	#portfolio-unity .folio-item-cell {
+		display: none;
+	}
+
+
+
+
+
+	#portfolio-unreal .folio-item-table {
+	}
+/*
+	#portfolio-unreal .folio-item-table {
+		display: none;
+	}
+	#portfolio-unreal .folio-item-cell {
+		display: none;
+	}
+
+
+
+
+
+
+	#portfolio-extra .folio-item {
+		display: none !important;
+	}
+
+	#portfolio-extra .folio-item-table {
+		display: none;
+	}
+	#portfolio-extra .folio-item-cell {
+		display: none;
+	}
+
+	#portfolio-filmmaking .folio-item {
+		display: none !important;
+	}
+
+	#portfolio-filmmaking .folio-item-table {
+		display: none;
+	}
+	#portfolio-filmmaking .folio-item-cell {
+		display: none;
+	}
+
+	#portfolio-journalism .folio-item {
+		display: none !important;
+	}
+
+	#portfolio-journalism .folio-item-table {
+		display: none;
+	}
+	#portfolio-journalism .folio-item-cell {
+		display: none;
+	}
+ }
+	*/
