@@ -1763,6 +1763,15 @@ header .logo a {
 	border-radius: 50%;
 	margin: 0vh 0 0 0;
 	float: left;
+
+		/* RESPONSIVE MOD */
+
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 31vh;       /* Mitad de la pantalla en altura */
+		left: 50vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-400%, -50%); /* Centrar exactamente */
+		width: 100vw;     /* Tamaño relativo al ancho de la ventana */
+		height: 50vh;    /* Tamaño relativo al alto de la ventana */
 }
 
 .intro-info .lead {
@@ -1773,11 +1782,19 @@ header .logo a {
 }
 
 .about-content {
-	position: relative;
 	text-align: left;
-	max-width: 125vh;
+	max-width: 100%;
 	margin-bottom: 0vh;
 	z-index: 85 !important;
+
+		/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 30vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, 250%); /* Centrar exactamente */
+    width: 65.5vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
 }
 .about-content h3 {
 	font-family: "poppins-bold", sans-serif;
@@ -1903,6 +1920,15 @@ header .logo a {
 	max-width: 125vh;
 	margin-bottom: 0vh;
 	z-index: 85 !important;
+
+		/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 32.5vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 100vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
 }
 .skills-content h3 {
 	font-family: "poppins-bold", sans-serif;
@@ -1937,13 +1963,18 @@ header .logo a {
 	display: block;
 	font-family: "poppins-regular", sans-serif;
 	color: #888888;
-	font-size: 2vh;
+	font-size: 1.75vh;
 	line-height: 1;
 }
 .skills-content .skill-bars {
-	margin-top: 6vh;
-	margin-bottom: -6vh !important;
+	margin-top: 8vh;
+	margin-bottom: -7vh !important;
 }
+
+.skills-content .skill-bars li {
+	margin-top: -1.5vh !important;
+}
+
 
 .button-section {
 	text-align: center;
@@ -1956,15 +1987,16 @@ header .logo a {
 }
 
 .also-worked {
-	font-size: 1.8vh !important;
-	line-height: 2.5vh !important;
+	font-size: 1.75vh !important;
+	line-height: 3vh !important;
+	margin-top: 9vh !important;
 }
 
 /**
  * responsive:
  * about
  * ------------------------------------------------------------------- 
- */
+ 
 @media only screen and (max-width:1024px) and (min-width:768px) {
 	.intro-info {
 		margin-right: 0;
@@ -2638,12 +2670,12 @@ header .logo a {
 	}
 
 }
-
+*/
 /**
  * responsive:
  * skills
  * ------------------------------------------------------------------- 
- */
+ 
 
  @media only screen and (max-width:1300px) {
 
@@ -2822,7 +2854,7 @@ header .logo a {
 		margin-bottom: -2.5vh;
 	}
 }
-
+*/
 /** 
  * ===================================================================
  * 12. resume - (_layout.scss)
@@ -2842,8 +2874,8 @@ header .logo a {
 }
 
 #resume .resume-timeline {
-	max-width: 980px;
-	margin-left: 10%;
+	max-width: 100%;
+	margin-left: 5%;
 }
 
 .timeline-block h3{
@@ -2868,8 +2900,8 @@ header .logo a {
 }
 
 #resume .timeline-wrap {
-	position: relative;
-	margin-top: 0vh;
+	position: fixed;
+	margin-top: 25vh;
 	margin-bottom: 0vh;
 }
 #resume .timeline-wrap::before {
@@ -2879,12 +2911,13 @@ header .logo a {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.1);
 	position: absolute;
-	left: 43.5vh;
+	left: 44.5vh;
 	top: 0;
 }
 #resume .timeline-block {
 	position: relative;
 	padding-top: 1.5vh;
+	width: 65vw;
 }
 #resume .timeline-ico {
 	height: 4.8vh;
@@ -2895,7 +2928,7 @@ header .logo a {
 	text-align: center;
 	color: #FFFFFF;
 	position: absolute;
-	left: 43.5vh;
+	left: 44.5vh;
 	top: .9vh;
 	margin-left: -2.4vh;
 }
@@ -2903,15 +2936,18 @@ header .logo a {
 	position: relative;
 	left: .05vh;
 	top: .1vh;
-	font-size: 90%;
+	font-size: 1.75vh;
 }
 
 #resume .timeline-header {
 	float: left;
-	width: 48vh;
-	padding-right: 9%;
+	width: 40vh;
 	text-align: right;
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+	left: 4.5vw;
 }
+
 #resume .timeline-header h3 {
 	margin-bottom: 0;
 	font-size: 2vh;
@@ -2922,8 +2958,9 @@ header .logo a {
 	letter-spacing: -0.15vh;
 	font-size: 2vh;
 	color: #888888;
-	margin-top: 1vh;
-	margin-bottom: -1vh !important;
+	margin-top: 3vh;
+	line-height: 1vh !important;
+
 }
 #resume .timeline-content {
 	margin-left: 43.5vh;
@@ -2938,8 +2975,8 @@ header .logo a {
 #resume .timeline-content p {
 	margin-top: -5% !important;
 	font-family: "poppins-regular", sans-serif;
-	font-size: 1.9vh;
-	line-height: 4vh;
+	font-size: 1.75vh;
+	line-height: 3.5vh;
 }
 
 #resume .timeline-content h4::after {
@@ -2959,9 +2996,11 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 
+ /*
  @media only screen and (min-height:850px) { /* FULLSCREEN */
-
+/*
 	#resume h1 {
+		display: none;
 		width: 120% !important;
 		margin-left: -10% !important;
 		margin-bottom: 4vh;
@@ -3304,6 +3343,7 @@ header .logo a {
 		line-height: 4vh;
 	}
 }
+	*/
 
 /** 
  * ===================================================================
@@ -3381,7 +3421,7 @@ header .logo a {
 	font-size: 1.8vh;
 	padding: 0 2vh;
 	letter-spacing: 0.1vh;
-	margin-bottom: 0;
+	margin-bottom: 1vh;
 }
 #portfolio-unity .folio-types {
 	margin: 0;
@@ -3543,7 +3583,7 @@ header .logo a {
 	font-size: 1.8vh;
 	padding: 0 2vh;
 	letter-spacing: 0.1vh;
-	margin-bottom: 0;
+	margin-bottom: 1vh;
 }
 #portfolio-unreal .folio-types {
 	margin: 0;
@@ -3700,7 +3740,7 @@ header .logo a {
 	font-size: 1.8vh;
 	padding: 0 2vh;
 	letter-spacing: 0.1vh;
-	margin-bottom: 0;
+	margin-bottom: 1vh;
 }
 #portfolio-extra .folio-types {
 	margin: 0;
@@ -3855,7 +3895,7 @@ header .logo a {
 	font-size: 1.8vh;
 	padding: 0 2vh;
 	letter-spacing: 0.1vh;
-	margin-bottom: 0;
+	margin-bottom: 1vh;
 }
 #portfolio-filmmaking .folio-types {
 	margin: 0;
@@ -4010,11 +4050,11 @@ header .logo a {
 	font-size: 1.8vh;
 	letter-spacing: 0.1vh;
 	padding: 0 2vh;
-	margin-bottom: 0;
+	margin-bottom: 1vh;
 }
 #portfolio-journalism .folio-types {
 	margin: 0;
-	padding: 0;
+	padding-top: 1vh;
 	font-family: "poppins-bold", sans-serif;
 	text-transform: uppercase;
 	font-size: 1.6vh;
@@ -4491,7 +4531,14 @@ header .logo a {
 	color: #2b2b2b;
 }
 .services-content {
-	max-width: 160vh;
+	max-width: 150vh;
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 38vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 100%;     /* Tamaño relativo al ancho de la ventana */
+    height: 0vh;    /* Tamaño relativo al alto de la ventana */
 }
 
 .services-list {
@@ -4576,7 +4623,8 @@ header .logo a {
 .services-list .desc {
 	color: #2b2b2b;
 	margin-top: -2vh !important;
-	line-height: 4vh;
+	line-height: 3.5vh;
+	font-size: 1.75vh;
 }
 
 /* pagination */
@@ -4610,7 +4658,7 @@ header .logo a {
 	margin: 0vh 1.6vh -0.2vh .8vh !important;
 
 }
-
+/*
 @media only screen and (max-height:495px) and (min-height:490px) {
 	#services .section-intro p {
 		margin-left: 10% !important;
@@ -4656,7 +4704,7 @@ header .logo a {
 	}
 }
 
-
+*/
 /** 
  * ===================================================================
  * 16. stats - (_layout.scss)
@@ -5422,7 +5470,16 @@ footer .copyright span:last-child::after {
 	font-size: 4.2vh;
 	margin-top: 2vh;
 	color: #ebebeb;
-}
+
+		/* RESPONSIVE MOD */
+
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 17vh;       /* Mitad de la pantalla en altura */
+		left: 50vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%); /* Centrar exactamente */
+		width: 35vw;     /* Tamaño relativo al ancho de la ventana */
+		height: 10vh;    /* Tamaño relativo al alto de la ventana */
+	}
 
   .portfolio-unity h5 {
 	font-size: 2vh !important;
@@ -5440,17 +5497,15 @@ footer .copyright span:last-child::after {
   .portfolio-unity .lead {
 	font-family: "poppins-regular", serif;
 	color: #ebebeb;
-	width: 135%;
-	margin-left: -17.5% !important;
 
 		/* RESPONSIVE MOD */
 
-		position: fixed;  /* Se mantiene en la misma posición en la ventana */
-		top: 30vh;       /* Mitad de la pantalla en altura */
-		left: 50vw;      /* Mitad de la pantalla en anchura */
-		transform: translate(-50%, -50%); /* Centrar exactamente */
-		width: 50vw;     /* Tamaño relativo al ancho de la ventana */
-		height: 5vh;    /* Tamaño relativo al alto de la ventana */
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+	top: 30vh;       /* Mitad de la pantalla en altura */
+	left: 50vw;      /* Mitad de la pantalla en anchura */
+	transform: translate(-50%, -50%); /* Centrar exactamente */
+	width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+	height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-unreal {
@@ -5553,8 +5608,6 @@ footer .copyright span:last-child::after {
   .portfolio-extra .lead {
 	font-family: "poppins-regular", serif;
 	color: #ebebeb;
-	width: 135%;
-	margin-left: -17.5% !important;
 
 	position: fixed;  /* Se mantiene en la misma posición en la ventana */
     top: 30vh;       /* Mitad de la pantalla en altura */
@@ -5605,8 +5658,17 @@ footer .copyright span:last-child::after {
   .portfolio-filmmaking .lead {
 	font-family: "poppins-regular", serif;
 	color: #2b2b2b;
-	width: 135%;
-	margin-left: -17.5% !important;
+
+		/* RESPONSIVE MOD */
+
+	/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 30vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 60vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-journalism {
@@ -5615,13 +5677,6 @@ footer .copyright span:last-child::after {
 	width: 100%;
 	height: 100%;
 	z-index: 97 !important;
-
-	position: fixed;  /* Se mantiene en la misma posición en la ventana */
-    top: 30vh;       /* Mitad de la pantalla en altura */
-    left: 50vw;      /* Mitad de la pantalla en anchura */
-    transform: translate(-50%, -50%); /* Centrar exactamente */
-    width: 50vw;     /* Tamaño relativo al ancho de la ventana */
-    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-journalism h1 {
@@ -5658,14 +5713,12 @@ footer .copyright span:last-child::after {
   .portfolio-journalism .lead {
 	font-family: "poppins-regular", serif;
 	color: #2b2b2b;
-	width: 135%;
-	margin-left: -17.5% !important;
 
 	position: fixed;  /* Se mantiene en la misma posición en la ventana */
     top: 30vh;       /* Mitad de la pantalla en altura */
     left: 50vw;      /* Mitad de la pantalla en anchura */
     transform: translate(-50%, -50%); /* Centrar exactamente */
-    width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+    width: 60vw;     /* Tamaño relativo al ancho de la ventana */
     height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
@@ -5691,12 +5744,40 @@ footer .copyright span:last-child::after {
 	letter-spacing: -0.15vh;
 	font-size: 4.2vh;
 	margin-top: 2vh;
+
+		/* RESPONSIVE MOD */
+
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 17vh;       /* Mitad de la pantalla en altura */
+		left: 50vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%); /* Centrar exactamente */
+		width: 35vw;     /* Tamaño relativo al ancho de la ventana */
+		height: 10vh;    /* Tamaño relativo al alto de la ventana */
+  }
+
+  .services h5{
+			/* RESPONSIVE MOD */
+
+			position: fixed;  /* Se mantiene en la misma posición en la ventana */
+			top: 10vh;       /* Mitad de la pantalla en altura */
+			left: 50vw;      /* Mitad de la pantalla en anchura */
+			transform: translate(-50%, -50%); /* Centrar exactamente */
+			width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+			height: 5vh;    /* Tamaño relativo al alto de la ventana */
+  }
+
+  .services .lead{
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 25vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .services p {
 	font-family: "poppins-regular", serif;
 	font-size: 2vh;
-
   }
 
   .count-up {
@@ -7042,6 +7123,15 @@ footer .copyright span:last-child::after {
 	letter-spacing: .55vh;
 
 	color: linear-gradient(-45deg, rgba(255,208,18,1) 0%, rgba(125,69,188,1) 100%);
+
+			/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 10vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
 }
 
 #resume h1 {
@@ -7049,6 +7139,28 @@ footer .copyright span:last-child::after {
 	letter-spacing: -0.15vh;
 	margin-top: 2vh;
 	font-size: 4.2vh;
+
+		/* RESPONSIVE MOD */
+
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 17vh;       /* Mitad de la pantalla en altura */
+		left: 50vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%); /* Centrar exactamente */
+		width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+		height: 10vh;    /* Tamaño relativo al alto de la ventana */
+}
+
+#resume .lead {
+	font-family: "poppins-regular", serif;
+	
+	/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 22.5vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 40vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
 }
 
 #resume p {
@@ -7084,11 +7196,12 @@ footer .copyright span:last-child::after {
 	display: block;
 	position: fixed;
 	left: auto;
-	right: 10%;
+	right: 10vw;
 	bottom: 6%;
 
 	text-align: center !important;
 	align-items: center !important;
+
 }
 
 .resume-stats .stat-big {
@@ -7138,6 +7251,15 @@ footer .copyright span:last-child::after {
 	font-size: 4.2vh;
 	color: #2b2b2b;
 	margin-bottom: 0vh;
+
+		/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 17vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 35vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 10vh;    /* Tamaño relativo al alto de la ventana */
 }
 
 #about h3 {
@@ -7147,10 +7269,30 @@ footer .copyright span:last-child::after {
 	margin-bottom: -0.5	vh;
 }
 
+#about h5{
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 10vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
+}
+
+#about .lead{
+	/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 25vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 55vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
+}
+
 #about p {
 	font-family: "poppins-regular";
 	margin-top: 2vh;
-	font-size: 2vh;
+	font-size: 1.75vh;
 	color: #2b2b2b;
 }
 
@@ -7166,6 +7308,15 @@ footer .copyright span:last-child::after {
 	margin-top: 2vh;
 	font-size: 4.2vh;
 	color: #2b2b2b;
+
+		/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 17vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 35vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 10vh;    /* Tamaño relativo al alto de la ventana */
 }
 
 #skills h3 {
@@ -7198,6 +7349,26 @@ footer .copyright span:last-child::after {
 	letter-spacing: .55vh;
 
 	color: linear-gradient(-45deg, rgba(255,208,18,1) 0%, rgba(125,69,188,1) 100%);
+
+			/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 10vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
+}
+
+#skills .lead{
+		/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 22vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
 }
 
 #skills p {
@@ -7327,6 +7498,51 @@ footer .copyright span:last-child::after {
     height: 100vh;    /* Tamaño relativo al alto de la ventana */
 }
 
+#folio-wrapper-unity{
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 50vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -12.5%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 100vh;    /* Tamaño relativo al alto de la ventana */
+}
+
+#folio-wrapper-unreal{
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 50vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -12.5%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 100vh;    /* Tamaño relativo al alto de la ventana */
+}
+
+#folio-wrapper-extra{
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 50vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -12.5%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 100vh;    /* Tamaño relativo al alto de la ventana */
+}
+
+#folio-wrapper-filmmaking{
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 50vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -12.5%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 100vh;    /* Tamaño relativo al alto de la ventana */
+}
+
+#folio-wrapper-journalism{
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 50vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -12.5%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 100vh;    /* Tamaño relativo al alto de la ventana */
+}
+
 @media only screen and (max-width: 1052px) {
 	#folio-wrapper{
 		position: fixed;  /* Se mantiene en la misma posición en la ventana */
@@ -7335,7 +7551,52 @@ footer .copyright span:last-child::after {
 		transform: translate(-50%, -50%) !important; /* Centrar exactamente */
 		width: 70vw !important;     /* Tamaño relativo al ancho de la ventana */
 		height: 100vh !important;    /* Tamaño relativo al alto de la ventana */
-}
+	}
+
+	#folio-wrapper-unity{
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 92.5vh;       /* Mitad de la pantalla en altura */
+		left: 40vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%) !important; /* Centrar exactamente */
+		width: 70vw !important;     /* Tamaño relativo al ancho de la ventana */
+		height: 100vh !important;    /* Tamaño relativo al alto de la ventana */
+	}
+
+	#folio-wrapper-unreal{
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 92.5vh;       /* Mitad de la pantalla en altura */
+		left: 40vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%) !important; /* Centrar exactamente */
+		width: 70vw !important;     /* Tamaño relativo al ancho de la ventana */
+		height: 100vh !important;    /* Tamaño relativo al alto de la ventana */
+	}
+
+	#folio-wrapper-extra{
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 92.5vh;       /* Mitad de la pantalla en altura */
+		left: 40vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%) !important; /* Centrar exactamente */
+		width: 70vw !important;     /* Tamaño relativo al ancho de la ventana */
+		height: 100vh !important;    /* Tamaño relativo al alto de la ventana */
+	}
+
+	#folio-wrapper-filmmaking{
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 92.5vh;       /* Mitad de la pantalla en altura */
+		left: 40vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%) !important; /* Centrar exactamente */
+		width: 70vw !important;     /* Tamaño relativo al ancho de la ventana */
+		height: 100vh !important;    /* Tamaño relativo al alto de la ventana */
+	}
+
+	#folio-wrapper-journalism{
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 92.5vh;       /* Mitad de la pantalla en altura */
+		left: 40vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%) !important; /* Centrar exactamente */
+		width: 70vw !important;     /* Tamaño relativo al ancho de la ventana */
+		height: 100vh !important;    /* Tamaño relativo al alto de la ventana */
+	}
 }
 
  /*
