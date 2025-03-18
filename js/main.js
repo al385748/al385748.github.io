@@ -528,7 +528,7 @@ function blackMouse(){
 }
 
 function downloadCV(){
-	window.open("docs/CHARLIE-SANCHEZ_CV+RECLET.pdf");
+	window.open("docs/CHARLIE-SANCHEZ_CV.pdf");
 }
 
 function downloadPostmortem(){
