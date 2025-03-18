@@ -5428,6 +5428,13 @@ footer .copyright span:last-child::after {
 	font-size: 2vh !important;
 	color: #ebebeb;
 	letter-spacing: .55vh;
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 10vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-unity .lead {
@@ -5435,6 +5442,15 @@ footer .copyright span:last-child::after {
 	color: #ebebeb;
 	width: 135%;
 	margin-left: -17.5% !important;
+
+		/* RESPONSIVE MOD */
+
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 30vh;       /* Mitad de la pantalla en altura */
+		left: 50vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%); /* Centrar exactamente */
+		width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+		height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-unreal {
@@ -5456,7 +5472,7 @@ footer .copyright span:last-child::after {
 	/* RESPONSIVE MOD */
 
 	position: fixed;  /* Se mantiene en la misma posición en la ventana */
-    top: 13.5vh;       /* Mitad de la pantalla en altura */
+    top: 17vh;       /* Mitad de la pantalla en altura */
     left: 50vw;      /* Mitad de la pantalla en anchura */
     transform: translate(-50%, -50%); /* Centrar exactamente */
     width: 35vw;     /* Tamaño relativo al ancho de la ventana */
@@ -5467,6 +5483,16 @@ footer .copyright span:last-child::after {
 	font-size: 2vh !important;
 	color: #ebebeb;
 	letter-spacing: .55vh;
+
+		/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 10vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
+
   }
 
   .portfolio-unreal .lead {
@@ -5481,7 +5507,7 @@ footer .copyright span:last-child::after {
     left: 50vw;      /* Mitad de la pantalla en anchura */
     transform: translate(-50%, -50%); /* Centrar exactamente */
     width: 50vw;     /* Tamaño relativo al ancho de la ventana */
-    height: 10vh;    /* Tamaño relativo al alto de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-extra {
@@ -5498,12 +5524,30 @@ footer .copyright span:last-child::after {
 	font-size: 4.2vh;
 	margin-top: 2vh;
 	color: #ebebeb;
+
+		/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 17vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 35vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 10vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-extra h5 {
 	font-size: 2vh !important;
 	color: #ebebeb;
 	letter-spacing: .55vh;
+
+			/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 10vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-extra .lead {
@@ -5511,6 +5555,13 @@ footer .copyright span:last-child::after {
 	color: #ebebeb;
 	width: 135%;
 	margin-left: -17.5% !important;
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 30vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-filmmaking {
@@ -5525,12 +5576,30 @@ footer .copyright span:last-child::after {
 	font-family: "chapaza";
 	font-size: 4.2vh;
 	margin-top: 2vh;
+
+		/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 17vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 35vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 10vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-filmmaking h5 {
 	font-size: 2vh !important;
 	color: #2b2b2b;
 	letter-spacing: .55vh;
+
+			/* RESPONSIVE MOD */
+
+			position: fixed;  /* Se mantiene en la misma posición en la ventana */
+			top: 10vh;       /* Mitad de la pantalla en altura */
+			left: 50vw;      /* Mitad de la pantalla en anchura */
+			transform: translate(-50%, -50%); /* Centrar exactamente */
+			width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+			height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-filmmaking .lead {
@@ -5546,6 +5615,13 @@ footer .copyright span:last-child::after {
 	width: 100%;
 	height: 100%;
 	z-index: 97 !important;
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 30vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-journalism h1 {
@@ -5553,12 +5629,30 @@ footer .copyright span:last-child::after {
 	letter-spacing: -0.15vh;
 	font-size: 4.2vh;
 	margin-top: 2vh;
+
+		/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 17vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 35vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 10vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-journalism h5 {
 	font-size: 2vh !important;
 	color: #2b2b2b;
 	letter-spacing: .55vh;
+
+			/* RESPONSIVE MOD */
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 10vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 70vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .portfolio-journalism .lead {
@@ -5566,6 +5660,13 @@ footer .copyright span:last-child::after {
 	color: #2b2b2b;
 	width: 135%;
 	margin-left: -17.5% !important;
+
+	position: fixed;  /* Se mantiene en la misma posición en la ventana */
+    top: 30vh;       /* Mitad de la pantalla en altura */
+    left: 50vw;      /* Mitad de la pantalla en anchura */
+    transform: translate(-50%, -50%); /* Centrar exactamente */
+    width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+    height: 5vh;    /* Tamaño relativo al alto de la ventana */
   }
 
   .grey-section {
@@ -7224,6 +7325,17 @@ footer .copyright span:last-child::after {
     transform: translate(-50%, -12.5%); /* Centrar exactamente */
     width: 70vw;     /* Tamaño relativo al ancho de la ventana */
     height: 100vh;    /* Tamaño relativo al alto de la ventana */
+}
+
+@media only screen and (max-width: 1052px) {
+	#folio-wrapper{
+		position: fixed;  /* Se mantiene en la misma posición en la ventana */
+		top: 92.5vh;       /* Mitad de la pantalla en altura */
+		left: 40vw;      /* Mitad de la pantalla en anchura */
+		transform: translate(-50%, -50%) !important; /* Centrar exactamente */
+		width: 70vw !important;     /* Tamaño relativo al ancho de la ventana */
+		height: 100vh !important;    /* Tamaño relativo al alto de la ventana */
+}
 }
 
  /*
