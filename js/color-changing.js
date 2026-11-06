@@ -49,6 +49,19 @@ function removeAnimation(animation) {
   }
 }
 
+// Ripple and particles only need to stop being drawn when they finish; only the
+// page fill (removeAnimation) should switch the scene.
+function dropAnimation(animation) {
+  var index = animations.indexOf(animation);
+  if (index > -1) animations.splice(index, 1);
+}
+
+// Transition timings (ms). Kept short so the site feels responsive.
+var CLICK_DELAY = 90;      // wait before drawing the circle (goToNewScreen runs at 40)
+var FILL_MIN = 480;        // circle cover duration: between FILL_MIN and FILL_MAX,
+var FILL_MAX = 650;        // depending on how far it has to travel
+var FADE_MS = 380;         // canvas fade that reveals the new screen
+
 function calcPageFillRadius(x, y) {
   var l = Math.max(x - 0, cW - x);
   var h = Math.max(y - 0, cH - y);
@@ -94,7 +107,7 @@ function handleEvent(e) {
         
         var targetR = calcPageFillRadius(e.pageX, e.pageY);
         var rippleSize = Math.min(200, (cW * .4));
-        var minCoverDuration = 750;
+        var coverDuration = Math.min(Math.max(targetR / 3, FILL_MIN), FILL_MAX);
         isDrawing = true;
 
           var pageFill = new Circle({
@@ -109,7 +122,7 @@ function handleEvent(e) {
           var fillAnimation = anime({
             targets: pageFill,
             r: targetR,
-            duration:  Math.max(targetR / 2 , minCoverDuration ),
+            duration: coverDuration,
             easing: "easeOutQuart",
             complete: function(){
               document.getElementById("touchAnywhere").style.opacity = "50%";
@@ -127,7 +140,7 @@ function handleEvent(e) {
           var fillAnimation = anime({
             targets: pageFill,
             r: targetR,
-            duration:  Math.max(targetR / 2 , minCoverDuration ),
+            duration: coverDuration,
             direction: "reverse",
             easing: "easeOutQuart",
             complete: function(){
@@ -156,8 +169,8 @@ function handleEvent(e) {
           r: rippleSize,
           opacity: 0,
           easing: "easeOutExpo",
-          duration: 900,
-          complete: removeAnimation
+          duration: 700,
+          complete: dropAnimation
         });
 
         
@@ -181,13 +194,13 @@ function handleEvent(e) {
           },
           r: 0,
           easing: "easeOutExpo",
-          duration: anime.random(1000,1300),
-          complete: removeAnimation
+          duration: anime.random(800,1000),
+          complete: dropAnimation
         });
         animations.push(fillAnimation, rippleAnimation, particlesAnimation);
       
       }  
-    }, 250);
+    }, CLICK_DELAY);
   }
 }
 
@@ -231,17 +244,26 @@ Circle.prototype.draw = function() {
   ctx.closePath();
 }
 
+// The render loop below never ends (duration: Infinity). It used to be created on
+// every section visit, so the loops piled up: each one repaints the canvas every
+// frame, which made the fades stick near opaque and then pop. Create it only once.
+var renderLoop = null;
+
 function animateCircle(){
 
   if(anyTransitionWorking && !circleTransitionWorking){
 
     circleTransitionWorking = true;
-  
-    var animate = anime({
+
+    if (renderLoop) return;
+
+    renderLoop = anime({
       duration: Infinity,
       update: function() {
         ctx.fillStyle = bgColor;
-        if(currentScene != "intro")ctx.fillRect(0, 0, cW, cH);
+        // Only paint the background while a circle is being drawn; otherwise it
+        // repaints over fadeOut() and makes the fade jump.
+        if(currentScene != "intro" && isDrawing) ctx.fillRect(0, 0, cW, cH);
         animations.forEach(function(anim) {
           anim.animatables.forEach(function(animatable) {
             animatable.target.draw();
@@ -366,24 +388,38 @@ function fauxClick(x, y) {
   document.dispatchEvent(fauxClick);
 }
 
+// Fades the canvas cover out to reveal the new screen. Time-based (FADE_MS) with
+// an ease-in-out curve, driven by requestAnimationFrame so it runs at the
+// display's frame rate. It used to step alpha by 0.01 every few ms with
+// setTimeout, so its speed depended on how fast timers fired.
 function fadeOut()
 {
     animations = [];
 
-    ctx.clearRect(0, 0, c.width, c.height);
-    ctx.globalAlpha -= 0.01;
+    var fill = (currentScene == "intro") ? "#000000" : currentCircleColor;
+    var start = performance.now();
 
-    if(currentScene == "intro") ctx.fillStyle = "#000000";
-    else ctx.fillStyle = currentCircleColor;
+    function step() {
+      var t = Math.min(1, (performance.now() - start) / FADE_MS);
 
-    ctx.fillRect(0, 0, cW, cH);
+      ctx.clearRect(0, 0, c.width, c.height);
+      ctx.globalAlpha = 0.5 + 0.5 * Math.cos(Math.PI * t); // 1 -> 0, eased
+      ctx.fillStyle = fill;
+      ctx.fillRect(0, 0, cW, cH);
 
-    if (ctx.globalAlpha > 0.01)
-    {       
-      setTimeout(fadeOut, timerId)
-      return;
+      if (t < 1) {
+        requestAnimationFrame(step);
+        return;
+      }
+      fadeOutDone();
     }
-    else{
+    step();
+}
+
+function fadeOutDone()
+{
+    {
+      ctx.clearRect(0, 0, c.width, c.height);
       ctx.globalAlpha = 0;
       document.getElementById("c").style.pointerEvents = 'none';
       if(currentScene == "intro") buttonTouch = false;
@@ -409,4 +445,4 @@ function secondClickOnGrid(){
 
 function makeSelectable(){
   isSelectable = true;
-}
+}

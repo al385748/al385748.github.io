@@ -494,7 +494,7 @@ function goToNewScreen(myNewScene){
 		else setTimeout(function() {whiteMouse()}, 10);
 	}
 
-	}, 100);
+	}, 40); // must run before handleEvent's CLICK_DELAY (color-changing.js)
 }
 
 function disableAllButtons(){
@@ -514,7 +514,7 @@ function endSceneTransition(value){
 		document.getElementById("touchAnywhere").style.opacity = value/2 + "%";
 		setTimeout(function () {
 			endSceneTransition(value - 10)
-		}, 20);
+		}, 12);
 	}
 	else{
 		document.getElementById("transition-color-screen").style.display = "none"
@@ -544,6 +544,10 @@ function returnHome(){
 				document.getElementById("sunObject").src = "images/main-art/clickable/sol_jarrones-white.png";
 			}
 
+			// Black is what the shrinking circle reveals; set it now so the circle
+			// (drawn after CLICK_DELAY) never shows the old colour behind it.
+			bgColor = "#000000";
+
 			setTimeout(function () {
 
 				endSceneTransition(100);
@@ -565,8 +569,8 @@ function returnHome(){
 				document.getElementById(currentScene).style.display = "none";
 
 				buttonTouch = false;
-				}, 200);
-			}, 100);
+				}, 120); // must stay later than CLICK_DELAY, which needs buttonTouch
+			}, 30);
 		}
 	}
 }
