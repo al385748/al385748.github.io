@@ -28,6 +28,46 @@ function rememberPointer(e) {
 document.addEventListener("mousedown", rememberPointer, true);
 document.addEventListener("touchend", rememberPointer, true);
 
+// Sections are fixed screens: when their content is taller (or wider) than the
+// window, scale it down to fit instead of letting it be cut off or scroll.
+var FIT_SECTIONS = ["about", "skills", "resume", "contact"];
+var FIT_MARGIN = 0.02; // keep 2% of the window free at the bottom
+
+FIT_SECTIONS.forEach(function (id) {
+	var sec = document.getElementById(id);
+	if (!sec) return;
+	var wrap = document.createElement("div");
+	wrap.className = "section-fit";
+	while (sec.firstChild) wrap.appendChild(sec.firstChild);
+	sec.appendChild(wrap);
+});
+
+function fitSection(id) {
+	if (FIT_SECTIONS.indexOf(id) < 0) return;
+	var wrap = document.querySelector("#" + id + " > .section-fit");
+	if (!wrap) return;
+
+	wrap.style.transform = "none";
+	var bottom = 0, left = 0, right = window.innerWidth;
+	var els = wrap.getElementsByTagName("*");
+	for (var i = 0; i < els.length; i++) {
+		var r = els[i].getBoundingClientRect();
+		if (!r.width || !r.height) continue;
+		if (r.bottom > bottom) bottom = r.bottom;
+		if (r.left < left) left = r.left;
+		if (r.right > right) right = r.right;
+	}
+
+	var scaleY = (window.innerHeight * (1 - FIT_MARGIN)) / bottom;
+	var scaleX = window.innerWidth / (Math.max(right - window.innerWidth / 2, window.innerWidth / 2 - left) * 2);
+	var scale = Math.min(1, scaleY, scaleX);
+	wrap.style.transform = scale < 0.999 ? "scale(" + scale + ")" : "";
+}
+
+window.addEventListener("resize", function () {
+	if (currentScene && currentScene != "intro") fitSection(currentScene);
+});
+
 function flushPendingScene() {
 	var scene = pendingScene;
 	pendingScene = null;
@@ -405,7 +445,7 @@ function enableNewScene(myNewScene){
 	if(myNewScene == null || myNewScene == "") myNewScene = "intro";
 	if(myNewScene != "intro") {
 		document.getElementById(myNewScene).style.display = "block";
-		document.getElementById(myNewScene).scrollTop = 0;
+		fitSection(myNewScene);
 	}
 	console.log("PINTANDO " + myNewScene)
 	currentScene = myNewScene;
