@@ -15,6 +15,27 @@ var buttonTouch = false;
 
 document.getElementById("c").style.pointerEvents = 'none';
 
+// A click on an object while a transition is still running used to be dropped.
+// Remember it (and where it happened) and replay it once the transition ends.
+var pendingScene = null;
+var pendingPoint = null;
+var lastPointer = { pageX: 0, pageY: 0 };
+
+function rememberPointer(e) {
+	var p = (e.changedTouches && e.changedTouches[0]) || e;
+	if (p && p.pageX !== undefined) lastPointer = { pageX: p.pageX, pageY: p.pageY };
+}
+document.addEventListener("mousedown", rememberPointer, true);
+document.addEventListener("touchend", rememberPointer, true);
+
+function flushPendingScene() {
+	var scene = pendingScene;
+	pendingScene = null;
+	if (!scene || currentScene != "intro") return;
+	goToNewScreen(scene);
+	handleEvent(pendingPoint); // draws the circle transition, as the original click would have
+}
+
 (function($) {
 
 	"use strict";
@@ -29,6 +50,12 @@ document.getElementById("c").style.pointerEvents = 'none';
 
         // will fade out the whole DIV that covers the website.
         $("#preloader").delay(300).fadeOut("slow");
+
+		// Off-screen images (portfolio, modals...) are loading="lazy" so they don't
+		// hold the preloader. Once the site is visible, fetch them in the background.
+		setTimeout(function () {
+			$('img[loading="lazy"]').attr('loading', 'eager');
+		}, 1500);
 
 		screen.orientation.lock('landscape');
 
@@ -376,12 +403,21 @@ function disableOldScene(myCurrentScene, myNewScene){
 
 function enableNewScene(myNewScene){
 	if(myNewScene == null || myNewScene == "") myNewScene = "intro";
-	if(myNewScene != "intro") document.getElementById(myNewScene).style.display = "block";
+	if(myNewScene != "intro") {
+		document.getElementById(myNewScene).style.display = "block";
+		document.getElementById(myNewScene).scrollTop = 0;
+	}
 	console.log("PINTANDO " + myNewScene)
 	currentScene = myNewScene;
 }
 
 function goToNewScreen(myNewScene){
+
+	if(circleTransitionWorking || anyTransitionWorking){
+		pendingScene = myNewScene;
+		pendingPoint = lastPointer;
+		return;
+	}
 
 	setTimeout(function () {
 

@@ -1659,6 +1659,25 @@ header .logo a {
 	margin: 0 1.5%;
 	padding: 0;
 }
+
+.intro-human-made {
+	position: fixed;
+	left: 0;
+	bottom: 1.2vh;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	font-family: "poppins-regular", sans-serif;
+	font-size: clamp(8px, 1.35vh, 14px);
+	line-height: 1.5;
+	letter-spacing: clamp(1px, .35vh, 4px);
+	text-transform: uppercase;
+	color: #5e5e5e;
+	pointer-events: none;
+}
+.intro-human-made span {
+	color: #7a7a7a;
+}
 .intro-social li a, .intro-social li a:visited {
 	color: #FFFFFF;
 }
@@ -5803,6 +5822,23 @@ footer .copyright span:last-child::after {
 	margin-top: 2vh;
   }
 
+  /* Allow tall content to scroll on short screens (landscape phones, tablets).
+     Scrollbar hidden: clicking it would trigger the section's returnHome().
+     The transform makes the section the containing block of its many
+     position:fixed children, so they scroll with it instead of staying pinned. */
+  .about, .skills, .grey-section, .contact {
+	transform: translateZ(0);
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	overscroll-behavior: contain;
+	scrollbar-width: none;
+  }
+  .about::-webkit-scrollbar, .skills::-webkit-scrollbar,
+  .grey-section::-webkit-scrollbar, .contact::-webkit-scrollbar {
+	display: none;
+  }
+
   .transition-color-screen {
 	display: none;
     position: fixed !important;
@@ -7147,6 +7183,8 @@ footer .copyright span:last-child::after {
 		left: 50vw;      /* Mitad de la pantalla en anchura */
 		transform: translate(-50%, -50%); /* Centrar exactamente */
 		width: 50vw;     /* Tamaño relativo al ancho de la ventana */
+		/* Font is vh-based: on 4:3 screens 50vw is too narrow and the title wraps over the lead */
+		width: min(90vw, max(50vw, 89vh));
 		height: 10vh;    /* Tamaño relativo al alto de la ventana */
 }
 

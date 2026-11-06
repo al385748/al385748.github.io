@@ -390,7 +390,9 @@ function fadeOut()
 
       anyTransitionWorking = false;
       circleTransitionWorking = false;
-    } 
+
+      if (typeof flushPendingScene === "function") flushPendingScene();
+    }
 }
 
 function clickOnSelectableObject(){
